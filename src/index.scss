@@ -1,0 +1,213 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('./assets/fonts/Roboto-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url('./assets/fonts/Roboto_Condensed-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url('./assets/fonts/Roboto_Condensed-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto Regular';
+  src: url('./assets/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rowdies';
+  src: url('./assets/fonts/Rowdies-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rowdies';
+  src: url('./assets/fonts/Rowdies-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rowdies';
+  src: url('./assets/fonts/Rowdies-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: #ffffff;
+  --primary-color-yellow: #ff9f0e;
+  --primary-dark: #181817;
+  /* secondary-color: */
+  --secondary-yellow-light: #fcb62a;
+  --secondary-light: #fffaf3;
+  --secondary-light-blue: #f1f3ff;
+  --secondary-gray: #839aa9;
+  --secondary-violet: #D9A6FF;
+  --cacondary-light-gray: #f8f9ff;
+  --menu-accent: #ffd166
+
+}
+
+body {
+  margin: 0;
+  color: var(--color-primary-dark);
+  /* Local font declarations */
+
+  background-color: var(--color-primary-light);
+  font-family: 'Roboto Condensed';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  /* Use Rowdies for headings */
+  font-family: 'Rowdies', cursive;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+address {
+  font-style: normal;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.btn {
+  align-self: center;
+  background-color: var(--primary-color-yellow);
+  color: var(--primary-color);
+  border: none;
+  padding: 20px 35px;
+  border-radius: 10px;
+  align-self: flex-start;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--secondary-yellow-light);
+}
+// =========Form========
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+}
+
+  .form-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--primary-color-yellow);
+    border-radius: 10px;
+    padding: 0 15px;
+  }
+
+    .input-icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    input {
+      flex-grow: 1;
+      padding: 12px 0;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      font-family: "Roboto-Regular", sans-serif;
+      background-color: transparent;
+
+      &::placeholder {
+        color: var(--primary-color-yellow); // Changed placeholder color to yellow
+      }
+
+      &:focus {
+        border-color: var(--primary-color-yellow); // Ensure focus border is yellow
+        outline: 1px solid var(--primary-color-yellow); // Add outline for better visibility
+      }
+    }
+    .privacy-policy {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+
+      input[type="checkbox"] {
+        margin-right: 10px;
+        width: 18px;
+        height: 18px;
+        cursor: pointer;
+        border: 1px solid #888; // Changed checkbox border color
+        accent-color: var(--primary-color-yellow); // To change the fill color when checked
+      }
+
+      label {
+        font-size: 14px;
+        color: #888;
+        font-family: "Roboto-Regular", sans-serif;
+      }
+    }
+.nutrition-search {
+   width: 50%;
+}

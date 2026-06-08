@@ -1,0 +1,108 @@
+.account {
+  &-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 16px;
+  }
+
+  &-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 4px;
+    color: var(--menu-accent);
+  }
+
+  &-subtitle {
+    font-size: 1.1rem;
+    color: #121212;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+
+  &__title {
+    margin: 0 0 8px 0;
+    font-size: 1.2rem;
+    color: var(--menu-accent);
+  }
+
+  &__info {
+    margin: 4px 0;
+    color: #333;
+    font-size: 0.95rem;
+  }
+
+  &__items {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0 0;
+  }
+
+  &__item-detail {
+    padding: 8px 12px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.9rem;
+    color: #444;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__divider {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 16px 0 0 0;
+  }
+
+  &__delete-button {
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 12px;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #d9363e;
+    }
+  }
+}
+
+.no-orders {
+  text-align: center;
+  color: var(--primary-color-yellow);
+  font-size: 1rem;
+  padding: 40px 0;
+}
+
+@media (max-width: 768px) {
+  .account-container {
+    padding: 16px 12px;
+  }
+
+  .order-card {
+    padding: 16px;
+
+    &__title {
+      font-size: 1.1rem;
+    }
+  }
+}

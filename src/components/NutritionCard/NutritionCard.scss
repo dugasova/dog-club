@@ -1,0 +1,91 @@
+.nutri-card {
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+
+        @media (min-width: 768px) {
+            justify-content: flex-start;
+        }
+    }
+
+    &__price {
+        font-family: 'Roboto';
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--primary-dark);
+        margin: 10px 0;
+    }
+
+    &-item {
+        width: calc(50% - 10px);
+        /* 2 items per row on mobile, with gap */
+        padding: 20px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #eee;
+        /* for visualization */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Subtle shadow */
+        border-radius: 8px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (min-width: 768px) {
+            width: calc(33.333% - 14px);
+            /* 3 items per row on tablet */
+        }
+
+        @media (min-width: 1024px) {
+            width: calc(25% - 15px);
+            /* 4 items per row on desktop */
+        }
+    }
+
+    &__code {
+        font-family: "Roboro";
+        font-size: 12px;
+        font-weight: 200;
+        color: var(--secondary-gray);
+    }
+
+    &__description {
+        font-family: 'Roboto';
+        font-size: 16px;
+        font-weight: 300;
+        color: var(--primary-dark);
+    }
+
+    &__stars {
+        display: flex;
+        align-items: center;
+    }
+
+    &__star {
+        width: 20px;
+        height: 20px;
+        margin-right: 2px;
+        vertical-align: middle;
+    }
+
+    &__btn {
+        border: none;
+        background-color: var(--primary-color-yellow);
+        color: var(--primary-color);
+        padding: 15px 25px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    &__btn:hover {
+        background-color: var(--secondary-yellow-light);
+    }
+}

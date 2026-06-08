@@ -1,0 +1,189 @@
+{
+  "experts": {
+    "title": "Наші експерти подбають \nпро вашого друга",
+    "description": "Заповніть форму, щоб ми могли з вами зв'язатися!",
+    "form": {
+      "name": "Ім'я",
+      "email": "Електронна пошта",
+      "phone": "Телефон",
+      "message": "Повідомлення",
+      "submit": "Надіслати",
+      "petName": "Ім'я улюбленця",
+      "yourName": "Ваше ім'я",
+      "yourPhone": "Ваш телефон",
+      "yourEmail": "Ваш email",
+      "exploreMore": "Дізнатися більше",
+      "sending": "Надсилається...",
+      "privacyAgree": "Я погоджуюся з політикою конфіденційності",
+      "validation": {
+        "nameMin": "Ім'я має містити принаймні 2 символи",
+        "petNameRequired": "Ім'я улюбленця обов'язкове",
+        "invalidPhone": "Невірний номер телефону",
+        "invalidEmail": "Невірна адреса електронної пошти",
+        "privacyRequired": "Ви повинні погодитися з політикою конфіденційності"
+      }
+    },
+    "success": "Дякуємо, {{name}}! Ваш запит успішно надіслано.",
+    "successContact": "Дякуємо, {{name}}, що звернулися до нас! Ми відповімо найближчим часом."
+  },
+  "header": {
+    "account": "Акаунт",
+    "logout": "Вийти",
+    "login": "Увійти",
+    "signup": "Зареєструватися",
+    "contactUs": "Зв'язатися з нами",
+    "basket": "Кошик"
+  },
+  "menu": {
+    "lessTalk": "Менше слів",
+    "services": "Категорії послуг",
+    "happyCustomer": "Щасливий клієнт",
+    "contact": "Контакти"
+  },
+  "common": {
+    "back": "Назад"
+  },
+  "takingcare": {
+    "title": "Догляд за вашим \nрозумним другом!",
+    "description": "Зв'язок між людиною та собакою — це стосунки між собаками та людьми",
+    "button": "Дізнатися більше",
+    "intro": "Взаємозв'язок людини і собаки бере початок від приручення тварин понад 30 000 років тому.",
+    "heroAlt": "Малюнок собаки",
+    "section1": {
+      "title": "Історія",
+      "text": "Перші доказі стосунків людини та собаки — це знахідка собаки з Бонн‑Оберкасселя 1914 року, похованої поруч із двома людьми приблизно 15 000 років тому. Фраза «найкращий друг людини» вживається століттями."
+    },
+    "section2": {
+      "title": "Сучасний зв'язок",
+      "text": "Як у собак, так і у людей під час спільних занять виділяється окситоцин, що призводить до міцного соціального зв'язку. Собаки читають людські вирази та шукають власників як безпечне місце."
+    }
+  },
+  "lesstalk": {
+    "title": "Менше розмов \nі більше прогулянок",
+    "description": "Іноді наша кар'єра, спосіб життя чи розпорядок дня можуть ускладнювати забезпечення вашого улюбленця рекомендованою кількістю фізичних вправ, яка йому потрібна. \nСаме тому можна використовувати додаткову руку під час вигулу собак, щоб вони були у відмінній формі, як психічно, так і фізично.",
+    "button": "Дізнатися більше",
+    "intro": "Щоденні прогулянки — це основа щасливої, здорової собаки. Наша служба допомагає зайнятим власникам підтримувати активність улюбленців.",
+    "section1": {
+      "title": "Чому прогулянки важливі",
+      "text": "Щоденне фізичне навантаження знижує тривогу, запобігає ожирінню та дозволяє собакам досліджувати навколишній світ."
+    },
+    "section2": {
+      "title": "Як ми допомагаємо",
+      "text": "Наші досвідчені прогульники підбирають маршрут згідно з енергійністю та характером вашого собаки, забезпечуючи безпечні та приємні прогулянки."
+    }
+  },
+  "servicecs": {
+    "grooming": {
+      "title": "Grooming",
+      "description": "Grooming requirements vary significantly depending on breed, age, and health. However, regular and proper grooming is essential for all dog breeds. Regular grooming helps prevent mats, dirt, and shedding, and promotes your dog's well-being.\nProfessional dog grooming in Kyiv includes the following essential procedures:\nGrooming – trimming the coat to maintain a well-groomed appearance.\nHygienic grooming – trimming the coat in sensitive areas (paws, groin, muzzle, anal area).\nBathing – using professional shampoos suitable for your pet's coat type. Ear cleaning helps prevent ear infections and ear infections.\nTeeth brushing helps prevent dental problems and bad breath.\nNail trimming prevents discomfort when walking and injuries.\nGrooming is also a great way to check your dog's overall health, checking for irritation, inflammation, fleas, or other issues that may require veterinary attention.\nGrooming a dog at home can be challenging, especially if the breed has a long or specific coat. Incorrect grooming or using inappropriate products can ruin your pet's appearance and lead to serious health problems.\nThat's why it's best to trust the professionals! We offer comprehensive grooming for dogs of all breeds. Our experienced groomers are knowledgeable about dog grooming, coat care, and hygiene procedures, and work in a calm and friendly atmosphere to ensure your pet feels as comfortable as possible.\nGive your pet professional grooming that will make them beautiful and healthy!"
+    },
+    "nutrition": {
+      "title": "Nutrition",
+      "description": "We believe that great nutrition should be accessible to all dogs and cats around the world. That’s why we offer a wide range of products that allow pet owners to choose the food that’s right for their pets. We want every pet owner to feel confident that their pet food meets or exceeds regulatory and industry standards, but we also want every pet owner to feel confident that they’ve made the right choice.\nWe believe that nutrition starts with understanding nutrients, not just ingredients. The best ingredients are those that work together to enhance each other’s effectiveness. A stronger blend of nutrients will be more digestible and effective for your pet than a single ingredient. That’s why we measure how different formulations affect\nWe believe that innovation should be pursued with a focus on your pet’s nutritional needs, safety and well-being. Our nutritional research helps us better understand the natural preferences, nutritional needs and behaviors of dogs and cats. Our trained and caring staff treats our dogs and cats with respect and affection because we are pet owners too."
+    },
+    "training": {
+      "title": "Training",
+      "description": "10 tips for training your dogBefore you start training your pup, here are 10 tips to help ensure that it is a success.\n1. Try it without your dog first, so you are clear and can avoid confusing them. \n2. Ensure the training is done in a calm space that is free of distractions.\n3. Make sure your dog has eaten and been to the toilet before you start. \n4. Only use positive reinforcement – reward with praise or a tasty treat and mix up what you use keep it interesting for your pooch.\n5. Show your pooch what you want them to do, don’t physically force them to do it.\n6. Be calm and consistent.\n7. Keep training sessions short (five to 10 minutes at a time) – and focus on training one behaviour before ending the session with a fun game.\n8. Record your progress – you could film it and / or write it down.\n9. Be patient. If pup is struggling, stop and go back a step and progress more slowly next time.\n10. Have fun and enjoy yourself – if either of you aren’t, pick it up another day."
+    },
+    "bathing": {
+      "title": "Bathing",
+      "description": "1. Brush Your Dog\nBefore you rinse your dog, brush them to remove excess dirt and mats. Otherwise, matted hair may hold water and irritate their skin. \n2. Set Water Temperature. The ideal bath water temperature for dogs is warm, but not hot. Setting a comfortable temperature is important, especially for canines who aren’t necessarily excited about a bath. \n3. Rinse Your Dog Rinse your dog’s body, offering praise and treats to keep them calm and happy. \n4. Apply Dog Shampoo.\nBefore lathering your pet, check the instructions on the bottle. Some shampoos need to be diluted with water. Apply the cleanser and don’t forget easy-to-overlook parts such as their paws and other sensitive areas. Make sure to keep the shampoo out of their eyes and nose. \n5. Rinse Shampoo Thoroughly\nMake sure you rinse all parts of your dog’s body at least once. You don’t want to miss a bit of shampoo hidden beneath your pet’s fur. Again, don’t forget areas like the paws, armpits and belly. \nIf you’re asking, Do dogs need conditioner?, the answer is it’s optional. Dog conditioner might be a good idea if your canine has long hair or dry skin. Just make sure to completely rinse it off your pet’s coat. \nApply conditioner at this step if you’re using it. \n6. Dry Your Dog\nIf you’re considering how to dry a dog, simply towel them off once the bath is over. They’ll probably shake several times to rid their bodies of excess water, so be prepared. \nWondering, Can you use a hair dryer on a dog? You can try it but keep the dryer on the cool setting to avoid burning your pet. Also keep in mind your dog may not like the sensation or the sound of the dryer. Consider acclimating them by turning the hair dryer on for short periods in their presence, prior to the bath. \nOnce you’re finished, don’t forget to provide treats and praise for a bath well done."
+    }
+  },
+  "happycustomers": {
+    "title": "Щасливі клієнти",
+    "customer1": {
+      "name": "Крістіан та Том",
+      "comment": "Подобається загальний досвід тренування!"
+    },
+    "customer2": {
+      "name": "Анна та Роббі",
+      "comment": "Чудові товари та доставка вчасно."
+    },
+    "customer3": {
+      "name": "Сінді та Кітч",
+      "comment": "Подобається загальний досвід тренування!"
+    },
+    "customer4": {
+      "name": "Крістіан та Кітч",
+      "comment": "Подобається загальний досвід тренування!"
+    },
+    "customer5": {
+      "name": "Аліна та Тоні",
+      "comment": "Чудові товари та доставка вчасно."
+    }
+  },
+  "contacts": {
+    "title": "Зв'яжіться з нами",
+    "description": "Ми будемо раді почути від вас! Якщо у вас є питання щодо наших послуг, відгук чи просто хочете привітатися, звертайтеся до нас.",
+    "infoTitle": "Контактна інформація",
+    "followTitle": "Слідкуйте за нами",
+    "address": "Догго Лейн, Пет Сіті, ПК"
+  },
+  "footer": {
+    "navigation": {
+      "lessTalk": "Менше слів",
+      "services": "Категорії послуг",
+      "happyCustomer": "Щасливий клієнт",
+      "contact": "Контакти"
+    },
+    "form": {
+      "name": "Ваше ім'я",
+      "sms": "Ваше смс",
+      "contactUs": "Зв'язатися з нами",
+      "privacyAgree": "Я погоджуюся з політикою конфіденційності"
+    }
+  },
+  "sorting": {
+    "title": "Сортувати за",
+    "options": {
+      "Popularity": "Популярністю",
+      "Cheaper first": "Спочатку дешевші",
+      "More expensive first": "Спочатку дорожчі",
+      "By name": "За назвою",
+      "New ones first": "Спочатку нові"
+    }
+  },
+  "nutrition": {
+    "desc1": "Сухий корм для собак середніх порід Savory 3 кг (індичка та ягня)",
+    "desc2": "Сухий корм для собак усіх порід Savory 3 кг (кролик та качка)",
+    "desc3": "Сухий корм для собак малих порід Savory 3 кг (ягня)",
+    "desc4": "Canin Maine Coon Kitten",
+    "desc5": "Пакетики Urinary S/O Feline з помірною калорійністю",
+    "buy": "Додати в корзину",
+    "more": "Більш товарів",
+    "less": "Меньш товарів",
+    "code": "код",
+    "found": "Не знайдено результатів для запиту",
+    "placeholder": "Пошук їжі..."
+  },
+  "account": {
+    "title": "Ваш обліковий запис",
+    "desc": "Ваші замовлення",
+    "button": "Видалити замовлення",
+    "orderFrom": "Замовлення вид ",
+    "date": "Дата",
+    "totalPrice": "Загальна ціна",
+    "totalItems": "Всього товарів",
+    "items": "Товари",
+    "noOrders": "Для вашого облікового запису замовлення не знайдено."
+  },
+  "basket": {
+    "title": "Ваш кошик",
+    "totalPrice": "Загальна ціна",
+    "totalItems": "Всього товарів",
+    "remove": "Видалити",
+    "clearCart": "Очистити кошик",
+    "goToHome": "На головну сторінку",
+    "checkout": "Оформити замовлення",
+    "goToPurchases": "Перейти до покупок",
+    "empty": "Ваш кошик порожній",
+    "modalRedirect": "Ви не ввійшли в систему. Перенаправлення для входу через 3 секунди....",
+    "modalSuccess": "Замовлення успішно оформлено!"
+  },
+  "empty": {
+    "title": "Кошик",
+    "empty": "Порожньо!",
+    "desc": "У вашому кошику нічого немає"
+  }
+}

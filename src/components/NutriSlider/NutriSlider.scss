@@ -1,0 +1,52 @@
+.slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes content and controls to edges */
+    align-items: center;
+    padding-top: 32px;
+    width: 100%;
+    height: 100%;
+
+    .slider-content {
+        flex-grow: 1; /* Allows content to take up available space */
+        width: 100%;
+        display: flex; /* Assuming content inside also needs flex for cards */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slider-controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px; /* Space between buttons and page number */
+        margin-top: 20px; /* Space between content and controls */
+        padding-bottom: 20px; /* Padding at the very bottom */
+
+        .slider-btn {
+            background-color: var(--primary-color-yellow);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            &-prev {
+                transform: rotate(180deg);
+            }
+
+            &:disabled {
+                background-color: #ccc; /* Grey out disabled buttons */
+                cursor: not-allowed;
+            }
+        }
+
+        span {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+    }
+}

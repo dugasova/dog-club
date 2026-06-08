@@ -1,0 +1,9 @@
+#search {
+    flex-grow: 0;
+    border-radius: 10px;
+}
+
+#search:hover,
+#search:focus {
+    border: 1px solid var(--secondary-yellow-light);
+}

@@ -1,0 +1,139 @@
+.contact-modal-backdrop {
+  background-color: #FFFDF8; // Light cream/yellow background
+  padding: 40px;
+  border-radius: 20px;
+  position: relative; // For background paw prints
+  overflow-y: auto;
+  max-width: 500px; // Adjusted for the image design
+  width: 90%; // Responsive width
+  max-height: 90vh; // Ensure it doesn't exceed viewport height
+
+  // Background paw prints
+  &::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -30px;
+    width: 100px;
+    height: 100px;
+    background: url("/src/assets/dogs/paw.svg") no-repeat center center;
+    background-size: contain;
+    opacity: 0.1;
+    transform: rotate(20deg);
+    z-index: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    right: -30px;
+    width: 100px;
+    height: 100px;
+    background: url("/src/assets/dogs/paw.svg") no-repeat center center;
+    background-size: contain;
+    opacity: 0.1;
+    transform: rotate(-40deg);
+    z-index: 0;
+  }
+
+  // Ensure content is above paw prints
+  .modal-close-btn,
+  .contact-modal-content {
+    z-index: 1;
+    position: relative; // To ensure z-index applies
+  }
+}
+
+.contact-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .contact-modal-title {
+    font-family: "Rowdies-Bold", sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+    text-align: center;
+    white-space: pre-line;
+
+    @media (max-height: 600px) {
+      font-size: 24px;
+    }
+  }
+
+  .contact-modal-description {
+    font-size: 18px;
+    font-weight: 300;
+    font-family: "Roboto-Light", sans-serif;
+    color: var(--secondary-gray);
+    margin-bottom: 30px;
+    text-align: center;
+
+    @media (max-height: 600px) {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+
+    .form-group {
+      position: relative;
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--primary-color-yellow);
+      border-radius: 10px;
+      padding: 0 15px;
+
+      .input-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+
+      input {
+        flex-grow: 1;
+        padding: 12px 0;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        font-family: "Roboto-Regular", sans-serif;
+        background-color: transparent;
+        min-width: 0;
+
+        &::placeholder {
+          color: var(--primary-color-yellow); // Changed placeholder color to yellow
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    .contact-modal-btn {
+      background-color: var(--primary-color-yellow);
+      color: #fff;
+      border: none;
+      padding: 15px 25px;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+
+      &:hover {
+        background-color: var(--primary-color-yellow) // A slightly darker orange
+      }
+    }
+  }
+}

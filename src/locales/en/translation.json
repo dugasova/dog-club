@@ -1,0 +1,189 @@
+{
+  "experts": {
+    "title": "Our experts will take \ncare of your friend",
+    "description": "Fill out the form so we can contact you!",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message",
+      "submit": "Submit",
+      "petName": "Pet name",
+      "yourName": "Your name",
+      "yourPhone": "Your phone",
+      "yourEmail": "Your email",
+      "exploreMore": "Explore more",
+      "sending": "Sending...",
+      "privacyAgree": "I agree to the privacy policy",
+      "validation": {
+        "nameMin": "Name must be at least 2 characters",
+        "petNameRequired": "Pet name is required",
+        "invalidPhone": "Invalid phone number",
+        "invalidEmail": "Invalid email address",
+        "privacyRequired": "You must agree to the privacy policy"
+      }
+    },
+    "success": "Thank you, {{name}}! Your request has been submitted successfully.",
+    "successContact": "Thank you {{name}} for contacting us! We will respond soon."
+  },
+  "header": {
+    "account": "Account",
+    "logout": "Log out",
+    "login": "Log in",
+    "signup": "Sign up",
+    "contactUs": "Contact Us",
+    "basket": "Basket"
+  },
+  "menu": {
+    "lessTalk": "Less talk",
+    "services": "Services category",
+    "happyCustomer": "Happy customer",
+    "contact": "Contact"
+  },
+  "takingcare": {
+    "title": "Taking care for \nyour Smart Dog!",
+    "description": "Human - canine bonding is the relationship \nbetween dogs and humans",
+    "button": "Explore more",
+    "intro": "The human–canine bond is rooted in the domestication of the dog, which began more than 30 000 years ago.",
+    "heroAlt": "Cartoon dog drawing",
+    "section1": {
+      "title": "History",
+      "text": "The earliest known relationship between dogs and humans is attested by the 1914 discovery of the Bonn–Oberkassel dog, buried with two humans about 15 000 years ago. For centuries the phrase 'man's best friend' has been used to describe the bond."
+    },
+    "section2": {
+      "title": "The bond today",
+      "text": "Both dogs and humans release oxytocin during quality time together, creating a strong social bond. Canines can read human facial expressions and often treat their owners as a safe haven."
+    }
+  },
+  "lesstalk": {
+    "title": "Less talk \nand more walk",
+    "description": "Sometimes our career, lifestyle, or routines can make it difficult to provide your pet \nwith the recommended amount of exercise that they need. \nWhich is why, it’s okay to use an extra hand in walking dogs so they are in perfect shape, mentally and physically.",
+    "button": "Explore more",
+    "intro": "Regular walks are the foundation of a happy, healthy dog. Our service helps busy owners keep their pets active.",
+    "section1": {
+      "title": "Why walking matters",
+      "text": "Daily exercise reduces anxiety, prevents obesity and gives dogs a chance to explore the world around them."
+    },
+    "section2": {
+      "title": "How we help",
+      "text": "Our experienced walkers tailor each route to your dog’s energy level and personality, ensuring safe, enjoyable outings."
+    }
+  },
+  "servicecs": {
+    "grooming": {
+      "title": "Grooming",
+      "description": "Grooming requirements vary significantly depending on breed, age, and health. However, regular and proper grooming is essential for all dog breeds. Regular grooming helps prevent mats, dirt, and shedding, and promotes your dog's well-being.\nProfessional dog grooming in Kyiv includes the following essential procedures:\nGrooming – trimming the coat to maintain a well-groomed appearance.\nHygienic grooming – trimming the coat in sensitive areas (paws, groin, muzzle, anal area).\nBathing – using professional shampoos suitable for your pet's coat type. Ear cleaning helps prevent ear infections and ear infections.\nTeeth brushing helps prevent dental problems and bad breath.\nNail trimming prevents discomfort when walking and injuries.\nGrooming is also a great way to check your dog's overall health, checking for irritation, inflammation, fleas, or other issues that may require veterinary attention.\nGrooming a dog at home can be challenging, especially if the breed has a long or specific coat. Incorrect grooming or using inappropriate products can ruin your pet's appearance and lead to serious health problems.\nThat's why it's best to trust the professionals! We offer comprehensive grooming for dogs of all breeds. Our experienced groomers are knowledgeable about dog grooming, coat care, and hygiene procedures, and work in a calm and friendly atmosphere to ensure your pet feels as comfortable as possible.\nGive your pet professional grooming that will make them beautiful and healthy!"
+    },
+    "nutrition": {
+      "title": "Nutrition",
+      "description": "We believe that great nutrition should be accessible to all dogs and cats around the world. That’s why we offer a wide range of products that allow pet owners to choose the food that’s right for their pets. We want every pet owner to feel confident that their pet food meets or exceeds regulatory and industry standards, but we also want every pet owner to feel confident that they’ve made the right choice.\nWe believe that nutrition starts with understanding nutrients, not just ingredients. The best ingredients are those that work together to enhance each other’s effectiveness. A stronger blend of nutrients will be more digestible and effective for your pet than a single ingredient. That’s why we measure how different formulations affect\nWe believe that innovation should be pursued with a focus on your pet’s nutritional needs, safety and well-being. Our nutritional research helps us better understand the natural preferences, nutritional needs and behaviors of dogs and cats. Our trained and caring staff treats our dogs and cats with respect and affection because we are pet owners too."
+    },
+    "training": {
+      "title": "Training",
+      "description": "10 tips for training your dogBefore you start training your pup, here are 10 tips to help ensure that it is a success.\n1. Try it without your dog first, so you are clear and can avoid confusing them. \n2. Ensure the training is done in a calm space that is free of distractions.\n3. Make sure your dog has eaten and been to the toilet before you start. \n4. Only use positive reinforcement – reward with praise or a tasty treat and mix up what you use keep it interesting for your pooch.\n5. Show your pooch what you want them to do, don’t physically force them to do it.\n6. Be calm and consistent.\n7. Keep training sessions short (five to 10 minutes at a time) – and focus on training one behaviour before ending the session with a fun game.\n8. Record your progress – you could film it and / or write it down.\n9. Be patient. If pup is struggling, stop and go back a step and progress more slowly next time.\n10. Have fun and enjoy yourself – if either of you aren’t, pick it up another day."
+    },
+    "bathing": {
+      "title": "Bathing",
+      "description": "1. Brush Your Dog\nBefore you rinse your dog, brush them to remove excess dirt and mats. Otherwise, matted hair may hold water and irritate their skin. \n2. Set Water Temperature. The ideal bath water temperature for dogs is warm, but not hot. Setting a comfortable temperature is important, especially for canines who aren’t necessarily excited about a bath. \n3. Rinse Your Dog Rinse your dog’s body, offering praise and treats to keep them calm and happy. \n4. Apply Dog Shampoo.\nBefore lathering your pet, check the instructions on the bottle. Some shampoos need to be diluted with water. Apply the cleanser and don’t forget easy-to-overlook parts such as their paws and other sensitive areas. Make sure to keep the shampoo out of their eyes and nose. \n5. Rinse Shampoo Thoroughly\nMake sure you rinse all parts of your dog’s body at least once. You don’t want to miss a bit of shampoo hidden beneath your pet’s fur. Again, don’t forget areas like the paws, armpits and belly. \nIf you’re asking, Do dogs need conditioner?, the answer is it’s optional. Dog conditioner might be a good idea if your canine has long hair or dry skin. Just make sure to completely rinse it off your pet’s coat. \nApply conditioner at this step if you’re using it. \n6. Dry Your Dog\nIf you’re considering how to dry a dog, simply towel them off once the bath is over. They’ll probably shake several times to rid their bodies of excess water, so be prepared. \nWondering, Can you use a hair dryer on a dog? You can try it but keep the dryer on the cool setting to avoid burning your pet. Also keep in mind your dog may not like the sensation or the sound of the dryer. Consider acclimating them by turning the hair dryer on for short periods in their presence, prior to the bath. \nOnce you’re finished, don’t forget to provide treats and praise for a bath well done."
+    }
+  },
+  "common": {
+    "back": "Back"
+  },
+  "happycustomers": {
+    "title": "Happy Customers",
+    "customer1": {
+      "name": "Christian & Tom",
+      "comment": "Love the overall wrkout experience!"
+    },
+    "customer2": {
+      "name": "Anna & Tobbty",
+      "comment": "Amazing Products & Delivery on time."
+    },
+    "customer3": {
+      "name": "Sindy & Kitch",
+      "comment": "Love the overall wrkout experience!"
+    },
+    "customer4": {
+      "name": "Chris & Kitch",
+      "comment": "Love the overall wrkout experience!"
+    },
+    "customer5": {
+      "name": "Alina & Tony",
+      "comment": "Amazing Products & Delivery on time."
+    }
+  },
+  "contacts": {
+    "title": "Get in Touch With Us",
+    "description": "We'd love to hear from you! Whether you have a question about our services, feedback, or just want to say hello, feel free to reach out.",
+    "infoTitle": "Contact Information",
+    "followTitle": "Follow Us",
+    "address": "Doggo Lane, Pet City, PC "
+  },
+  "footer": {
+    "navigation": {
+      "lessTalk": "Less talk",
+      "services": "Services category",
+      "happyCustomer": "Happy customer",
+      "contact": "Contact"
+    },
+    "form": {
+      "name": "Your name",
+      "sms": "Yor sms",
+      "contactUs": "Contact us",
+      "privacyAgree": "I agree to the privacy policy"
+    }
+  },
+  "sorting": {
+    "title": "Sort by",
+    "options": {
+      "Popularity": "Popularity",
+      "Cheaper first": "Cheaper first",
+      "More expensive first": "More expensive first",
+      "By name": "By name",
+      "New ones first": "New ones first"
+    }
+  },
+  "nutrition": {
+    "desc1": "Dry food for dogs of average breeds Savory 3 kg (turkey and lamb)",
+    "desc2": "Dry food for dogs of all breeds Savory 3 kg (rabbit and duck)",
+    "desc3": "Dry food for dogs of small breeds Savory 3 kg (lamb)",
+    "desc4": "Canin Maine Coon Kitten",
+    "desc5": "Urinary S/O Feline Moderate Calorie Pouches",
+    "buy": "Add to cart",
+    "more": "Show more",
+    "less": "Show less",
+    "code": "code",
+    "found": "No results found for ",
+    "placeholder": "Search food..."
+  },
+  "account": {
+    "title": "Your Account",
+    "desc": "Your Orders",
+    "button": "Delete Order",
+    "orderFrom": "Order From",
+    "date": "Date",
+    "totalPrice": "Total Price",
+    "totalItems": "Total Goods",
+    "items": "Goods",
+    "noOrders": "No order found for your accont."
+  },
+  "basket": {
+    "title": "Your Cart",
+    "totalPrice": "Total Price",
+    "totalItems": "Total Goods",
+    "remove": "Remove",
+    "clearCart": "Clear Cart",
+    "goToHome": "Go to Home",
+    "checkout": "Procced to Checkout",
+    "goToPurchases": "Go to Purchases",
+    "empty": "Your basket is empty",
+    "modalRedirect": "You are not logged in. Redirecting to login in 3 seconds...",
+    "modalSuccess": "Order placed successfully!"
+  },
+  "empty": {
+    "title": "Your Basket",
+    "empty": "Empty!",
+    "desc": "Your basket is empty"
+  }
+}

@@ -1,0 +1,168 @@
+.services {
+    position: relative;
+    background-image: url(../../assets/background/firstbg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    /* Ensure outer container is column for mobile-first stacking */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+    /* Adjusted for mobile */
+
+    @media screen and (min-width: 1024px) {
+        margin-bottom: 200px;
+        /* Original for desktop */
+    }
+
+    &-title {
+        color: var(--color-primary-dark);
+        text-align: center;
+        font-size: 32px;
+        font-weight: 400;
+        margin-top: 100px;
+        /* Mobile: Adjusted for mobile */
+
+        @media screen and (min-width: 768px) {
+            margin-top: 100px;
+            /* Tablet: Adjusted for tablet */
+            font-size: 72px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            margin-top: 200px;
+            /* Desktop: Original for desktop */
+        }
+    }
+
+    &-cards {
+        display: flex;
+        flex-direction: column;
+        /* Mobile: 1 card per column */
+        align-items: center;
+        gap: 24px;
+        margin-top: 40px;
+        /* Adjusted for mobile */
+        margin-bottom: 40px;
+        /* Adjusted for mobile */
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            /* Tablet: 2 cards per row */
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 80px;
+
+        }
+
+        @media screen and (min-width: 1024px) {
+            justify-content: space-between;
+            /* Desktop: 4 cards per row */
+            margin-top: 140px;
+            margin-bottom: 140px;
+        }
+    }
+
+    &-card {
+        display: none;
+        /* Hide all cards by default on mobile */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        background-color: var(--primary-color);
+        width: 80%;
+        /* Mobile: Adjust width for single card */
+        max-width: 300px;
+        /* Max width for mobile card */
+        height: 240px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        cursor: pointer; // Indicate clickability
+
+        &:nth-child(2) {
+            /* Show only the Nutrition card on mobile */
+            display: flex;
+        }
+
+        &_title {
+            font-family: "Roboto-SemiBold";
+            font-size: 24px;
+            font-weight: 400;
+            color: var(--primary-color-yellow);
+            padding-top: 44px;
+        }
+
+        &_more {
+            display: flex;
+            align-items: center;
+            margin-top: 24px;
+            font-family: "Roboto-Medium";
+            font-size: 24px;
+            font-weight: 500;
+            color: var(--primary-color-yellow);
+            border: none;
+            background: none;
+            padding: 0;
+            cursor: pointer;
+            align-self: center;
+
+            @media screen and (min-width: 768px) {
+                align-self: flex-end;
+            }
+        }
+
+        &_more:hover {
+            color: var(--secondary-yellow-light);
+        }
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+            /* Show all cards on tablet and desktop */
+            width: calc(50% - 36px);
+            /* Tablet: 2 cards per row with gap. (24px gap between cards + 2*6px for outer margins/padding if needed) */
+            max-width: 350px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            width: calc(25% - 18px);
+            /* Desktop: 4 cards per row with gap. (3*24px total gap / 4 cards) */
+            max-width: 240px;
+            /* Original width for desktop */
+        }
+    }
+
+    &-arrow {
+        margin-left: 10px;
+    }
+}
+
+.arrow {
+    background-image: url("../../assets/icons/arrow.svg");
+    /* Mobile default */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    /* Explicitly left for mobile */
+    right: auto;
+    /* Ensure no right positioning on mobile */
+    top: 20px;
+    width: 50px;
+    height: 50px;
+    z-index: 10;
+
+    @media screen and (min-width: 768px) {
+        background-image: url("../../assets/icons/servicesarrowhead.svg");
+        /* Tablet and Desktop */
+        right: 10%;
+        /* Explicitly right for desktop */
+        left: auto;
+        /* Ensure no left positioning on desktop */
+        top: 10%;
+        width: 200px;
+        height: 200px;
+    }
+}
