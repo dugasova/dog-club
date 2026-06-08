@@ -3,11 +3,11 @@ import { act, renderHook } from '@testing-library/react';
 import useNutriSearch from './useNutriSearch';
 import { actionCreator } from '../store/store';
 import { SEARCH_SET } from '../store/search/action';
-import type { NutriCard } from '../store/search/reducer';
+import type { CardData } from '../types';
 
-const card = (overrides: Partial<NutriCard> = {}): NutriCard => ({
+const card = (overrides: Partial<CardData> = {}): CardData => ({
   id: 1,
-  raiting: 4.5,
+  rating: 4.5,
   price: 10,
   code: 'KBL-1',
   desc: 'Chicken kibble for dogs',

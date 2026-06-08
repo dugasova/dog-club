@@ -1,9 +1,10 @@
 import { useReducer, useEffect } from 'react';
-import { initialState, reducer, type NutriCard } from '../store/search/reducer';
+import { initialState, reducer } from '../store/search/reducer';
 import { actionCreator } from '../store/store';
 import { LIST_SEARCH, LIST_SEARCH_SET } from '../store/search/action';
+import type { CardData } from '../types';
 
-export default function useNutriSearch(list: NutriCard[]) {
+export default function useNutriSearch(list: CardData[]) {
   const [stateSearch, dispatchSearch] = useReducer(reducer, initialState);
   useEffect(() => {
     if (stateSearch.search.length >= 3) {

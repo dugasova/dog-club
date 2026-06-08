@@ -11,7 +11,7 @@ const card = {
   desc: 'Chicken kibble for dogs',
   imsrcOfImg: 'kibble.png',
   price: 25,
-  raiting: 3,
+  rating: 3,
 };
 
 vi.mock('react-i18next', () => ({
@@ -33,7 +33,7 @@ describe('NutritionCard', () => {
     expect(screen.getByText('nutrition.code: KBL-1')).toBeInTheDocument();
     expect(screen.getByText('25.00$')).toBeInTheDocument();
     expect(screen.getByText(card.desc)).toBeInTheDocument();
-    expect(screen.getAllByRole('img', { name: 'star' })).toHaveLength(card.raiting);
+    expect(screen.getAllByRole('img', { name: 'star' })).toHaveLength(card.rating);
   });
 
   it('dispatches an ADD_ITEM action with the card data when buying', async () => {

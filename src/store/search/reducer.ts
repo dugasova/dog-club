@@ -1,22 +1,14 @@
 import { LIST_SEARCH, LIST_SEARCH_SET, SEARCH_SET } from './action';
-
-export type NutriCard = {
-  id: number;
-  raiting: number; // Changed to be a required number
-  price: number;
-  code: string;
-  desc: string;
-  imsrcOfImg: string;
-}
+import type { CardData } from '../../types';
 
 export type SearchState = {
   search: string;
-  searchList: NutriCard[];
+  searchList: CardData[];
 }
 
 const initialState: SearchState = {
   search: ``,
-  searchList: [] as NutriCard[],
+  searchList: [] as CardData[],
 }
 
 const reducer = (state: SearchState = initialState, {type, payload}: {type: string, payload: any}) => {
@@ -24,11 +16,11 @@ const reducer = (state: SearchState = initialState, {type, payload}: {type: stri
     case SEARCH_SET:
       return {...state, search: payload}
     case LIST_SEARCH_SET:
-      return{...state, searchList:payload as NutriCard[]}
+      return{...state, searchList:payload as CardData[]}
     case LIST_SEARCH:
       return {
         ...state,
-        searchList: ( payload.list as NutriCard[]).filter((item: NutriCard) =>
+        searchList: ( payload.list as CardData[]).filter((item: CardData) =>
           item.desc.toLowerCase().includes(payload.value.toLowerCase())
         ),
       };

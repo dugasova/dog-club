@@ -1,16 +1,9 @@
 import React, { createContext, useContext, useState, useMemo } from 'react';
 import type { ReactNode } from 'react';
 import { CardData as InitialCardData } from '../data'; // Renamed import to avoid conflict
+import type { CardData } from '../types';
 
-export type CardData = { // Exported CardData
-  id: number;
-  code: string;
-  raiting: number;
-  desc: string;
-  descUk?: string;
-  price: number;
-  imsrcOfImg: string;
-}
+export type { CardData };
 
 export type SortOption = 'Popularity' | 'Cheaper first' | 'More expensive first' | 'By name' | 'New ones first';
 
@@ -30,7 +23,7 @@ export const NutritionProvider: React.FC<{ children: ReactNode }> = ({ children 
 
     switch (sortOption) {
       case 'Popularity':
-        sortedData.sort((a, b) => b.raiting - a.raiting);
+        sortedData.sort((a, b) => b.rating - a.rating);
         break;
       case 'Cheaper first':
         sortedData.sort((a, b) => a.price - b.price);

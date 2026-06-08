@@ -2,7 +2,7 @@ export const CardData = [
     {
       id: 1,
       code: '37875',
-      raiting: 5,
+      rating: 5,
       desc: 'Dry food for dogs of average breeds Savory 3 kg (turkey and lamb)',
       price: 120,
       imsrcOfImg: '/src/assets/dogs/avegedog.png' 
@@ -10,7 +10,7 @@ export const CardData = [
     {
       id: 2,
       code: '00027',
-      raiting: 4,
+      rating: 4,
       desc: 'Dry food for dogs of all breeds Savory 3 kg (rabbit and duck',
       price: 136,
       imsrcOfImg: '/src/assets/dogs/alldogs.png' 
@@ -18,7 +18,7 @@ export const CardData = [
     {
       id: 3,
       code: '34905',
-      raiting: 5,
+      rating: 5,
       desc: 'Dry food for dogs of small breeds Savory 3 kg (lamb)',
       price: 140,
       imsrcOfImg: '/src/assets/dogs/smalldog.png' 
@@ -26,7 +26,7 @@ export const CardData = [
     {
       id: 4,
       code: '37875',
-      raiting: 3,
+      rating: 3,
       desc: 'Dry food for dogs of average breeds Savory 3 kg (turkey and lamb)',
       price: 120,
       imsrcOfImg: '/src/assets/dogs/avegedog.png' 
@@ -34,7 +34,7 @@ export const CardData = [
     {
       id: 5,
       code: '00027',
-      raiting: 5,
+      rating: 5,
       desc: 'Dry food for dogs of all breeds Savory 3 kg (rabbit and duck',
       price: 136,
       imsrcOfImg: '/src/assets/dogs/alldogs.png' 
@@ -42,7 +42,7 @@ export const CardData = [
     {
       id: 6,
       code: '34905',
-      raiting: 6,
+      rating: 6,
       desc: 'Dry food for dogs of small breeds Savory 3 kg (lamb)',
       price: 140,
       imsrcOfImg: '/src/assets/dogs/smalldog.png' 
@@ -50,7 +50,7 @@ export const CardData = [
         {
       id: 7,
       code: '37875',
-      raiting: 5,
+      rating: 5,
       desc: 'Dry food for dogs of average breeds Savory 3 kg (turkey and lamb)',
       price: 120,
       imsrcOfImg: '/src/assets/dogs/avegedog.png' 
@@ -58,7 +58,7 @@ export const CardData = [
     {
       id: 8,
       code: '00027',
-      raiting: 4,
+      rating: 4,
       desc: 'Dry food for dogs of all breeds Savory 3 kg (rabbit and duck',
       price: 136,
       imsrcOfImg: '/src/assets/dogs/alldogs.png' 
@@ -66,7 +66,7 @@ export const CardData = [
     {
       id: 9,
       code: '34905',
-      raiting: 5,
+      rating: 5,
       desc: 'Dry food for dogs of small breeds Savory 3 kg (lamb)',
       price: 140,
       imsrcOfImg: '/src/assets/dogs/smalldog.png' 
@@ -74,7 +74,7 @@ export const CardData = [
     {
       id: 10,
       code: '37875',
-      raiting: 3,
+      rating: 3,
       desc: 'Dry food for dogs of average breeds Savory 3 kg (turkey and lamb)',
       price: 120,
       imsrcOfImg: '/src/assets/dogs/avegedog.png' 
@@ -82,7 +82,7 @@ export const CardData = [
     {
       id: 11,
       code: '00027',
-      raiting: 5,
+      rating: 5,
       desc: 'Dry food for dogs of all breeds Savory 3 kg (rabbit and duck',
       price: 136,
       imsrcOfImg: '/src/assets/dogs/alldogs.png' 
@@ -90,7 +90,7 @@ export const CardData = [
     {
       id: 12,
       code: '34905',
-      raiting: 6,
+      rating: 6,
       desc: 'Dry food for dogs of small breeds Savory 3 kg (lamb)',
       price: 140,
       imsrcOfImg: '/src/assets/dogs/smalldog.png' 
@@ -98,7 +98,7 @@ export const CardData = [
      {
       id: 13,
       code: '37875',
-      raiting: 5,
+      rating: 5,
       desc: 'Dry food for dogs of average breeds Savory 3 kg (turkey and lamb)',
       price: 120,
       imsrcOfImg: '/src/assets/dogs/avegedog.png' 
@@ -106,7 +106,7 @@ export const CardData = [
     {
       id: 14,
       code: '00027',
-      raiting: 4,
+      rating: 4,
       desc: 'Dry food for dogs of all breeds Savory 3 kg (rabbit and duck',
       price: 136,
       imsrcOfImg: '/src/assets/dogs/alldogs.png' 
@@ -114,7 +114,7 @@ export const CardData = [
     {
       id: 15,
       code: '34905',
-      raiting: 5,
+      rating: 5,
       desc: 'Dry food for dogs of small breeds Savory 3 kg (lamb)',
       price: 140,
       imsrcOfImg:  '/src/assets/dogs/smalldog.png' 
@@ -122,7 +122,7 @@ export const CardData = [
     {
       id: 16,
       code: '37875',
-      raiting: 3,
+      rating: 3,
       desc: 'Dry food for dogs of average breeds Savory 3 kg (turkey and lamb)',
       price: 120,
       imsrcOfImg: '/src/assets/dogs/avegedog.png' 
@@ -130,7 +130,7 @@ export const CardData = [
     {
       id: 17,
       code: '00027',
-      raiting: 5,
+      rating: 5,
       desc: 'Dry food for dogs of all breeds Savory 3 kg (rabbit and duck',
       price: 136,
       imsrcOfImg: '/src/assets/dogs/alldogs.png' 
@@ -138,7 +138,7 @@ export const CardData = [
     {
       id: 18,
       code: '34905',
-      raiting: 2,
+      rating: 2,
       desc: 'Dry food for dogs of small breeds Savory 3 kg (lamb)',
       price: 140,
       imsrcOfImg:  '/src/assets/dogs/smalldog.png' 
@@ -146,7 +146,7 @@ export const CardData = [
     {
       id: 19,
       code: '37875',
-      raiting: 5,
+      rating: 5,
       desc: 'Dry food for dogs of average breeds Savory 3 kg (turkey and lamb)',
       price: 120,
       imsrcOfImg: '/src/assets/dogs/avegedog.png' 
@@ -154,7 +154,7 @@ export const CardData = [
     {
       id: 20,
       code: '00027',
-      raiting: 4,
+      rating: 4,
       desc: 'Dry food for dogs of all breeds Savory 3 kg (rabbit and duck',
       price: 136,
       imsrcOfImg: '/src/assets/dogs/alldogs.png' 
@@ -162,7 +162,7 @@ export const CardData = [
     {
       id: 21,
       code: '34905',
-      raiting: 5,
+      rating: 5,
       desc: 'Dry food for dogs of small breeds Savory 3 kg (lamb)',
       price: 140,
       imsrcOfImg:  '/src/assets/dogs/smalldog.png' 
@@ -170,7 +170,7 @@ export const CardData = [
     {
       id: 22,
       code: '37875',
-      raiting: 3,
+      rating: 3,
       desc: 'Dry food for dogs of average breeds Savory 3 kg (turkey and lamb)',
       price: 120,
       imsrcOfImg: '/src/assets/dogs/avegedog.png' 
@@ -178,7 +178,7 @@ export const CardData = [
     {
       id: 23,
       code: '00027',
-      raiting: 5,
+      rating: 5,
       desc: 'Dry food for dogs of all breeds Savory 3 kg (rabbit and duck',
       price: 136,
       imsrcOfImg: '/src/assets/dogs/alldogs.png' 
@@ -186,7 +186,7 @@ export const CardData = [
     {
       id: 24,
       code: '34905',
-      raiting: 4,
+      rating: 4,
       desc: 'Dry food for dogs of small breeds Savory 3 kg (lamb)',
       price: 140,
       imsrcOfImg: '/src/assets/dogs/smalldog.png' 
@@ -194,14 +194,14 @@ export const CardData = [
      {
       id: 25,
       code: '34906',
-      raiting: 4,
+      rating: 4,
       desc: 'Canin Maine Coon Kitten',
       price: 175,
       imsrcOfImg: '/src/assets/dogs/smalldog.png' 
     }, {
       id: 26,
       code: '35905',
-      raiting: 5,
+      rating: 5,
       desc: 'Urinary S/O Feline Moderate Calorie Pouches',
       price: 160,
       imsrcOfImg: '/src/assets/dogs/smalldog.png' 

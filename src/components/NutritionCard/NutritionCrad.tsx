@@ -3,18 +3,10 @@ import './NutritionCard.scss';
 import Star from '../../assets/icons/strforfeed.svg';
 
 import { useCart } from '../../context/useCart';
-
-type Card = {
-  id: number;
-  code: string;
-  desc: string;
-  imsrcOfImg: string;
-  price: number;
-  raiting: number;
-};
+import type { CardData } from '../../types';
 
 type NutritionCardProps = {
-  card: Card;
+  card: CardData;
 };
 
 export default function NutritionCard({ card }: NutritionCardProps) {
@@ -41,7 +33,7 @@ export default function NutritionCard({ card }: NutritionCardProps) {
       </p>
       <p className="nutri-card__code">{t('nutrition.code')}: {card.code}</p>
       <p className="nutri-card__stars">
-        {renderStars(card.raiting)}
+        {renderStars(card.rating)}
       </p>
       <p className="nutri-card__description">{t(card.desc)}</p>
       <p className="nutri-card__price">{card.price}.00$</p>

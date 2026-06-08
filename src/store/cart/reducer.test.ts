@@ -9,7 +9,7 @@ const item = (overrides: Partial<Omit<CartItem, 'quantity'>> = {}): Omit<CartIte
   price: 10,
   imsrcOfImg: 'kibble.png',
   code: 'KBL-1',
-  raiting: 4.5,
+  rating: 4.5,
   desc: 'Tasty chicken kibble for dogs',
   ...overrides,
 });

@@ -5,9 +5,9 @@ import { NutritionProvider, useNutrition, type SortOption } from './NutritionCon
 
 const { mockCards } = vi.hoisted(() => ({
   mockCards: [
-    { id: 1, code: 'A', raiting: 3, desc: 'Banana kibble', price: 30, imsrcOfImg: 'a.png' },
-    { id: 2, code: 'B', raiting: 5, desc: 'Apple kibble', price: 10, imsrcOfImg: 'b.png' },
-    { id: 3, code: 'C', raiting: 1, desc: 'Cherry kibble', price: 20, imsrcOfImg: 'c.png' },
+    { id: 1, code: 'A', rating: 3, desc: 'Banana kibble', price: 30, imsrcOfImg: 'a.png' },
+    { id: 2, code: 'B', rating: 5, desc: 'Apple kibble', price: 10, imsrcOfImg: 'b.png' },
+    { id: 3, code: 'C', rating: 1, desc: 'Cherry kibble', price: 20, imsrcOfImg: 'c.png' },
   ],
 }));
 

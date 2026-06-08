@@ -2,12 +2,12 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, it, expect, vi } from 'vitest';
 import NutriSlider from './NutriSlider';
-import type { CardData } from '../../context/NutritionContext';
+import type { CardData } from '../../types';
 
 const cardsData: CardData[] = Array.from({ length: 20 }, (_, i) => ({
   id: i + 1,
   code: `CODE-${i + 1}`,
-  raiting: 4,
+  rating: 4,
   desc: `Card ${i + 1}`,
   price: 10 + i,
   imsrcOfImg: `card-${i + 1}.png`,

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './NutriSlider.scss';
 import SortingBtn from './../../assets/icons/sortblack.svg';
-import { useNutrition, type CardData } from '../../context/NutritionContext';
+import { useNutrition } from '../../context/NutritionContext';
+import type { CardData } from '../../types';
 
 export default function NutriSlider({ children }: { children: (visibleCards: CardData[]) => React.ReactNode }) {
   const { cardsData } = useNutrition();

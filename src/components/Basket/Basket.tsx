@@ -120,7 +120,7 @@ export default function Basket() {
                     <p className="basket-item-name">{item.name}</p>
                     <p>{item.desc}</p>
                     <p>{item.code}</p>
-                    <p>{item.raiting}/5</p>
+                    <p>{item.rating}/5</p>
                     <p className="basket-item-price">${item.price}.00</p>
                     <div className='basket-item-quantity-control'>
                       <button onClick={() => handleUpdateQuantity(item.id, item.quantity - 1)}>-</button>

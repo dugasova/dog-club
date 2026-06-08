@@ -9,7 +9,7 @@ export interface OrderItem {
   id?: number;
   imsrcOfImg?: string;
   code?: string;
-  raiting?: number;
+  rating?: number;
 }
 
 export interface Order {

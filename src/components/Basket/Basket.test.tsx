@@ -17,7 +17,7 @@ const item = (overrides: Partial<CartItem> = {}): CartItem => ({
   price: 10,
   imsrcOfImg: 'kibble.png',
   code: 'KBL-1',
-  raiting: 4,
+  rating: 4,
   desc: 'Tasty chicken kibble',
   quantity: 1,
   ...overrides,

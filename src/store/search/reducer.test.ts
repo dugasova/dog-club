@@ -1,10 +1,11 @@
 import { describe, it, expect } from 'vitest';
-import { reducer, initialState, type NutriCard, type SearchState } from './reducer';
+import { reducer, initialState, type SearchState } from './reducer';
+import type { CardData } from '../../types';
 import { SEARCH_SET, LIST_SEARCH_SET, LIST_SEARCH } from './action';
 
-const card = (overrides: Partial<NutriCard> = {}): NutriCard => ({
+const card = (overrides: Partial<CardData> = {}): CardData => ({
   id: 1,
-  raiting: 4.5,
+  rating: 4.5,
   price: 10,
   code: 'KBL-1',
   desc: 'Chicken kibble for dogs',
