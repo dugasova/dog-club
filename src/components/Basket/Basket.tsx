@@ -4,8 +4,7 @@ import { useCart } from "../../context/useCart";
 import HomeIcon from "../../assets/icons/servicearrow.svg";
 import { useNavigate } from "react-router-dom";
 import { UserAuth } from "../../context/AuthContext";
-import { arrayUnion, doc, updateDoc } from "firebase/firestore";
-import { db } from "../../firebase";
+import { placeOrder } from "../../services/orders";
 import Modal from "../Modal/Modal";
 import { useTranslation } from "react-i18next";
 import EmptyBasket from "./EmptyBasket";
@@ -78,19 +77,14 @@ export default function Basket() {
     }
 
     try {
-      const order = {
-        email: user.email,
+      await placeOrder({
+        email: `${user.email}`,
         userId: user.uid,
         orderId: user.uid,
         items: state.items,
-        totalPrice: totalPrice,
-        totalItems: totalItems,
+        totalPrice,
+        totalItems,
         createdAt: new Date(),
-      };
-
-      const userRef = doc(db, 'users', `${user.email}`);
-      await updateDoc(userRef, {
-        savedFood: arrayUnion(order)
       });
 
       dispatch({ type: 'CLEAR_CART' });

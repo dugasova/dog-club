@@ -4,6 +4,8 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import Basket from './Basket';
 import type { CartItem } from '../../types';
 
+const { placeOrder } = vi.hoisted(() => ({ placeOrder: vi.fn() }));
+
 const dispatch = vi.fn();
 const navigate = vi.fn();
 let cartItems: CartItem[] = [];
@@ -37,20 +39,15 @@ vi.mock('../../context/AuthContext', () => ({
   UserAuth: () => ({ user: authUser }),
 }));
 
-vi.mock('firebase/firestore', () => ({
-  arrayUnion: vi.fn(),
-  doc: vi.fn(),
-  updateDoc: vi.fn(),
-}));
-
-vi.mock('../../firebase', () => ({
-  db: {},
+vi.mock('../../services/orders', () => ({
+  placeOrder: placeOrder,
 }));
 
 describe('Basket', () => {
   beforeEach(() => {
     dispatch.mockClear();
     navigate.mockClear();
+    placeOrder.mockReset();
     cartItems = [];
     authUser = null;
   });
@@ -131,5 +128,38 @@ describe('Basket', () => {
     await user.click(screen.getByRole('button', { name: 'basket.checkout' }));
 
     expect(await screen.findByText('basket.modalRedirect')).toBeInTheDocument();
+  });
+
+  it('places the order, clears the cart and shows a success message when checking out while logged in', async () => {
+    cartItems = [item({ id: 1, price: 10, quantity: 2 })];
+    authUser = { email: 'olha@example.com', uid: 'user-1' };
+    placeOrder.mockResolvedValue(undefined);
+    const user = userEvent.setup();
+    render(<Basket />);
+
+    await user.click(screen.getByRole('button', { name: 'basket.checkout' }));
+
+    expect(await screen.findByText('basket.modalSuccess')).toBeInTheDocument();
+    expect(placeOrder).toHaveBeenCalledWith(expect.objectContaining({
+      email: 'olha@example.com',
+      userId: 'user-1',
+      orderId: 'user-1',
+      items: cartItems,
+      totalPrice: 20,
+      totalItems: 2,
+    }));
+    expect(dispatch).toHaveBeenCalledWith({ type: 'CLEAR_CART' });
+  });
+
+  it('shows an error message when placing the order fails', async () => {
+    cartItems = [item({ id: 1, price: 10, quantity: 1 })];
+    authUser = { email: 'olha@example.com', uid: 'user-1' };
+    placeOrder.mockRejectedValue(new Error('network error'));
+    const user = userEvent.setup();
+    render(<Basket />);
+
+    await user.click(screen.getByRole('button', { name: 'basket.checkout' }));
+
+    expect(await screen.findByText('Error placing order. Please try again.')).toBeInTheDocument();
   });
 });

@@ -1,49 +1,23 @@
 import { useEffect, useState } from 'react';
 import './Account.scss';
-import { db } from '../../firebase';
-import { doc, onSnapshot, updateDoc } from 'firebase/firestore';
 import { UserAuth } from '../../context/AuthContext';
 import { useTranslation } from 'react-i18next';
-
-interface OrderItem {
-  desc: string;
-  quantity: number;
-  price: number;
-  id?: number;
-  imsrcOfImg?: string;
-  code?: string;
-  raiting?: number;
-}
-
-interface Order {
-  id: string;
-  createdAt: { seconds: number; nanoseconds: number };
-  email: string;
-  items: OrderItem[];
-  totalPrice: number;
-  totalItems: number;
-  userId: string;
-}
+import { deleteOrder, subscribeToOrders, type Order, type OrderItem } from '../../services/orders';
 
 export default function Account() {
-  const [orders, setOrders] = useState([])
+  const [orders, setOrders] = useState<Order[]>([])
   const { user } = UserAuth();
   const { t } = useTranslation()
 
   useEffect(() => {
-    if (!user) return;
-    onSnapshot(doc(db, 'users', `${user.email}`), (doc) => {
-      setOrders(doc.data()?.savedFood || [])
-      console.log(doc.data()?.savedFood)
-    })
+    if (!user?.email) return;
+    return subscribeToOrders(user.email, setOrders);
   }, [user?.email])
 
-  const deleteOrder = async (passedOrder: Order) => {
+  const handleDeleteOrder = async (passedOrder: Order) => {
+    if (!user?.email) return;
     try {
-      const result = orders.filter((item: Order) => item.createdAt.seconds !== passedOrder.createdAt.seconds);
-      await updateDoc(doc(db, 'users', `${user?.email}`), {
-        savedFood: result,
-      });
+      await deleteOrder(user.email, orders, passedOrder);
     } catch (e) {
       console.log(e);
     }
@@ -77,7 +51,7 @@ export default function Account() {
                 </ul>
                 <button
                   className="order-card__delete-button"
-                  onClick={() => deleteOrder(order)}
+                  onClick={() => handleDeleteOrder(order)}
                 >
                   {t("account.button")}
                 </button>

@@ -30,7 +30,6 @@ export default function NutritionCard({ card }: NutritionCardProps) {
   const { dispatch } = useCart();
 
   const handleAddToCart = () => {
-    console.log('Adding to cart:', card);
     dispatch({ type: 'ADD_ITEM', item: { ...card, name: card.desc } });
   };
   return (
