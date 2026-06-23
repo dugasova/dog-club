@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import Arrow from '../../assets/icons/arrow.svg';
+const Arrow = '/icons/arrow.svg';
 import Poodle from '../../assets/dogs/whitepoodle.png';
 import YellowPrint from '../../assets/dogs/yellow-print.svg';
 import Dachshund from '../../assets/dogs/dachshund.png';

@@ -1,5 +1,5 @@
 import './Sorting.scss';
-import SortingBtn from './../../assets/icons/sortblack.svg'
+const SortingBtn = '/icons/sortblack.svg'
 import { useNutrition } from '../../context/NutritionContext';
 import type { SortOption } from '../../context/NutritionContext'; // Import SortOption as a type
 import { useTranslation } from 'react-i18next';

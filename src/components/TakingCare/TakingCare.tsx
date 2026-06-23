@@ -1,5 +1,5 @@
 import "./TakingCare.scss";
-import Arrow from "../../assets/icons/arrow.svg";
+const Arrow = "/icons/arrow.svg";
 import Hasky from "../../assets/dogs/hasky.jpg";
 import Dog from "../../assets/dogs/dog.png";
 import Poodle from "../../assets/dogs/whitepoodle.png";

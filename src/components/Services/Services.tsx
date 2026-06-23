@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import "./Services.scss";
 import { servicesData } from './../../data'
-import Arrowmore from "../../assets/icons/servicearrow.svg";
+const Arrowmore = "/icons/servicearrow.svg";
 import { useNavigate } from 'react-router-dom';
 import Modal from '../Modal/Modal';
 import { useTranslation } from 'react-i18next';

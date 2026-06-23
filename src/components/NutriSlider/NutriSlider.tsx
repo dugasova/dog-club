@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './NutriSlider.scss';
-import SortingBtn from './../../assets/icons/sortblack.svg';
+const SortingBtn = '/icons/sortblack.svg';
 import { useNutrition } from '../../context/NutritionContext';
 import type { CardData } from '../../types';
 

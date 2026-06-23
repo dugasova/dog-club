@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import "./HappyCustomer.scss";
-import Sliderarrow from "../../assets/icons/sliderarrow.svg";
+const Sliderarrow = "/icons/sliderarrow.svg";
 import { RxDotFilled } from "react-icons/rx";
 import { CUSTOMERS } from '../../data';
 import HappyCustomerCard from './HappyCustomerCard';

@@ -62,7 +62,7 @@ export default function ExpertsForm() {
       <p className="experts-description">{t('experts.description')}</p>
       <form className="experts-form" onSubmit={handleSubmit(onSubmit)}>
         <div className="form-group">
-          <img src="/src/assets/icons/people.svg" alt="name icon" className="input-icon" />
+          <img src="/icons/people.svg" alt="name icon" className="input-icon" />
           <Controller
             name='name'
             control={control}
@@ -80,7 +80,7 @@ export default function ExpertsForm() {
         {errors.name && <span className="error-text">{errors.name.message}</span>}
 
         <div className="form-group">
-          <img src="/src/assets/icons/dog-barking.svg" alt="pet icon" className="input-icon" />
+          <img src="/icons/dog-barking.svg" alt="pet icon" className="input-icon" />
           <Controller
             name='petName'
             control={control}
@@ -98,7 +98,7 @@ export default function ExpertsForm() {
         {errors.petName && <span className="error-text">{errors.petName.message}</span>}
 
         <div className="form-group">
-          <img src="/src/assets/icons/phone.svg" alt="phone icon" className="input-icon" />
+          <img src="/icons/phone.svg" alt="phone icon" className="input-icon" />
           <Controller
             name='phone'
             control={control}
@@ -116,7 +116,7 @@ export default function ExpertsForm() {
         {errors.phone && <span className="error-text">{errors.phone.message}</span>}
 
         <div className="form-group">
-          <img src="/src/assets/icons/email.svg" alt="email icon" className="input-icon" />
+          <img src="/icons/email.svg" alt="email icon" className="input-icon" />
           <Controller
             name='email'
             control={control}

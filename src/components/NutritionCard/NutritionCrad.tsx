@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import './NutritionCard.scss';
-import Star from '../../assets/icons/strforfeed.svg';
+const Star = '/icons/strforfeed.svg';
 
 import { useCart } from '../../context/useCart';
 import type { CardData } from '../../types';

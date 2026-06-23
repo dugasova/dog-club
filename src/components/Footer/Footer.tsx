@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
 import "./Footer.scss";
-import Logo from "../../assets/icons/logo.svg";
-import FacebookIcon from "../../assets/icons/facebook.svg";
-import InstagramIcon from "../../assets/icons/instagram.svg";
+const Logo = "/icons/logo.svg";
+const FacebookIcon = "/icons/facebook.svg";
+const InstagramIcon = "/icons/instagram.svg";
 import Dog from "../../assets/dogs/footerdog.png";
 import { useTranslation } from 'react-i18next';
 
@@ -65,7 +65,7 @@ export default function Footer() {
       </div>
       <div className="footer-to-contact">
         <div className="form-group">
-          <img src="/src/assets/icons/people.svg" alt="name icon" className="input-icon" />
+          <img src="/icons/people.svg" alt="name icon" className="input-icon" />
           <input type="text" id="name" name="name" placeholder={t('footer.form.name')} required className='footer-name' />
         </div>
         <div className="form-group form-group-sms">

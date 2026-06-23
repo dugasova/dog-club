@@ -58,7 +58,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
         <p className="contact-modal-description">{t('experts.description')}</p>
         <form onSubmit={handleSubmit(handleSubmitForm)} className="contact-form">
           <div className="form-group">
-            <img src="/src/assets/icons/people.svg" alt="name icon" className="input-icon" />
+            <img src="/icons/people.svg" alt="name icon" className="input-icon" />
             <Controller
               name='name'
               control={control}
@@ -74,7 +74,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             {errors.name && <p className="error-text">{errors.name.message}</p>}
           </div>
           <div className="form-group">
-            <img src="/src/assets/icons/dog-barking.svg" alt="pet icon" className="input-icon" />
+            <img src="/icons/dog-barking.svg" alt="pet icon" className="input-icon" />
             <Controller
               name='petName'
               control={control}
@@ -90,7 +90,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             {errors.petName && <p className="error-text">{errors.petName.message}</p>}
           </div>
           <div className="form-group">
-            <img src="/src/assets/icons/phone.svg" alt="phone icon" className="input-icon" />
+            <img src="/icons/phone.svg" alt="phone icon" className="input-icon" />
             <Controller
               name='phone'
               control={control}
@@ -106,7 +106,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             {errors.phone && <p className="error-text">{errors.phone.message}</p>}
           </div>
           <div className="form-group">
-            <img src="/src/assets/icons/email.svg" alt="email icon" className="input-icon" />
+            <img src="/icons/email.svg" alt="email icon" className="input-icon" />
             <Controller
               name='email'
               control={control}

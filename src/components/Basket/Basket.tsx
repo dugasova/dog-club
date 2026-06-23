@@ -1,7 +1,7 @@
 import { useState, useMemo, useCallback, useEffect } from "react";
 import "./Basket.scss";
 import { useCart } from "../../context/useCart";
-import HomeIcon from "../../assets/icons/servicearrow.svg";
+const HomeIcon = "/icons/servicearrow.svg";
 import { useNavigate } from "react-router-dom";
 import { UserAuth } from "../../context/AuthContext";
 import { placeOrder } from "../../services/orders";

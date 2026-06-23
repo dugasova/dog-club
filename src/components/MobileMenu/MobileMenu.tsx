@@ -1,8 +1,8 @@
 import './MobileMenu.scss';
-import Logo from '../../assets/icons/logo.svg';
-import CloseMobile from '../../assets/icons/closemobile.svg';
-import Instagram from '../../assets/icons/instagram.svg';
-import Facebook from '../../assets/icons/facebook.svg';
+const Logo = '/icons/logo.svg';
+const CloseMobile = '/icons/closemobile.svg';
+const Instagram = '/icons/instagram.svg';
+const Facebook = '/icons/facebook.svg';
 import { useTranslation } from 'react-i18next';
 
 export default function MobileMenu({ onClose }: { onClose?: () => void }) {

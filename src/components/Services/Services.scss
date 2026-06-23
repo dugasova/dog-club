@@ -139,7 +139,7 @@
 }
 
 .arrow {
-    background-image: url("../../assets/icons/arrow.svg");
+    background-image: url("/icons/arrow.svg");
     /* Mobile default */
     background-repeat: no-repeat;
     background-position: center;
@@ -155,7 +155,7 @@
     z-index: 10;
 
     @media screen and (min-width: 768px) {
-        background-image: url("../../assets/icons/servicesarrowhead.svg");
+        background-image: url("/icons/servicesarrowhead.svg");
         /* Tablet and Desktop */
         right: 10%;
         /* Explicitly right for desktop */

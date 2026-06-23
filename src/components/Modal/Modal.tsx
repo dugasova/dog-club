@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Modal.scss";
-import Close from './../../assets/icons/closemodal.svg'
+const Close = '/icons/closemodal.svg'
 
 interface ModalProps {
   handleClick: () => void;

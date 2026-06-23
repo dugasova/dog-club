@@ -2,7 +2,7 @@ import "./LessTalk.scss";
 import LesstalkImage from "../../assets/lesstalk/lesstolkleft.svg";
 import Pow from "../../assets/dogs/paw.svg";
 import Dog from "../../assets/dogs/shetland.png";
-import Arrow from '../../assets/icons/arrow.svg'
+const Arrow = '/icons/arrow.svg'
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 

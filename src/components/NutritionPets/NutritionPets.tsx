@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "./NutritionPets.scss";
 import NutritionCard from '../NutritionCard/NutritionCrad';
-import SortingArrow from '../../assets/icons/sorting-arrow.svg';
+const SortingArrow = '/icons/sorting-arrow.svg';
 import { useNutrition } from '../../context/NutritionContext';
 import { useTranslation } from 'react-i18next';
 import Sorting from '../Sorting/Sorting';

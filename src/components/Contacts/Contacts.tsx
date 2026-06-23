@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import './Contacts.scss';
 
-import emailIcon from '../../assets/icons/email.svg';
-import phoneIcon from '../../assets/icons/phone.svg';
-import facebookIcon from '../../assets/icons/facebook.svg';
-import instagramIcon from '../../assets/icons/instagram.svg';
+const emailIcon = '/icons/email.svg';
+const phoneIcon = '/icons/phone.svg';
+const facebookIcon = '/icons/facebook.svg';
+const instagramIcon = '/icons/instagram.svg';
 import ExpertsForm from '../Experts/ExpertsForm';
 
 export default function Contacts() {

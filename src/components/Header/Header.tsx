@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Logo from "../../assets/icons/logo.svg";
-import BasketImg from "../../assets/icons/basket.svg";
-import Humburger from "../../assets/icons/humburger.svg";
+const Logo = "/icons/logo.svg";
+const BasketImg = "/icons/basket.svg";
+const Humburger = "/icons/humburger.svg";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import "./Header.scss";
 import Menu from "../Menu/Menu";
