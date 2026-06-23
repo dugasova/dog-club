@@ -213,7 +213,7 @@ export const CardData = [
     id: 1,
     name: "Christian & Tom",
     coment: "Love the overall wrkout experience!",
-    img: '/customers/christin .png',
+    img: '/customers/christin.png',
     rating: '5/5',
   },
   {
@@ -234,7 +234,7 @@ export const CardData = [
     id: 4,
     name: "Christian & Tom",
     coment: "Love the overall wrkout experience!",
-    img: '/customers/christin .png',
+    img: '/customers/christin.png',
     rating: '5/5',
   },
   {

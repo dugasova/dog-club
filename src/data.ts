@@ -229,7 +229,7 @@ export const CUSTOMERS = [
     id: 1,
     name: "happycustomers.customer1.name",
     coment: "happycustomers.customer1.comment",
-    img: '/customers/christin .png',
+    img: '/customers/christin.png',
     rating: '5/5',
   },
   {
@@ -250,7 +250,7 @@ export const CUSTOMERS = [
     id: 4,
     name: "happycustomers.customer4.name",
     coment: "happycustomers.customer4.comment",
-    img: '/customers/christin .png',
+    img: '/customers/christin.png',
     rating: '4/5',
   },
   {

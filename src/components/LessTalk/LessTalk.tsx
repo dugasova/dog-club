@@ -1,6 +1,6 @@
 import "./LessTalk.scss";
 import LesstalkImage from "../../assets/lesstalk/lesstolkleft.svg";
-import Pow from "../../assets/dogs/paw.svg";
+const Pow = "/dogs/paw.svg";
 import Dog from "../../assets/dogs/shetland.png";
 const Arrow = '/icons/arrow.svg'
 import { useTranslation } from 'react-i18next';
