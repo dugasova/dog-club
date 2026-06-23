@@ -37,7 +37,7 @@ beforeEach(() => {
   mockDoc.mockReturnValue(docRef);
   mockUpdateDoc.mockResolvedValue(undefined);
   mockArrayUnion.mockImplementation((data: unknown) => ({ __arrayUnion: data }));
-  mockOnSnapshot.mockImplementation((_ref: unknown, cb: (s: unknown) => void) => {
+  mockOnSnapshot.mockImplementation((_ref: unknown, _cb: (s: unknown) => void) => {
     return mockUnsubscribe;
   });
 });
