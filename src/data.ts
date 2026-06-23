@@ -229,35 +229,35 @@ export const CUSTOMERS = [
     id: 1,
     name: "happycustomers.customer1.name",
     coment: "happycustomers.customer1.comment",
-    img: './src/assets/customers/christin .png',
+    img: '/customers/christin .png',
     rating: '5/5',
   },
   {
     id: 2,
     name: "happycustomers.customer2.name",
     coment: "happycustomers.customer2.comment",
-    img: './src/assets/customers/anna.png',
+    img: '/customers/anna.png',
     rating: '5/5',
   },
   {
     id: 3,
     name: "happycustomers.customer3.name",
     coment: "happycustomers.customer3.comment",
-    img: './src/assets/customers/sindy.png',
+    img: '/customers/sindy.png',
     rating: '4/5',
   },
   {
     id: 4,
     name: "happycustomers.customer4.name",
     coment: "happycustomers.customer4.comment",
-    img: './src/assets/customers/christin .png',
+    img: '/customers/christin .png',
     rating: '4/5',
   },
   {
     id: 5,
     name: "happycustomers.customer5.name",
     coment: "happycustomers.customer5.comment",
-    img: './src/assets/customers/anna.png',
+    img: '/customers/anna.png',
     rating: '5/5',
   },
 ]
@@ -266,27 +266,27 @@ export const servicesData = [
   {
     id: 1,
     title: "Grooming",
-    src: "./src/assets/services/grooming.jpg",
+    src: "/services/grooming.jpg",
     description: "servicecs.grooming.description",
 
   },
   {
     id: 2,
     title: "Nutrition",
-    src: "./src/assets/services/nutrition.jpg",
+    src: "/services/nutrition.jpg",
     description: "servicecs.nutrition.description",
   },
   {
     id: 3,
     title: "Training",
-    src: "./src/assets/services/training.jpg",
+    src: "/services/training.jpg",
     description: "servicecs.training.description",
 
   },
   {
     id: 4,
     title: "Bathing",
-    src: "../src/assets/services/bathing.jpg",
+    src: "/services/bathing.jpg",
     description: "servicecs.bathing.description",
   },
 ]
