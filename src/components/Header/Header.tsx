@@ -38,7 +38,7 @@ export default function Header({ onContactUsClick }: HeaderProps) {
       navigate('/')
 
     } catch (error) {
-      console.log(error)
+      console.error(error)
     }
   }
   const goToLogin = () => navigate('/login');

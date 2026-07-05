@@ -45,7 +45,6 @@ export default function ExpertsForm() {
   const onSubmit = async (data: ExpertsFormData) => {
     try {
       // Simulate API call
-      console.log('Form data:', data);
       await new Promise((resolve) => setTimeout(resolve, 1000));
       setSubmittedName(data.name);
       reset();

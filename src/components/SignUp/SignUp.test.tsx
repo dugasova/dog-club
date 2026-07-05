@@ -6,8 +6,14 @@ import SignUp from './SignUp';
 const navigate = vi.fn();
 const signUp = vi.fn();
 
-vi.mock('react-router', () => ({
+vi.mock('react-router-dom', () => ({
   useNavigate: () => navigate,
+  Link: ({ to, children }: { to: string; children: React.ReactNode }) =>
+    <a href={to}>{children}</a>,
+}));
+
+vi.mock('react-i18next', () => ({
+  useTranslation: () => ({ t: (key: string) => key }),
 }));
 
 vi.mock('../../context/AuthContext', () => ({
@@ -27,7 +33,7 @@ describe('SignUp', () => {
 
     await user.type(screen.getByPlaceholderText('Email'), 'olha@example.com');
     await user.type(screen.getByPlaceholderText('Password'), 'secret123');
-    await user.click(screen.getByRole('button', { name: 'Sign up' }));
+    await user.click(screen.getByRole('button', { name: 'signup.button' }));
 
     expect(signUp).toHaveBeenCalledWith('olha@example.com', 'secret123');
     await waitFor(() => expect(navigate).toHaveBeenCalledWith('/account'));
@@ -40,18 +46,16 @@ describe('SignUp', () => {
 
     await user.type(screen.getByPlaceholderText('Email'), 'olha@example.com');
     await user.type(screen.getByPlaceholderText('Password'), 'secret123');
-    await user.click(screen.getByRole('button', { name: 'Sign up' }));
+    await user.click(screen.getByRole('button', { name: 'signup.button' }));
 
     expect(await screen.findByText('Email already in use')).toBeInTheDocument();
     expect(navigate).not.toHaveBeenCalled();
   });
 
-  it('navigates to the login page when "Log in" is clicked', async () => {
-    const user = userEvent.setup();
+  it('renders a link to the login page', () => {
     render(<SignUp />);
 
-    await user.click(screen.getByText('Log in'));
-
-    expect(navigate).toHaveBeenCalledWith('/login');
+    const link = screen.getByRole('link', { name: 'signup.loginLink' });
+    expect(link).toHaveAttribute('href', '/login');
   });
 });

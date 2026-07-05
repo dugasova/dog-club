@@ -12,6 +12,10 @@ vi.mock('react-router-dom', () => ({
     <a href={to}>{children}</a>,
 }));
 
+vi.mock('react-i18next', () => ({
+  useTranslation: () => ({ t: (key: string) => key }),
+}));
+
 vi.mock('../../context/AuthContext', () => ({
   UserAuth: () => ({ logIn }),
 }));
@@ -29,7 +33,7 @@ describe('Login', () => {
 
     await user.type(screen.getByLabelText('Email'), 'olha@example.com');
     await user.type(screen.getByLabelText('Password'), 'secret123');
-    await user.click(screen.getByRole('button', { name: 'Log in' }));
+    await user.click(screen.getByRole('button', { name: 'login.button' }));
 
     expect(logIn).toHaveBeenCalledWith('olha@example.com', 'secret123');
     await waitFor(() => expect(navigate).toHaveBeenCalledWith('/account'));
@@ -42,9 +46,9 @@ describe('Login', () => {
 
     await user.type(screen.getByLabelText('Email'), 'olha@example.com');
     await user.type(screen.getByLabelText('Password'), 'wrong-password');
-    await user.click(screen.getByRole('button', { name: 'Log in' }));
+    await user.click(screen.getByRole('button', { name: 'login.button' }));
 
-    expect(await screen.findByText('Invalid email or password. Please try again.')).toBeInTheDocument();
+    expect(await screen.findByText('login.error')).toBeInTheDocument();
     expect(navigate).not.toHaveBeenCalled();
   });
 });

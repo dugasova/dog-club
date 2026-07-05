@@ -45,9 +45,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
   const handleSubmitForm = async (data: ContactsFormData) => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    console.log('Form submitted:', data);
-    setSubmittedName(data.name);
-    // alert(`Thank you, ${data.name}! We will respond soon.`);
+    setSubmittedName(data.name);;
     reset(); // Reset form after successful submission
   };
 

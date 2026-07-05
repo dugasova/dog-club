@@ -19,7 +19,7 @@ export default function Account() {
     try {
       await deleteOrder(user.email, orders, passedOrder);
     } catch (e) {
-      console.log(e);
+      console.error(e);
     }
   };
 

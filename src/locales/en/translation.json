@@ -168,6 +168,23 @@
     "items": "Goods",
     "noOrders": "No order found for your accont."
   },
+  "login": {
+    "title": "Log in to your account",
+    "noAccount": "Don't have an account?",
+    "signupLink": "Sign up",
+    "button": "Log in",
+    "error": "Invalid email or password. Please try again."
+  },
+  "signup": {
+    "title": "Sign up",
+    "alreadyMember": "Already a member?",
+    "loginLink": "Log in",
+    "button": "Sign up"
+  },
+  "services": {
+    "moreServices": "More services",
+    "modalTitle": "Service Details"
+  },
   "basket": {
     "title": "Your Cart",
     "totalPrice": "Total Price",

@@ -52,7 +52,7 @@ export default function Services() {
 
         <div className="services-more">
           <button className='services-card_more' onClick={handleNavigateToServices}>
-            more services
+            {t('services.moreServices')}
             <img className="services-arrow" src={Arrowmore} alt="arrow" />
           </button>
         </div>
@@ -61,7 +61,7 @@ export default function Services() {
       {showModal && (
         <Modal handleClick={closeServiceDescriptionModal}>
           <div className="service-description-modal">
-            <h2>Service Details</h2>
+            <h2>{t('services.modalTitle')}</h2>
             <p>{selectedServiceDescription}</p>
           </div>
         </Modal>
