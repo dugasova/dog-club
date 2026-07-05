@@ -22,7 +22,7 @@ vi.mock('../firebase', () => ({ db: {} }));
 const docRef = { id: 'mock-doc-ref' };
 
 const order = (overrides: Partial<Order> = {}): Order => ({
-  id: 'order-1',
+  orderId: 'order-1',
   createdAt: { seconds: 1000, nanoseconds: 0 },
   email: 'user@example.com',
   items: [],
@@ -37,9 +37,7 @@ beforeEach(() => {
   mockDoc.mockReturnValue(docRef);
   mockUpdateDoc.mockResolvedValue(undefined);
   mockArrayUnion.mockImplementation((data: unknown) => ({ __arrayUnion: data }));
-  mockOnSnapshot.mockImplementation((_ref: unknown, _cb: (s: unknown) => void) => {
-    return mockUnsubscribe;
-  });
+  mockOnSnapshot.mockImplementation(() => mockUnsubscribe);
 });
 
 describe('placeOrder', () => {
@@ -85,7 +83,7 @@ describe('subscribeToOrders', () => {
 
   it('calls onChange with savedFood orders when the snapshot contains data', () => {
     const onChange = vi.fn();
-    const orders = [order({ id: 'order-1' }), order({ id: 'order-2' })];
+    const orders = [order({ orderId: 'order-1' }), order({ orderId: 'order-2' })];
     subscribeToOrders('user@example.com', onChange);
 
     const snapshotCb = mockOnSnapshot.mock.calls[0][1] as (s: unknown) => void;
@@ -119,8 +117,8 @@ describe('deleteOrder', () => {
   });
 
   it('removes the target order and saves the remainder', async () => {
-    const keep = order({ id: 'keep', createdAt: { seconds: 200, nanoseconds: 0 } });
-    const remove = order({ id: 'remove', createdAt: { seconds: 100, nanoseconds: 0 } });
+    const keep = order({ orderId: 'keep', createdAt: { seconds: 200, nanoseconds: 0 } });
+    const remove = order({ orderId: 'remove', createdAt: { seconds: 100, nanoseconds: 0 } });
 
     await deleteOrder('user@example.com', [keep, remove], remove);
 

@@ -79,7 +79,7 @@ describe('Account', () => {
 
     render(<Account />);
 
-    expect(screen.getByText('account.orderFrom: order-1')).toBeInTheDocument();
+    expect(screen.getByText('account.orderFrom: user@example.com')).toBeInTheDocument();
     expect(screen.getByText(/\$20\.00/)).toBeInTheDocument();
     expect(screen.getByText(/account\.totalItems/)).toBeInTheDocument();
   });
@@ -141,8 +141,7 @@ describe('Account', () => {
 
     render(<Account />);
 
-    expect(screen.getByText('account.orderFrom: order-1')).toBeInTheDocument();
-    expect(screen.getByText('account.orderFrom: order-2')).toBeInTheDocument();
+    expect(screen.getAllByText('account.orderFrom: user@example.com')).toHaveLength(2);
   });
 
   it('updates the order list when the subscription delivers new data', () => {
@@ -159,6 +158,6 @@ describe('Account', () => {
     act(() => capturedCallback([order()]));
 
     expect(screen.queryByText('account.noOrders')).not.toBeInTheDocument();
-    expect(screen.getByText('account.orderFrom: order-1')).toBeInTheDocument();
+    expect(screen.getByText('account.orderFrom: user@example.com')).toBeInTheDocument();
   });
 });
