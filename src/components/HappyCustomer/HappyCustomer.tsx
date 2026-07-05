@@ -27,7 +27,7 @@ export default function HappyCustomer() {
           <HappyCustomerCard
             key={customer.id}
             id={customer.id}
-            coment={t(customer.coment)}
+            comment={t(customer.comment)}
             name={t(customer.name)}
             img={customer.img}
             rating={customer.rating}
@@ -51,7 +51,7 @@ export default function HappyCustomer() {
             <HappyCustomerCard
               key={customer.id}
               id={customer.id}
-              coment={t(customer.coment)}
+              comment={t(customer.comment)}
               name={t(customer.name)}
               img={customer.img}
               rating={customer.rating}

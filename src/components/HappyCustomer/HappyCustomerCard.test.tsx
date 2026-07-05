@@ -6,7 +6,7 @@ describe('HappyCustomerCard', () => {
   it('renders the customer name, comment and photo', () => {
     render(
       <ul>
-        <HappyCustomerCard id={1} name="Olha" coment="Great food!" img="olha.png" rating="4/5" />
+        <HappyCustomerCard id={1} name="Olha" comment="Great food!" img="olha.png" rating="4/5" />
       </ul>
     );
 
@@ -18,7 +18,7 @@ describe('HappyCustomerCard', () => {
   it('fills the number of stars matching the rating', () => {
     render(
       <ul>
-        <HappyCustomerCard id={1} name="Olha" coment="Great food!" img="olha.png" rating="3/5" />
+        <HappyCustomerCard id={1} name="Olha" comment="Great food!" img="olha.png" rating="3/5" />
       </ul>
     );
 
@@ -31,7 +31,7 @@ describe('HappyCustomerCard', () => {
   it('treats an unparseable rating as zero filled stars', () => {
     render(
       <ul>
-        <HappyCustomerCard id={1} name="Olha" coment="Great food!" img="olha.png" rating="n/a" />
+        <HappyCustomerCard id={1} name="Olha" comment="Great food!" img="olha.png" rating="n/a" />
       </ul>
     );
 

@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import NutritionCard from './NutritionCrad';
+import NutritionCard from './NutritionCard';
 
 const dispatch = vi.fn();
 
@@ -9,7 +9,7 @@ const card = {
   id: 1,
   code: 'KBL-1',
   desc: 'Chicken kibble for dogs',
-  imsrcOfImg: 'kibble.png',
+  imgSrc: 'kibble.png',
   price: 25,
   rating: 3,
 };

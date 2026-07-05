@@ -4,16 +4,14 @@ import BoneWhite from './../../assets/dogs/bonewhite.svg';
 type HappyCustomerProps = {
   id: number,
   name: string,
-  coment: string,
+  comment: string,
   img: string,
   rating: string,
 }
 
-export default function HappyCustomerCard({ img, name, coment, rating }: HappyCustomerProps) {
+export default function HappyCustomerCard({ img, name, comment, rating }: HappyCustomerProps) {
   const ratingNum = parseInt(rating.split('/')[0]) || 0;
-  const maaxRating = 5
-  // Create array of stars
-  const stars = Array.from({ length: maaxRating }).map((_, idx) => ({
+  const stars = Array.from({ length: 5 }).map((_, idx) => ({
     id: idx,
     filled: idx < ratingNum
   }))
@@ -24,7 +22,7 @@ export default function HappyCustomerCard({ img, name, coment, rating }: HappyCu
       </p>
       <div className='happy-customer__info'>
         <h3 className='happy-customer__name'>{name}</h3>
-        <p className='happy-customer__coment'>{coment}</p>
+        <p className='happy-customer__comment'>{comment}</p>
         <p className='happy-customer__rating'>
           {
             stars.map(star => (

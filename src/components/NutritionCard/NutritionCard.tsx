@@ -29,7 +29,7 @@ export default function NutritionCard({ card }: NutritionCardProps) {
       <p>
         <img
           className="nutri-card-img"
-          src={card.imsrcOfImg} alt="img of savaryimg" />
+          src={card.imgSrc} alt="nutrition card" />
       </p>
       <p className="nutri-card__code">{t('nutrition.code')}: {card.code}</p>
       <p className="nutri-card__stars">

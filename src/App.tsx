@@ -2,10 +2,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './pages/Layout';
 import Home from './routes/Home';
 import Nutrition from './routes/Nutrition';
-import EroorRoute from './routes/ErrorRoute';
+import ErrorRoute from './routes/ErrorRoute';
 import ServicesRoute from './pages/ServicesRoute';
 import ContactsRoute from './routes/ContactsRoute';
-import { CartProvider } from './context/BuyBasketcontext';
+import { CartProvider } from './context/BuyBasketContext';
 import BasketRoute from './routes/BasketRoute';
 import LoginRoute from './routes/LoginRoute';
 import SignUpRoute from './routes/SignUpRoute';
@@ -62,10 +62,10 @@ export default function App() {
 
         {
           path: '*',
-          element: <EroorRoute />
+          element: <ErrorRoute />
         },
       ],
-      errorElement: <EroorRoute />
+      errorElement: <ErrorRoute />
     },
 
   ])

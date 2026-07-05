@@ -1,6 +1,6 @@
 import "./TakingCare.scss";
 const Arrow = "/icons/arrow.svg";
-import Hasky from "../../assets/dogs/hasky.jpg";
+import Husky from "../../assets/dogs/husky.jpg";
 import Dog from "../../assets/dogs/dog.png";
 import Poodle from "../../assets/dogs/whitepoodle.png";
 import YellowPrint from "../../assets/dogs/yellow-print.svg";
@@ -28,7 +28,7 @@ export default function TakingCare() {
             <p className="takingcare-content_description">{t("takingcare.description")}</p>
             <button className='btn' onClick={handleToContent}>{t("takingcare.button")}</button>
             <div>
-              <img className="takingcare-content_dog" src={Hasky} alt="" />
+              <img className="takingcare-content_dog" src={Husky} alt="" />
             </div>
           </div>
           <div className="takingcare-content-images">

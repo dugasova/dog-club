@@ -27,7 +27,7 @@ vi.mock('../../context/AuthContext', () => ({
 }));
 
 vi.mock('../Menu/Menu', () => ({ default: () => <nav data-testid="menu" /> }));
-vi.mock('../LunguageButton/LanguegeButton', () => ({ default: () => <button data-testid="lang-btn" /> }));
+vi.mock('../LanguageButton/LanguageButton', () => ({ default: () => <button data-testid="lang-btn" /> }));
 vi.mock('../MobileMenu/MobileMenu', () => ({
   default: ({ onClose }: { onClose?: () => void }) => (
     <div data-testid="mobile-menu">
@@ -37,7 +37,7 @@ vi.mock('../MobileMenu/MobileMenu', () => ({
 }));
 
 const item = (overrides: Partial<CartItem> = {}): CartItem => ({
-  id: 1, name: 'Kibble', price: 10, imsrcOfImg: '', code: 'K1',
+  id: 1, name: 'Kibble', price: 10, imgSrc: '', code: 'K1',
   rating: 4, desc: 'Good kibble', quantity: 1, ...overrides,
 });
 

@@ -7,7 +7,7 @@ export interface OrderItem {
   quantity: number;
   price: number;
   id?: number;
-  imsrcOfImg?: string;
+  imgSrc?: string;
   code?: string;
   rating?: number;
 }

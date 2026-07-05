@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
 import type { CartItem } from '../../types';
 import { UserAuth } from "../../context/AuthContext";
-import LanguegeButton from "../LunguageButton/LanguegeButton";
+import LanguageButton from "../LanguageButton/LanguageButton";
 
 interface HeaderProps {
   onContactUsClick: () => void;
@@ -67,7 +67,7 @@ export default function Header({ onContactUsClick }: HeaderProps) {
             <button onClick={goToLogin} className='header-auth-button'>{t('header.login')}</button>
             <button onClick={goToSignup} className='header-auth-button'>{t('header.signup')}</button>
           </div>)}
-        <LanguegeButton />
+        <LanguageButton />
         <div className="header-controls">
           <div className="header-basket">
             <button

@@ -115,7 +115,7 @@ export default function Basket() {
             <ul className="basket-items-list">
               {state.items.map((item: CartItem) => (
                 <li key={item.id} className="basket-item">
-                  <img src={item.imsrcOfImg} alt={item.name} className="basket-item-image" />
+                  <img src={item.imgSrc} alt={item.name} className="basket-item-image" />
                   <div className="basket-item-details">
                     <p className="basket-item-name">{item.name}</p>
                     <p>{item.desc}</p>

@@ -11,7 +11,7 @@ const card = (overrides: Partial<CardData> = {}): CardData => ({
   price: 10,
   code: 'KBL-1',
   desc: 'Chicken kibble for dogs',
-  imsrcOfImg: 'kibble.png',
+  imgSrc: 'kibble.png',
   ...overrides,
 });
 

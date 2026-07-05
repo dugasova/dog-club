@@ -5,14 +5,14 @@ export type CardData = {
   desc: string;
   descUk?: string;
   price: number;
-  imsrcOfImg: string;
+  imgSrc: string;
 }
 
 export type CartItem = {
   id: number;
   name: string;
   price: number;
-  imsrcOfImg: string;
+  imgSrc: string;
   quantity: number;
   code: string;
   rating: number;
