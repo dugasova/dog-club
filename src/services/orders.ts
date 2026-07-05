@@ -13,7 +13,7 @@ export interface OrderItem {
 }
 
 export interface Order {
-  id: string;
+  orderId: string;
   createdAt: { seconds: number; nanoseconds: number };
   email: string;
   items: OrderItem[];

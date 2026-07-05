@@ -23,7 +23,7 @@ let authUser: { email: string; uid: string } | null = null;
 const mockUnsubscribe = vi.fn();
 
 const order = (overrides: Partial<Order> = {}): Order => ({
-  id: 'order-1',
+  orderId: 'order-1',
   createdAt: { seconds: 1700000000, nanoseconds: 0 },
   email: 'user@example.com',
   items: [{ desc: 'Chicken kibble', quantity: 2, price: 10 }],
@@ -135,7 +135,7 @@ describe('Account', () => {
   it('renders multiple order cards when multiple orders arrive', () => {
     authUser = { email: 'user@example.com', uid: 'user-1' };
     subscribeToOrders.mockImplementation((_email: string, cb: (o: Order[]) => void) => {
-      cb([order({ id: 'order-1' }), order({ id: 'order-2' })]);
+      cb([order({ orderId: 'order-1' }), order({ orderId: 'order-2' })]);
       return mockUnsubscribe;
     });
 

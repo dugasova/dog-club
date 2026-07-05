@@ -143,7 +143,7 @@ describe('Basket', () => {
     expect(placeOrder).toHaveBeenCalledWith(expect.objectContaining({
       email: 'olha@example.com',
       userId: 'user-1',
-      orderId: 'user-1',
+      orderId: expect.any(String),
       items: cartItems,
       totalPrice: 20,
       totalItems: 2,

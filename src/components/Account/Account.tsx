@@ -32,8 +32,8 @@ export default function Account() {
           orders.map((order: Order) => {
             const orderDate = order.createdAt ? new Date(order.createdAt.seconds * 1000).toLocaleString() : 'N/A';
             return (
-              <div key={order.id} className="order-card">
-                <h3 className="order-card__title">{t("account.orderFrom")}: {order.id}</h3>
+              <div key={order.orderId} className="order-card">
+                <h3 className="order-card__title">{t("account.orderFrom")}: {order.email}</h3>
                 <p className="order-card__info"><strong>{t("account.date")}:</strong> {orderDate}</p>
                 <p className="order-card__info"><strong>{t("account.totalPrice")}:</strong> ${order.totalPrice ? order.totalPrice.toFixed(2) : '0.00'}</p>
                 <p className="order-card__info"><strong>{t("account.totalItems")}:</strong> {order.totalItems || 0}</p>
@@ -46,7 +46,7 @@ export default function Account() {
                       </li>
                     ))
                   ) : (
-                    <li key={order.id} >No items found for this order.</li>
+                    <li key={order.orderId}>No items found for this order.</li>
                   )}
                 </ul>
                 <button

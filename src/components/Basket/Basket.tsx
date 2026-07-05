@@ -80,7 +80,7 @@ export default function Basket() {
       await placeOrder({
         email: `${user.email}`,
         userId: user.uid,
-        orderId: user.uid,
+        orderId: crypto.randomUUID(),
         items: state.items,
         totalPrice,
         totalItems,
