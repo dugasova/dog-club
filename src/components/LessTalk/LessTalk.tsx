@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import "./LessTalk.scss";
 import LesstalkImage from "../../assets/lesstalk/lesstolkleft.svg";
 const Pow = "/dogs/paw.svg";
@@ -9,6 +10,8 @@ import { useNavigate } from 'react-router-dom';
 export default function LessTalk() {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const [videoOpen, setVideoOpen] = useState(false);
+
   const handleToLessTalkContent = () => {
     navigate('/lesstalk')
   }
@@ -29,8 +32,21 @@ export default function LessTalk() {
             <img src={Pow} alt="print of dogs pow " />
           </div>
         </div>
-        <button className='lesstalk-sheltland__btn play'></button>
       </div>
+
+      {videoOpen && (
+        <div className="video-modal" onClick={() => setVideoOpen(false)}>
+          <div className="video-modal__content" onClick={e => e.stopPropagation()}>
+            <button className="video-modal__close" onClick={() => setVideoOpen(false)} aria-label="Close">×</button>
+            <iframe
+              src="https://www.youtube.com/embed/nYMRS24mATg?autoplay=1"
+              title="Dog club video"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      )}
       <div className="lesstalk-content-block">
         <h2 className="lesstalk-title">{t("lesstalk.title")}
           <span>
@@ -39,7 +55,10 @@ export default function LessTalk() {
         <p className="lesstalk-description">
           {t("lesstalk.description")}
         </p>
-        <button onClick={handleToLessTalkContent} className='lesstalk_btn btn'>{t("lesstalk.button")}</button>
+        <div className="lesstalk-actions">
+          <button onClick={handleToLessTalkContent} className='lesstalk_btn btn'>{t("lesstalk.button")}</button>
+          <button className='lesstalk-sheltland__btn play' onClick={() => setVideoOpen(true)} aria-label="Play video" />
+        </div>
       </div>
     </div>
   )
