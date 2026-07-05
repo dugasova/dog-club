@@ -36,7 +36,7 @@
         }
 
         &-link {
-            color: #222;
+            color: var(--primary-dark);
             text-decoration: none;
             padding: 0.5rem;
             position: relative;
@@ -129,7 +129,7 @@
 .mobile {
     position: fixed;
     inset: 0;
-    background: #fff;
+    background: var(--primary-color);
     z-index: 1200;
     display: flex;
     flex-direction: column;
@@ -164,7 +164,7 @@
     }
 
     .mobile-menu-link {
-        color: #222;
+        color: var(--primary-dark);
         text-decoration: none;
         font-size: 1.125rem;
     }

@@ -8,7 +8,7 @@
 }
 
 @mixin auth-form-card {
-  background: #ffffff;
+  background: var(--primary-color);
   padding: 32px 28px;
   border-radius: 12px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
@@ -28,13 +28,13 @@
   label {
     font-size: 0.9rem;
     font-weight: 600;
-    color: #333;
+    color: var(--color-text);
     margin-bottom: 4px;
   }
 
   input {
     padding: 10px 14px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-border);
     border-radius: 8px;
     font-size: 0.95rem;
     transition: border-color 200ms ease, box-shadow 200ms ease;
@@ -63,7 +63,7 @@
 @mixin auth-submit-btn {
   padding: 12px;
   background: var(--menu-accent, #ffd166);
-  color: #222;
+  color: var(--primary-dark);
   border: none;
   border-radius: 8px;
   font-size: 1rem;
@@ -74,7 +74,7 @@
   letter-spacing: 0.5px;
 
   &:hover {
-    background: #ffca5c;
+    background: var(--secondary-yellow-light);
     transform: translateY(-2px);
   }
 
@@ -87,7 +87,7 @@
 @mixin auth-help-text {
   font-size: 0.85rem;
   text-align: center;
-  color: #666;
+  color: var(--color-text-muted);
 
   a, .signup-link {
     color: var(--menu-accent, #ffd166);
@@ -101,7 +101,7 @@
 }
 
 .error-message {
-  color: red;
+  color: var(--color-danger);
   margin-bottom: 10px;
   font-weight: bold;
 }

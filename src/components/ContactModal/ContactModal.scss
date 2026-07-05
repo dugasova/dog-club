@@ -1,5 +1,5 @@
 .contact-modal-backdrop {
-  background-color: #FFFDF8; // Light cream/yellow background
+  background-color: var(--secondary-light);
   padding: 40px;
   border-radius: 20px;
   position: relative; // For background paw prints
@@ -121,7 +121,7 @@
 
     .contact-modal-btn {
       background-color: var(--primary-color-yellow);
-      color: #fff;
+      color: var(--primary-color);
       border: none;
       padding: 15px 25px;
       border-radius: 10px;

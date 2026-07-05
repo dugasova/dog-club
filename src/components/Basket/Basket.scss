@@ -6,7 +6,7 @@
   position: relative;
 
   .basket-container {
-    background-color: #fff;
+    background-color: var(--primary-color);
     padding: 24px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
@@ -50,7 +50,7 @@
 
       .modal-description {
         text-align: left;
-        color: #777;
+        color: var(--color-text-muted);
         margin-top: 6px;
         font-size: 15px;
       }
@@ -60,12 +60,12 @@
         justify-content: space-between;
         margin-bottom: 10px;
         padding: 8px 0;
-        border-bottom: 1px solid #f2f2f2;
+        border-bottom: 1px solid var(--color-border-light);
 
         .modal-total {
           font-size: 16px;
           font-weight: 500;
-          color: #555;
+          color: var(--color-text-subtle);
         }
       }
 
@@ -78,7 +78,7 @@
           display: flex;
           align-items: center;
           padding: 14px 0;
-          border-bottom: 1px solid #f4f4f4;
+          border-bottom: 1px solid var(--color-border-light);
 
           &:last-child {
             border-bottom: none;
@@ -98,7 +98,7 @@
             p {
               margin: 0;
               font-size: 14px;
-              color: #333;
+              color: var(--color-text);
 
               &.basket-item-name {
                 font-weight: 700;
@@ -107,7 +107,7 @@
               }
 
               &.basket-item-price {
-                color: #e74c3c;
+                color: var(--color-danger);
                 font-weight: 700;
                 margin-top: 6px;
               }
@@ -120,7 +120,7 @@
 
               button {
                 background-color: #f3e8c9;
-                border: 1px solid #ddd;
+                border: 1px solid var(--color-border);
                 padding: 6px 10px;
                 cursor: pointer;
                 font-size: 15px;
@@ -141,8 +141,8 @@
           }
 
           .remove-item-button {
-            background-color: #e7ae3c;
-            color: #fff;
+            background-color: var(--menu-accent);
+            color: var(--primary-color);
             border: none;
             padding: 8px 12px;
             border-radius: 6px;
@@ -175,13 +175,13 @@
 
       .cart-footer {
         padding-top: 14px;
-        border-top: 1px solid #f2f2f2;
+        border-top: 1px solid var(--color-border-light);
         margin-top: 12px;
 
         .cart-footer__price {
           font-size: 20px;
           font-weight: 700;
-          color: #333;
+          color: var(--color-text);
           text-align: right;
         }
 
@@ -215,8 +215,6 @@
 
   img {
     color: var(--primary-color);
-    // width: 20px;
-    // height: 20px;
     transition: transform 0.3s ease;
   }
 
@@ -227,25 +225,13 @@
     transition: inherit;
   }
 
-  // &::before {
-  //   content: '';
-  //   position: absolute;
-  //   top: 0;
-  //   left: -100%;
-  //   width: 100%;
-  //   height: 100%;
-  //   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  //   transition: left 0.5s ease;
-  //   z-index: -1;
-  // }
-
   &:hover::before {
     left: 100%;
   }
 
   &.btn-home {
-    background: linear-gradient(135deg, #FFD700 0%, #FFC700 100%);
-    color: #333;
+    background: linear-gradient(135deg, var(--menu-accent) 0%, var(--secondary-yellow-light) 100%);
+    color: var(--color-text);
     box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
 
     &:hover {
@@ -264,8 +250,8 @@
   }
 
   &.btn-purchases {
-    background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%);
-    color: #fff;
+    background: linear-gradient(135deg, var(--color-warning) 0%, var(--color-warning-dark) 100%);
+    color: var(--primary-color);
     box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4);
 
     &:hover {
@@ -297,8 +283,8 @@
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
-  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
-  color: #fff;
+  background: linear-gradient(135deg, var(--color-success) 0%, var(--color-success-hover) 100%);
+  color: var(--primary-color);
   box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
   position: relative;
   overflow: hidden;

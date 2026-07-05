@@ -1,6 +1,6 @@
 .contacts {
   padding: 4rem 1rem;
-  background-color: #f9f9f9;
+  background-color: var(--color-bg-surface);
 
   &__container {
     max-width: 1200px;
@@ -12,14 +12,14 @@
 
   &__title {
     font-size: 2.8rem;
-    color: #333;
+    color: var(--color-text);
     text-align: center;
     margin-bottom: 1rem;
   }
 
   &__description {
     font-size: 1.1rem;
-    color: #666;
+    color: var(--color-text-muted);
     text-align: center;
     max-width: 800px;
     margin: 0 auto 2rem auto;
@@ -39,7 +39,7 @@
 
   &__subtitle {
     font-size: 1.8rem;
-    color: #444;
+    color: var(--color-text);
     margin-bottom: 1.5rem;
     text-align: center;
 
@@ -52,7 +52,7 @@
   &__social {
     flex: 1;
     min-width: 280px;
-    background-color: #fff;
+    background-color: var(--primary-color);
     padding: 2.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -62,7 +62,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
-    color: #555;
+    color: var(--color-text-subtle);
     font-size: 1rem;
 
     img {
@@ -77,12 +77,12 @@
   }
 
   &__link {
-    color: #555;
+    color: var(--color-text-subtle);
     text-decoration: none;
     transition: color 0.3s ease;
 
     &:hover {
-      color: #007bff; // A common primary color, adjust as needed
+      color: var(--primary-color-yellow);
     }
   }
 
@@ -108,7 +108,7 @@
   }
 
   &__form-wrapper {
-    background-color: #fff;
+    background-color: var(--primary-color);
     padding: 3rem;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -134,13 +134,13 @@
   &__label {
     margin-bottom: 0.5rem;
     font-weight: 600;
-    color: #333;
+    color: var(--color-text);
   }
 
   &__input,
   &__textarea {
     padding: 0.8rem 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-border);
     border-radius: 5px;
     font-size: 1rem;
     width: 100%;
@@ -149,8 +149,8 @@
 
     &:focus {
       outline: none;
-      border-color: #007bff; // Adjust to project's primary color
-      box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); // Adjust to project's primary color
+      border-color: var(--primary-color-yellow);
+      box-shadow: 0 0 0 2px rgba(255, 159, 14, 0.25);
     }
   }
 
@@ -160,18 +160,18 @@
   }
 
   &__button {
-    background-color: #007bff; // Adjust to project's primary color
-    color: #fff;
+    background-color: var(--primary-color-yellow);
+    color: var(--primary-color);
     padding: 1rem 1.5rem;
     border: none;
     border-radius: 5px;
     font-size: 1.1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    align-self: flex-start; // Align button to the left
+    align-self: flex-start;
 
     &:hover {
-      background-color: #0056b3; // Darker shade for hover
+      background-color: var(--secondary-yellow-light);
     }
   }
 }
