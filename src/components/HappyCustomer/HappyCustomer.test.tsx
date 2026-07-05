@@ -2,6 +2,7 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, it, expect, vi } from 'vitest';
 import HappyCustomer from './HappyCustomer';
+import { CUSTOMERS } from '../../data';
 
 vi.mock('react-i18next', () => ({
   useTranslation: () => ({ t: (key: string) => key }),
@@ -12,7 +13,8 @@ describe('HappyCustomer', () => {
     render(<HappyCustomer />);
 
     expect(screen.getByRole('heading', { name: 'happycustomers.title' })).toBeInTheDocument();
-    expect(screen.getAllByRole('listitem')).toHaveLength(3);
+    // mobile scroll list (all) + desktop visible slice (3)
+    expect(screen.getAllByRole('listitem')).toHaveLength(CUSTOMERS.length + 3);
   });
 
   it('disables the previous button at the start and enables it after moving forward', async () => {

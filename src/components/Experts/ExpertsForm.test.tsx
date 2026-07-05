@@ -16,7 +16,7 @@ describe('ExpertsForm', () => {
 
     expect(await screen.findByText('experts.form.validation.nameMin')).toBeInTheDocument();
     expect(screen.getByText('experts.form.validation.petNameRequired')).toBeInTheDocument();
-    expect(screen.getByText(/experts\.form\.validation\.invali\s+dPhone/)).toBeInTheDocument();
+    expect(screen.getByText('experts.form.validation.invalidPhone')).toBeInTheDocument();
     expect(screen.getByText('experts.form.validation.invalidEmail')).toBeInTheDocument();
     expect(screen.getByText('experts.form.validation.privacyRequired')).toBeInTheDocument();
   });

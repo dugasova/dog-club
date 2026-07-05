@@ -18,7 +18,7 @@ export function AuthContextProvider({ children }: { children: React.ReactNode })
     function signUp(email: string, password: string) {
        return createUserWithEmailAndPassword(auth, email, password).then((credential) => {
         setDoc(doc(db, 'users', email), {
-            savedFoods: []
+            savedFood: []
         })
         return credential
        })
