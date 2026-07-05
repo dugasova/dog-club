@@ -20,6 +20,22 @@ export default function HappyCustomer() {
   return (
     <section className="happy-customer container">
       <h2 className="happy-customer__title">{t('happycustomers.title')}</h2>
+
+      {/* Mobile: native scroll-snap, all cards */}
+      <ul className='happy-customer__scroll-list'>
+        {CUSTOMERS.map((customer) => (
+          <HappyCustomerCard
+            key={customer.id}
+            id={customer.id}
+            coment={t(customer.coment)}
+            name={t(customer.name)}
+            img={customer.img}
+            rating={customer.rating}
+          />
+        ))}
+      </ul>
+
+      {/* Desktop: button navigation, sliced */}
       <div className='happy-customer__wrapper'>
         <button
           className="happy-customer-btn btn__left"
@@ -52,7 +68,8 @@ export default function HappyCustomer() {
           <img src={Sliderarrow} alt="Next" />
         </button>
       </div>
-      <div>
+
+      <div className="happy-customer__dots-wrapper">
         {CUSTOMERS.map((_, idx) => (
           <RxDotFilled size={30}
             key={idx}
