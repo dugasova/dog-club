@@ -1,0 +1,72 @@
+.service-slider {
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 16px;
+
+  &__track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__card {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    position: relative;
+    height: 240px;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: var(--primary-color);
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    display: block;
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 32px 16px 16px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.55));
+    border-radius: 0 0 20px 20px;
+    font-family: "Roboto-SemiBold";
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--primary-color-yellow);
+  }
+
+  &__dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  &__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    background-color: #ccc;
+    transition: background-color 0.2s ease;
+
+    &--active {
+      background-color: var(--primary-color-yellow);
+    }
+  }
+}

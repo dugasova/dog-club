@@ -5,6 +5,7 @@ const Arrowmore = "/icons/servicearrow.svg";
 import { useNavigate } from 'react-router-dom';
 import Modal from '../Modal/Modal';
 import { useTranslation } from 'react-i18next';
+import ServiceSlider from './ServiceSlider';
 
 export default function Services() {
   const navigate = useNavigate();
@@ -34,20 +35,27 @@ export default function Services() {
       <div className="container">
         <h2 className="services-title">{t('menu.services')}</h2>
 
+        {/* Mobile: slider */}
+        <div className="services-slider-wrapper">
+          <ServiceSlider items={servicesData} onCardClick={openServiceDescriptionModal} />
+        </div>
+
+        {/* Tablet+: grid */}
         <ul className="services-cards">
-          {
-            servicesData.map(({ id, title, src, description }) => (
-              <li key={id} className="services-card" onClick={() => openServiceDescriptionModal(t(description.replace('services.', 'servicecs.')))}>
-                <img className="services-card_image" src={src} alt={title} />
-                <h3 className="services-card_title">{t(`servicecs.${title.toLowerCase()}.title`)}</h3>
-              </li>
-            ))
-          }
+          {servicesData.map(({ id, title, src, description }) => (
+            <li key={id} className="services-card" onClick={() => openServiceDescriptionModal(t(description))}>
+              <img className="services-card_image" src={src} alt={title} />
+              <h3 className="services-card_title">{t(`servicecs.${title.toLowerCase()}.title`)}</h3>
+            </li>
+          ))}
+        </ul>
+
+        <div className="services-more">
           <button className='services-card_more' onClick={handleNavigateToServices}>
             more services
             <img className="services-arrow" src={Arrowmore} alt="arrow" />
           </button>
-        </ul>
+        </div>
       </div>
 
       {showModal && (
