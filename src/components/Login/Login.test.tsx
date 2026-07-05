@@ -6,8 +6,10 @@ import Login from './Login';
 const navigate = vi.fn();
 const logIn = vi.fn();
 
-vi.mock('react-router', () => ({
+vi.mock('react-router-dom', () => ({
   useNavigate: () => navigate,
+  Link: ({ to, children }: { to: string; children: React.ReactNode }) =>
+    <a href={to}>{children}</a>,
 }));
 
 vi.mock('../../context/AuthContext', () => ({

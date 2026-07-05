@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import userEvent from '@testing-library/user-event';
 import { describe, it, expect, vi } from 'vitest';
 import MobileMenu from './MobileMenu';
@@ -7,9 +8,12 @@ vi.mock('react-i18next', () => ({
   useTranslation: () => ({ t: (key: string) => key }),
 }));
 
+const renderMenu = (props = {}) =>
+  render(<MemoryRouter><MobileMenu {...props} /></MemoryRouter>);
+
 describe('MobileMenu', () => {
   it('renders all four navigation links', () => {
-    render(<MobileMenu />);
+    renderMenu();
 
     expect(screen.getByRole('link', { name: 'menu.lessTalk' })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'menu.services' })).toBeInTheDocument();
@@ -20,7 +24,7 @@ describe('MobileMenu', () => {
   it('calls onClose when the close button is clicked', async () => {
     const onClose = vi.fn();
     const user = userEvent.setup();
-    render(<MobileMenu onClose={onClose} />);
+    renderMenu({ onClose });
 
     await user.click(screen.getByRole('button'));
 
@@ -30,7 +34,7 @@ describe('MobileMenu', () => {
   it('calls onClose when a nav link is clicked', async () => {
     const onClose = vi.fn();
     const user = userEvent.setup();
-    render(<MobileMenu onClose={onClose} />);
+    renderMenu({ onClose });
 
     await user.click(screen.getByRole('link', { name: 'menu.services' }));
 
@@ -40,7 +44,7 @@ describe('MobileMenu', () => {
   it('calls onClose when a social link is clicked', async () => {
     const onClose = vi.fn();
     const user = userEvent.setup();
-    render(<MobileMenu onClose={onClose} />);
+    renderMenu({ onClose });
 
     await user.click(screen.getByRole('link', { name: 'Instagram' }));
 
@@ -49,7 +53,7 @@ describe('MobileMenu', () => {
 
   it('does not throw when onClose is not provided', async () => {
     const user = userEvent.setup();
-    render(<MobileMenu />);
+    renderMenu();
 
     await expect(user.click(screen.getByRole('button'))).resolves.not.toThrow();
   });

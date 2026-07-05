@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router';
+import { useNavigate, Link } from 'react-router-dom';
 import { UserAuth } from '../../context/AuthContext';
 import './Login.scss'
 
@@ -54,7 +54,7 @@ export default function Login() {
           Log in
         </button>
         <p className="login-help">
-          Don't have an account? <a href="/signup">Sign up</a>
+          Don't have an account? <Link to="/signup">Sign up</Link>
         </p>
       </form>
     </div>

@@ -1,4 +1,5 @@
 import './MobileMenu.scss';
+import { NavLink } from 'react-router-dom';
 const Logo = '/icons/logo.svg';
 const CloseMobile = '/icons/closemobile.svg';
 const Instagram = '/icons/instagram.svg';
@@ -26,9 +27,9 @@ export default function MobileMenu({ onClose }: { onClose?: () => void }) {
         <ul className="mobile-menu-list">
           {menuItems.map((item, index) => (
             <li key={index} className="mobile-menu-item">
-              <a href={item.link} className="mobile-menu-link" onClick={() => onClose?.()}>
+              <NavLink to={item.link} className="mobile-menu-link" onClick={() => onClose?.()}>
                 {item.name}
-              </a>
+              </NavLink>
             </li>
           ))}
         </ul>

@@ -42,7 +42,7 @@ export const CardData = [
   {
     id: 6,
     code: '34905',
-    rating: 6,
+    rating: 5,
     desc: 'nutrition.desc3',
     price: 140,
     imsrcOfImg: '/dogs/smalldog.png'
@@ -90,7 +90,7 @@ export const CardData = [
   {
     id: 12,
     code: '34905',
-    rating: 6,
+    rating: 5,
     desc: 'Acana Adult Small Breed 31/17',
     price: 140,
     imsrcOfImg: '/dogs/smalldog.png'

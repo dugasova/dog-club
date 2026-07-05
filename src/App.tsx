@@ -5,7 +5,7 @@ import Nutrition from './routes/Nutrition';
 import EroorRoute from './routes/ErrorRoute';
 import ServicesRoute from './pages/ServicesRoute';
 import ContactsRoute from './routes/ContactsRoute';
-
+import { CartProvider } from './context/BuyBasketcontext';
 import BasketRoute from './routes/BasketRoute';
 import LoginRoute from './routes/LoginRoute';
 import SignUpRoute from './routes/SignUpRoute';
@@ -71,7 +71,11 @@ export default function App() {
   ])
   return (
     <AuthContextProvider>
-      <RouterProvider router={router} />
+
+      <CartProvider>
+        <RouterProvider router={router} />
+      </CartProvider>
     </AuthContextProvider>
+
   )
 }
