@@ -2,13 +2,15 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { placeOrder, subscribeToOrders, deleteOrder } from './orders';
 import type { Order, NewOrder } from './orders';
 
-const { mockDoc, mockOnSnapshot, mockUpdateDoc, mockArrayUnion, mockUnsubscribe } = vi.hoisted(() => ({
-  mockDoc: vi.fn(),
-  mockOnSnapshot: vi.fn(),
-  mockUpdateDoc: vi.fn(),
-  mockArrayUnion: vi.fn(),
-  mockUnsubscribe: vi.fn(),
-}));
+const { mockDoc, mockOnSnapshot, mockUpdateDoc, mockArrayUnion, mockUnsubscribe } = vi.hoisted(
+  () => ({
+    mockDoc: vi.fn(),
+    mockOnSnapshot: vi.fn(),
+    mockUpdateDoc: vi.fn(),
+    mockArrayUnion: vi.fn(),
+    mockUnsubscribe: vi.fn(),
+  }),
+);
 
 vi.mock('firebase/firestore', () => ({
   doc: mockDoc,

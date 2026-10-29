@@ -16,10 +16,10 @@ export default function MobileMenu({ onClose }: { onClose?: () => void }) {
   ];
 
   return (
-    <div className='mobile'>
+    <div className="mobile">
       <header className="mobile-menu-header">
         <img src={Logo} alt="logo" className="mobile-menu-logo" />
-        <button className='mobile-menu-close' onClick={() => onClose?.()}>
+        <button className="mobile-menu-close" onClick={() => onClose?.()}>
           <img src={CloseMobile} alt="close menu" className="mobile-menu-close__icon" />
         </button>
       </header>
@@ -43,5 +43,5 @@ export default function MobileMenu({ onClose }: { onClose?: () => void }) {
         </a>
       </div>
     </div>
-  )
+  );
 }

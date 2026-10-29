@@ -1,56 +1,56 @@
 .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-overlay);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-overlay);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 
-    &-backdrop {
-        background-color: var(--primary-color);
-        padding: 2rem;
-        border-radius: 8px;
-        position: relative;
-        max-width: 80%;
-        max-height: 80%;
-        overflow-y: auto;
+  &-backdrop {
+    background-color: var(--primary-color);
+    padding: 2rem;
+    border-radius: 8px;
+    position: relative;
+    max-width: 80%;
+    max-height: 80%;
+    overflow-y: auto;
+  }
+
+  &-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &-content {
+    padding-top: 20px;
+  }
+
+  .service-description-modal {
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--color-text);
     }
 
-    &-close-btn {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        font-size: 1.5rem;
-
-        img {
-            width: 20px;
-            height: 20px;
-        }
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--color-text-subtle);
+      white-space: pre-wrap;
     }
-
-    &-content {
-        padding-top: 20px;
-    }
-
-    .service-description-modal {
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: var(--color-text);
-        }
-
-        p {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: var(--color-text-subtle);
-            white-space: pre-wrap;
-        }
-    }
+  }
 }

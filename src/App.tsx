@@ -17,65 +17,63 @@ import LessTalkRoute from './routes/LessTalkRoute';
 export default function App() {
   const router = createBrowserRouter([
     {
-      path: '/', element: <Layout />,
+      path: '/',
+      element: <Layout />,
       children: [
         {
           path: '/',
-          element: <Home />
+          element: <Home />,
         },
         {
           path: 'happy-customer',
-          element: <Nutrition />
+          element: <Nutrition />,
         },
         {
           path: 'services',
-          element: <ServicesRoute />
+          element: <ServicesRoute />,
         },
         {
           path: 'contact',
-          element: <ContactsRoute />
+          element: <ContactsRoute />,
         },
         {
           path: '/basket',
-          element: <BasketRoute />
+          element: <BasketRoute />,
         },
         {
           path: 'login',
-          element: <LoginRoute />
+          element: <LoginRoute />,
         },
         {
           path: 'signup',
-          element: <SignUpRoute />
+          element: <SignUpRoute />,
         },
         {
           path: 'account',
-          element: <AccountRoute />
+          element: <AccountRoute />,
         },
         {
           path: 'takingcare',
-          element: <TakingCareRoute />
+          element: <TakingCareRoute />,
         },
         {
           path: 'lesstalk',
-          element: <LessTalkRoute />
+          element: <LessTalkRoute />,
         },
 
         {
           path: '*',
-          element: <ErrorRoute />
+          element: <ErrorRoute />,
         },
       ],
-      errorElement: <ErrorRoute />
+      errorElement: <ErrorRoute />,
     },
-
-  ])
+  ]);
   return (
     <AuthContextProvider>
-
       <CartProvider>
         <RouterProvider router={router} />
       </CartProvider>
     </AuthContextProvider>
-
-  )
+  );
 }

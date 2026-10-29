@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { UserAuth } from '../../context/AuthContext';
-import './Login.scss'
+import './Login.scss';
 
 export default function Login() {
   const { logIn } = UserAuth();
@@ -22,7 +22,7 @@ export default function Login() {
       setError(t('login.error'));
       console.error(err);
     }
-  }
+  };
 
   return (
     <div className="login-container">
@@ -55,5 +55,5 @@ export default function Login() {
         </p>
       </form>
     </div>
-  )
+  );
 }

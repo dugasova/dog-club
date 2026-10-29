@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "./NutritionPets.scss";
+import './NutritionPets.scss';
 import NutritionCard from '../NutritionCard/NutritionCard';
 const SortingArrow = '/icons/sorting-arrow.svg';
 import { useNutrition } from '../../context/NutritionContext';
@@ -17,23 +17,27 @@ export default function NutritionPets() {
   const { cardsData, sortOption } = useNutrition();
   const { t } = useTranslation();
 
-  const translatedCards = React.useMemo(() => cardsData.map(card => ({
-    ...card,
-    desc: t(card.desc)
-  })), [cardsData, t]);
+  const translatedCards = React.useMemo(
+    () =>
+      cardsData.map((card) => ({
+        ...card,
+        desc: t(card.desc),
+      })),
+    [cardsData, t],
+  );
 
   const { stateSearch, dispatchSearch } = useNutriSearch(translatedCards);
 
   const handleShowMore = () => {
-    setDisplayCount(prevCount => prevCount + 6);
+    setDisplayCount((prevCount) => prevCount + 6);
   };
   const handleShowLess = () => {
-    setDisplayCount(prev => Math.max(INITIAL_DISPLAY_COUNT, prev - 6));
+    setDisplayCount((prev) => Math.max(INITIAL_DISPLAY_COUNT, prev - 6));
   };
   const visibleCards = stateSearch.searchList.slice(0, displayCount);
 
   const handleClick = () => {
-    setSort(prev => !prev);
+    setSort((prev) => !prev);
   };
 
   return (
@@ -53,7 +57,9 @@ export default function NutritionPets() {
 
         <div className="nutri-card">
           {stateSearch.searchList.length === 0 && stateSearch.search.length > 0 ? (
-            <p className="nutri-card__not-found">{t("nutrition.found")} "{stateSearch.search}"</p>
+            <p className="nutri-card__not-found">
+              {t('nutrition.found')} "{stateSearch.search}"
+            </p>
           ) : (
             <ul className="nutri-card-list">
               {visibleCards.map((card) => (
@@ -63,15 +69,17 @@ export default function NutritionPets() {
           )}
           <div className="nutri-display-buttons">
             {displayCount < stateSearch.searchList.length && (
-              <button className="nutri-button" onClick={handleShowMore}>{t("nutrition.more")}</button>
+              <button className="nutri-button" onClick={handleShowMore}>
+                {t('nutrition.more')}
+              </button>
             )}
             {displayCount > INITIAL_DISPLAY_COUNT && (
-              <button className="nutri-button" onClick={handleShowLess}>{t("nutrition.less")}</button>
+              <button className="nutri-button" onClick={handleShowLess}>
+                {t('nutrition.less')}
+              </button>
             )}
           </div>
-          <div>
-            {sort && <Sorting handleClick={handleClick} />}
-          </div>
+          <div>{sort && <Sorting handleClick={handleClick} />}</div>
         </div>
       </div>
     </div>

@@ -37,7 +37,9 @@
     border: 1px solid var(--color-border);
     border-radius: 8px;
     font-size: 0.95rem;
-    transition: border-color 200ms ease, box-shadow 200ms ease;
+    transition:
+      border-color 200ms ease,
+      box-shadow 200ms ease;
 
     &:hover {
       border-color: var(--menu-accent, #ffd166);
@@ -69,7 +71,9 @@
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  transition: background 200ms ease, transform 150ms ease;
+  transition:
+    background 200ms ease,
+    transform 150ms ease;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 
@@ -89,7 +93,8 @@
   text-align: center;
   color: var(--color-text-muted);
 
-  a, .signup-link {
+  a,
+  .signup-link {
     color: var(--menu-accent, #ffd166);
     text-decoration: none;
     font-weight: 600;

@@ -1,7 +1,5 @@
-import Error from '../components/Error/Error'
+import Error from '../components/Error/Error';
 
 export default function EroorRoute() {
-  return (
-    <Error />
-  )
+  return <Error />;
 }

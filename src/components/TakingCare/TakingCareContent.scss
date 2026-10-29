@@ -45,18 +45,48 @@
       height: 40px;
     }
 
-    .decor-poodle { top: 10%; left: 15%; }
-    .decor-yellow { top: 5%; right: 20%; }
-    .decor-dachshund { bottom: 10%; left: 25%; }
-    .decor-pink { bottom: 5%; right: 15%; }
-    .decor-purple { top: 20%; right: 5%; }
+    .decor-poodle {
+      top: 10%;
+      left: 15%;
+    }
+    .decor-yellow {
+      top: 5%;
+      right: 20%;
+    }
+    .decor-dachshund {
+      bottom: 10%;
+      left: 25%;
+    }
+    .decor-pink {
+      bottom: 5%;
+      right: 15%;
+    }
+    .decor-purple {
+      top: 20%;
+      right: 5%;
+    }
 
     /* second row of duplicates */
-    .decor-poodle:nth-of-type(2) { top: 30%; left: 5%; }
-    .decor-yellow:nth-of-type(2) { top: 25%; right: 30%; }
-    .decor-dachshund:nth-of-type(2) { bottom: 25%; left: 40%; }
-    .decor-pink:nth-of-type(2) { bottom: 20%; right: 35%; }
-    .decor-purple:nth-of-type(2) { top: 50%; right: 20%; }
+    .decor-poodle:nth-of-type(2) {
+      top: 30%;
+      left: 5%;
+    }
+    .decor-yellow:nth-of-type(2) {
+      top: 25%;
+      right: 30%;
+    }
+    .decor-dachshund:nth-of-type(2) {
+      bottom: 25%;
+      left: 40%;
+    }
+    .decor-pink:nth-of-type(2) {
+      bottom: 20%;
+      right: 35%;
+    }
+    .decor-purple:nth-of-type(2) {
+      top: 50%;
+      right: 20%;
+    }
   }
 
   &__title {

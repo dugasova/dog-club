@@ -14,20 +14,22 @@ export default function Contacts() {
     <section className="contacts">
       <div className="contacts__container">
         <h2 className="contacts__title">{t('contacts.title')}</h2>
-        <p className="contacts__description">
-          {t('contacts.description')}
-        </p>
+        <p className="contacts__description">{t('contacts.description')}</p>
 
         <div className="contacts__info-social">
           <div className="contacts__info">
             <h3 className="contacts__subtitle">{t('contacts.infoTitle')}</h3>
             <div className="contacts__item">
               <img src={phoneIcon} alt="Phone" className="contacts__icon" />
-              <a href="tel:+1234567890" className="contacts__link">+1 (234) 567-890</a>
+              <a href="tel:+1234567890" className="contacts__link">
+                +1 (234) 567-890
+              </a>
             </div>
             <div className="contacts__item">
               <img src={emailIcon} alt="Email" className="contacts__icon" />
-              <a href="mailto:info@dogclub.com" className="contacts__link">info@dogclub.com</a>
+              <a href="mailto:info@dogclub.com" className="contacts__link">
+                info@dogclub.com
+              </a>
             </div>
             <div className="contacts__item">
               <p>{t('contacts.address')}12345</p>

@@ -1,6 +1,6 @@
 import React from 'react';
-import "./Modal.scss";
-const Close = '/icons/closemodal.svg'
+import './Modal.scss';
+const Close = '/icons/closemodal.svg';
 
 interface ModalProps {
   handleClick: () => void;
@@ -11,14 +11,15 @@ interface ModalProps {
 export default function Modal({ handleClick, children, backdropClassName }: ModalProps) {
   return (
     <div className="modal" onClick={handleClick}>
-      <div className={`modal-backdrop ${backdropClassName || ''}`} onClick={(e) => e.stopPropagation()}>
+      <div
+        className={`modal-backdrop ${backdropClassName || ''}`}
+        onClick={(e) => e.stopPropagation()}
+      >
         <button className="modal-close-btn" onClick={handleClick}>
           <img src={Close} alt="Close" />
         </button>
-        <div className="modal-content">
-          {children}
-        </div>
+        <div className="modal-content">{children}</div>
       </div>
     </div>
-  )
+  );
 }

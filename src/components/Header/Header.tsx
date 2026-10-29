@@ -1,16 +1,16 @@
-import { useState } from "react";
-const Logo = "/icons/logo.svg";
-const BasketImg = "/icons/basket.svg";
-const Humburger = "/icons/humburger.svg";
-import MobileMenu from "../MobileMenu/MobileMenu";
-import "./Header.scss";
-import Menu from "../Menu/Menu";
-import { useCart } from "../../context/useCart";
-import { useTranslation } from "react-i18next";
-import { Link, useNavigate } from "react-router-dom";
+import { useState } from 'react';
+const Logo = '/icons/logo.svg';
+const BasketImg = '/icons/basket.svg';
+const Humburger = '/icons/humburger.svg';
+import MobileMenu from '../MobileMenu/MobileMenu';
+import './Header.scss';
+import Menu from '../Menu/Menu';
+import { useCart } from '../../context/useCart';
+import { useTranslation } from 'react-i18next';
+import { Link, useNavigate } from 'react-router-dom';
 import type { CartItem } from '../../types';
-import { UserAuth } from "../../context/AuthContext";
-import LanguageButton from "../LanguageButton/LanguageButton";
+import { UserAuth } from '../../context/AuthContext';
+import LanguageButton from '../LanguageButton/LanguageButton';
 
 interface HeaderProps {
   onContactUsClick: () => void;
@@ -19,7 +19,7 @@ interface HeaderProps {
 export default function Header({ onContactUsClick }: HeaderProps) {
   const { t } = useTranslation();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { user, logOut } = UserAuth()
+  const { user, logOut } = UserAuth();
 
   const { state } = useCart();
 
@@ -30,17 +30,16 @@ export default function Header({ onContactUsClick }: HeaderProps) {
   };
 
   const handleHome = () => {
-    navigate('/')
-  }
+    navigate('/');
+  };
   const handleLogout = async () => {
     try {
       await logOut();
-      navigate('/')
-
+      navigate('/');
     } catch (error) {
-      console.error(error)
+      console.error(error);
     }
-  }
+  };
   const goToLogin = () => navigate('/login');
   const goToSignup = () => navigate('/signup');
 
@@ -57,16 +56,23 @@ export default function Header({ onContactUsClick }: HeaderProps) {
         {user?.email ? (
           <div className="header-auth">
             <Link to="/account">
-              <button className='header-auth-button'>{t('header.account')}</button>
+              <button className="header-auth-button">{t('header.account')}</button>
             </Link>
-            <button className='header-auth-button' onClick={handleLogout}>{t('header.logout')}</button>
+            <button className="header-auth-button" onClick={handleLogout}>
+              {t('header.logout')}
+            </button>
           </div>
         ) : (
           <div className="header-auth">
             {/* use nav-menu-link so buttons get the same appearance as menu links */}
-            <button onClick={goToLogin} className='header-auth-button'>{t('header.login')}</button>
-            <button onClick={goToSignup} className='header-auth-button'>{t('header.signup')}</button>
-          </div>)}
+            <button onClick={goToLogin} className="header-auth-button">
+              {t('header.login')}
+            </button>
+            <button onClick={goToSignup} className="header-auth-button">
+              {t('header.signup')}
+            </button>
+          </div>
+        )}
         <LanguageButton />
         <div className="header-controls">
           <div className="header-basket">

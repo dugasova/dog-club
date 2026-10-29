@@ -8,7 +8,7 @@ describe('Modal', () => {
     render(
       <Modal handleClick={vi.fn()}>
         <p>Modal body</p>
-      </Modal>
+      </Modal>,
     );
 
     expect(screen.getByText('Modal body')).toBeInTheDocument();
@@ -20,7 +20,7 @@ describe('Modal', () => {
     const { container } = render(
       <Modal handleClick={handleClick}>
         <p>Modal body</p>
-      </Modal>
+      </Modal>,
     );
 
     await user.click(container.querySelector('.modal')!);
@@ -34,7 +34,7 @@ describe('Modal', () => {
     render(
       <Modal handleClick={handleClick}>
         <p>Modal body</p>
-      </Modal>
+      </Modal>,
     );
 
     await user.click(screen.getByText('Modal body'));
@@ -48,7 +48,7 @@ describe('Modal', () => {
     render(
       <Modal handleClick={handleClick}>
         <p>Modal body</p>
-      </Modal>
+      </Modal>,
     );
 
     await user.click(screen.getByRole('button', { name: 'Close' }));
@@ -60,7 +60,7 @@ describe('Modal', () => {
     const { container } = render(
       <Modal handleClick={vi.fn()} backdropClassName="contact-modal-backdrop">
         <p>Modal body</p>
-      </Modal>
+      </Modal>,
     );
 
     expect(container.querySelector('.modal-backdrop')).toHaveClass('contact-modal-backdrop');

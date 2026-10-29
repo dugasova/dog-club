@@ -61,7 +61,10 @@ describe('Basket', () => {
   });
 
   it('renders cart items with their details and the total price', () => {
-    cartItems = [item({ id: 1, quantity: 2, price: 10 }), item({ id: 2, name: 'Beef chunks', price: 5, quantity: 1 })];
+    cartItems = [
+      item({ id: 1, quantity: 2, price: 10 }),
+      item({ id: 2, name: 'Beef chunks', price: 5, quantity: 1 }),
+    ];
     render(<Basket />);
 
     expect(screen.getByText('Chicken kibble')).toBeInTheDocument();
@@ -140,14 +143,16 @@ describe('Basket', () => {
     await user.click(screen.getByRole('button', { name: 'basket.checkout' }));
 
     expect(await screen.findByText('basket.modalSuccess')).toBeInTheDocument();
-    expect(placeOrder).toHaveBeenCalledWith(expect.objectContaining({
-      email: 'olha@example.com',
-      userId: 'user-1',
-      orderId: expect.any(String),
-      items: cartItems,
-      totalPrice: 20,
-      totalItems: 2,
-    }));
+    expect(placeOrder).toHaveBeenCalledWith(
+      expect.objectContaining({
+        email: 'olha@example.com',
+        userId: 'user-1',
+        orderId: expect.any(String),
+        items: cartItems,
+        totalPrice: 20,
+        totalItems: 2,
+      }),
+    );
     expect(dispatch).toHaveBeenCalledWith({ type: 'CLEAR_CART' });
   });
 

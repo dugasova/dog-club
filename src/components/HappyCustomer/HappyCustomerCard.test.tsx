@@ -7,7 +7,7 @@ describe('HappyCustomerCard', () => {
     render(
       <ul>
         <HappyCustomerCard id={1} name="Olha" comment="Great food!" img="olha.png" rating="4/5" />
-      </ul>
+      </ul>,
     );
 
     expect(screen.getByRole('heading', { name: 'Olha' })).toBeInTheDocument();
@@ -19,23 +19,27 @@ describe('HappyCustomerCard', () => {
     render(
       <ul>
         <HappyCustomerCard id={1} name="Olha" comment="Great food!" img="olha.png" rating="3/5" />
-      </ul>
+      </ul>,
     );
 
     const stars = screen.getAllByRole('img', { name: 'star' });
     expect(stars).toHaveLength(5);
-    expect(stars.slice(0, 3).every(star => star.getAttribute('src')?.includes('%23FFAA00'))).toBe(true);
-    expect(stars.slice(3).every(star => star.getAttribute('src')?.includes('%23F1F3FF'))).toBe(true);
+    expect(stars.slice(0, 3).every((star) => star.getAttribute('src')?.includes('%23FFAA00'))).toBe(
+      true,
+    );
+    expect(stars.slice(3).every((star) => star.getAttribute('src')?.includes('%23F1F3FF'))).toBe(
+      true,
+    );
   });
 
   it('treats an unparseable rating as zero filled stars', () => {
     render(
       <ul>
         <HappyCustomerCard id={1} name="Olha" comment="Great food!" img="olha.png" rating="n/a" />
-      </ul>
+      </ul>,
     );
 
     const stars = screen.getAllByRole('img', { name: 'star' });
-    expect(stars.every(star => star.getAttribute('src')?.includes('%23F1F3FF'))).toBe(true);
+    expect(stars.every((star) => star.getAttribute('src')?.includes('%23F1F3FF'))).toBe(true);
   });
 });

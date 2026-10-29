@@ -4,14 +4,13 @@ import ExpertsForm from './ExpertsForm';
 
 export default function Experts() {
   return (
-    <section className='experts'>
+    <section className="experts">
       <div className="experts-deco">
         <img src={WalkingDog} alt="dog walking" className="experts-deco-dog" />
       </div>
-      <div className='container'>
+      <div className="container">
         <ExpertsForm />
-
       </div>
     </section>
-  )
+  );
 }

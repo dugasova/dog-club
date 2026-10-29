@@ -8,8 +8,9 @@ const signUp = vi.fn();
 
 vi.mock('react-router-dom', () => ({
   useNavigate: () => navigate,
-  Link: ({ to, children }: { to: string; children: React.ReactNode }) =>
-    <a href={to}>{children}</a>,
+  Link: ({ to, children }: { to: string; children: React.ReactNode }) => (
+    <a href={to}>{children}</a>
+  ),
 }));
 
 vi.mock('react-i18next', () => ({

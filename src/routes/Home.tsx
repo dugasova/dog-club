@@ -1,4 +1,4 @@
-import LessTalk from '../components/LessTalk/LessTalk'
+import LessTalk from '../components/LessTalk/LessTalk';
 import HappyCustomer from '../components/HappyCustomer/HappyCustomer';
 import TakingCare from '../components/TakingCare/TakingCare';
 import Services from '../components/Services/Services';
@@ -13,5 +13,5 @@ export default function Home() {
       <HappyCustomer />
       <Experts />
     </>
-  )
+  );
 }

@@ -9,7 +9,11 @@ vi.mock('react-i18next', () => ({
 }));
 
 const renderMenu = (props = {}) =>
-  render(<MemoryRouter><MobileMenu {...props} /></MemoryRouter>);
+  render(
+    <MemoryRouter>
+      <MobileMenu {...props} />
+    </MemoryRouter>,
+  );
 
 describe('MobileMenu', () => {
   it('renders all four navigation links', () => {

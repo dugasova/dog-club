@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import "./HappyCustomer.scss";
-const Sliderarrow = "/icons/sliderarrow.svg";
-import { RxDotFilled } from "react-icons/rx";
+import './HappyCustomer.scss';
+const Sliderarrow = '/icons/sliderarrow.svg';
+import { RxDotFilled } from 'react-icons/rx';
 import { CUSTOMERS } from '../../data';
 import HappyCustomerCard from './HappyCustomerCard';
 import { useTranslation } from 'react-i18next';
@@ -22,7 +22,7 @@ export default function HappyCustomer() {
       <h2 className="happy-customer__title">{t('happycustomers.title')}</h2>
 
       {/* Mobile: native scroll-snap, all cards */}
-      <ul className='happy-customer__scroll-list'>
+      <ul className="happy-customer__scroll-list">
         {CUSTOMERS.map((customer) => (
           <HappyCustomerCard
             key={customer.id}
@@ -36,7 +36,7 @@ export default function HappyCustomer() {
       </ul>
 
       {/* Desktop: button navigation, sliced */}
-      <div className='happy-customer__wrapper'>
+      <div className="happy-customer__wrapper">
         <button
           className="happy-customer-btn btn__left"
           onClick={prev}
@@ -46,7 +46,7 @@ export default function HappyCustomer() {
           <img src={Sliderarrow} alt="Prev" />
         </button>
 
-        <ul className='happy-customer__list' aria-live="polite">
+        <ul className="happy-customer__list" aria-live="polite">
           {visible.map((customer) => (
             <HappyCustomerCard
               key={customer.id}
@@ -71,7 +71,8 @@ export default function HappyCustomer() {
 
       <div className="happy-customer__dots-wrapper">
         {CUSTOMERS.map((_, idx) => (
-          <RxDotFilled size={30}
+          <RxDotFilled
+            size={30}
             key={idx}
             className={`happy-customer__dot ${idx >= index && idx < index + visibleCount ? 'active' : ''}`}
             onClick={() => setIndex(Math.min(idx, maxIndex))}
@@ -79,5 +80,5 @@ export default function HappyCustomer() {
         ))}
       </div>
     </section>
-  )
+  );
 }

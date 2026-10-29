@@ -6,7 +6,7 @@ export type CardData = {
   descUk?: string;
   price: number;
   imgSrc: string;
-}
+};
 
 export type CartItem = {
   id: number;
@@ -17,6 +17,4 @@ export type CartItem = {
   code: string;
   rating: number;
   desc: string;
-
 };
-

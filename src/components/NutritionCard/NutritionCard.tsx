@@ -27,17 +27,17 @@ export default function NutritionCard({ card }: NutritionCardProps) {
   return (
     <li className="nutri-card-item" key={card.code}>
       <p>
-        <img
-          className="nutri-card-img"
-          src={card.imgSrc} alt="nutrition card" />
+        <img className="nutri-card-img" src={card.imgSrc} alt="nutrition card" />
       </p>
-      <p className="nutri-card__code">{t('nutrition.code')}: {card.code}</p>
-      <p className="nutri-card__stars">
-        {renderStars(card.rating)}
+      <p className="nutri-card__code">
+        {t('nutrition.code')}: {card.code}
       </p>
+      <p className="nutri-card__stars">{renderStars(card.rating)}</p>
       <p className="nutri-card__description">{t(card.desc)}</p>
       <p className="nutri-card__price">{card.price}.00$</p>
-      <button className="nutri-card__btn" onClick={handleAddToCart}>{t('nutrition.buy')}</button>
+      <button className="nutri-card__btn" onClick={handleAddToCart}>
+        {t('nutrition.buy')}
+      </button>
     </li>
   );
 }

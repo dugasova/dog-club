@@ -45,7 +45,11 @@ describe('cartReducer', () => {
   it('updates the quantity of an existing item', () => {
     const initial: CartState = { items: [{ ...item(), quantity: 1 }] };
 
-    const state = cartReducer(initial, { type: CartActionType.UPDATE_QUANTITY, id: 1, quantity: 5 });
+    const state = cartReducer(initial, {
+      type: CartActionType.UPDATE_QUANTITY,
+      id: 1,
+      quantity: 5,
+    });
 
     expect(state.items).toEqual([{ ...item(), quantity: 5 }]);
   });

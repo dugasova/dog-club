@@ -8,7 +8,6 @@
     font-size: 32px;
     white-space: pre-line;
 
-
     &_arrow {
       background-repeat: no-repeat;
       background-position: center;
@@ -20,7 +19,7 @@
 
   &-description {
     font-size: 18px;
-    font-family: "Roboto-Light";
+    font-family: 'Roboto-Light';
     font-weight: 300;
   }
 
@@ -58,7 +57,6 @@
     border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
-
   }
 
   &_btn:hover {
@@ -68,8 +66,6 @@
 
 //==============Tablet==================//
 @media screen and (min-width: 768px) {
-
-
   .lesstalk {
     max-width: 100%;
     display: flex;
@@ -104,13 +100,11 @@
       }
     }
 
-
     &-description {
-      font-family: "Roboto Regular";
+      font-family: 'Roboto Regular';
       font-size: 24px;
       margin-bottom: 24px;
       color: var(--color-primary-dark);
-
     }
 
     &-sheltland__circle1 {
@@ -119,14 +113,12 @@
       width: 100%;
     }
 
-
     &-sheltland__circle2 {
       display: block;
       position: absolute;
       width: 100%;
       top: 20%;
       left: 5%;
-
     }
 
     &-sheltland-pow_left {
@@ -153,7 +145,6 @@
       bottom: 5%;
       right: 30%;
       transform: rotate(130deg);
-
     }
 
     &-sheltland__btn {

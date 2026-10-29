@@ -8,15 +8,15 @@ interface NutritionSearchProps {
 }
 
 export default function NutritionSearch({ search, onSearchChange }: NutritionSearchProps) {
-  const {t } = useTranslation()
+  const { t } = useTranslation();
   return (
     <input
-      id='search'
+      id="search"
       type="text"
-      className='nutrition-search'
-      placeholder={t("nutrition.placeholder")}
+      className="nutrition-search"
+      placeholder={t('nutrition.placeholder')}
       value={search}
       onChange={onSearchChange}
     />
-  )
+  );
 }

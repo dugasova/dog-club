@@ -1,20 +1,23 @@
 import './Sorting.scss';
-const SortingBtn = '/icons/sortblack.svg'
+const SortingBtn = '/icons/sortblack.svg';
 import { useNutrition } from '../../context/NutritionContext';
 import type { SortOption } from '../../context/NutritionContext'; // Import SortOption as a type
 import { useTranslation } from 'react-i18next';
 
 type SortingProps = {
-  handleClick: () => void
-}
+  handleClick: () => void;
+};
 
 export default function Sorting({ handleClick }: SortingProps) {
   const { sortOption, setSortOption } = useNutrition();
   const { t } = useTranslation();
 
-
   const sortingItems: SortOption[] = [
-    'Popularity', 'Cheaper first', 'More expensive first', 'By name', 'New ones first'
+    'Popularity',
+    'Cheaper first',
+    'More expensive first',
+    'By name',
+    'New ones first',
   ];
 
   const handleSortItemClick = (item: SortOption) => {
@@ -23,10 +26,10 @@ export default function Sorting({ handleClick }: SortingProps) {
   };
 
   return (
-    <div className='sorting' onClick={handleClick}>
+    <div className="sorting" onClick={handleClick}>
       <div className="sorting-backdrop" onClick={(e) => e.stopPropagation()}>
-        <h3 className='sorting-title'>{t('sorting.title')}</h3>
-        <ul className='sorting-list'>
+        <h3 className="sorting-title">{t('sorting.title')}</h3>
+        <ul className="sorting-list">
           {sortingItems.map((item, index) => (
             <li
               key={index}
@@ -34,16 +37,13 @@ export default function Sorting({ handleClick }: SortingProps) {
               onClick={() => handleSortItemClick(item)}
             >
               {t(`sorting.options.${item}`)}
-              <button className='sorting__btn'>
-                <img
-                  src={SortingBtn}
-                  alt="Sort button"
-                  className='sorting__img' />
+              <button className="sorting__btn">
+                <img src={SortingBtn} alt="Sort button" className="sorting__img" />
               </button>
             </li>
           ))}
         </ul>
       </div>
     </div>
-  )
+  );
 }

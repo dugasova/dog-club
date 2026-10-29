@@ -1,7 +1,5 @@
-import LessTalkContent from '../components/LessTalk/LessTalkContent'
+import LessTalkContent from '../components/LessTalk/LessTalkContent';
 
 export default function LessTalkRoute() {
-  return (
-    <LessTalkContent />
-  )
+  return <LessTalkContent />;
 }

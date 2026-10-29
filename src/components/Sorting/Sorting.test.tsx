@@ -32,8 +32,12 @@ describe('Sorting', () => {
     sortOption = 'By name';
     render(<Sorting handleClick={vi.fn()} />);
 
-    expect(screen.getByText('sorting.options.By name').closest('li')).toHaveClass('sorting-item--active');
-    expect(screen.getByText('sorting.options.Popularity').closest('li')).not.toHaveClass('sorting-item--active');
+    expect(screen.getByText('sorting.options.By name').closest('li')).toHaveClass(
+      'sorting-item--active',
+    );
+    expect(screen.getByText('sorting.options.Popularity').closest('li')).not.toHaveClass(
+      'sorting-item--active',
+    );
   });
 
   it('selects an option and closes the panel when an item is clicked', async () => {

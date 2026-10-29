@@ -1,7 +1,5 @@
-import TakingCareContent from '../components/TakingCare/TakingCareContent'
+import TakingCareContent from '../components/TakingCare/TakingCareContent';
 
 export default function TakingCareRoute() {
-  return (
-    <TakingCareContent />
-  )
+  return <TakingCareContent />;
 }

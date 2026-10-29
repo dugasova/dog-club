@@ -28,7 +28,9 @@ function Consumer() {
       <p data-testid="current-option">{sortOption}</p>
       <p data-testid="order">{cardsData.map((c) => c.id).join(',')}</p>
       {sortOptions.map((option) => (
-        <button key={option} onClick={() => setSortOption(option)}>{option}</button>
+        <button key={option} onClick={() => setSortOption(option)}>
+          {option}
+        </button>
       ))}
     </div>
   );
@@ -38,7 +40,7 @@ const renderConsumer = () =>
   render(
     <NutritionProvider>
       <Consumer />
-    </NutritionProvider>
+    </NutritionProvider>,
   );
 
 describe('NutritionProvider', () => {

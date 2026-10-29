@@ -33,7 +33,11 @@ describe('ExpertsForm', () => {
 
     await user.click(screen.getByRole('button', { name: 'experts.form.exploreMore' }));
 
-    expect(await screen.findByText('experts.successContact', {}, { timeout: 3000 })).toBeInTheDocument();
-    await waitFor(() => expect(screen.getByPlaceholderText('experts.form.yourName')).toHaveValue(''));
+    expect(
+      await screen.findByText('experts.successContact', {}, { timeout: 3000 }),
+    ).toBeInTheDocument();
+    await waitFor(() =>
+      expect(screen.getByPlaceholderText('experts.form.yourName')).toHaveValue(''),
+    );
   });
 });

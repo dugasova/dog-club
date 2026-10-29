@@ -10,13 +10,13 @@
 
   // Background paw prints
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: -20px;
     left: -30px;
     width: 100px;
     height: 100px;
-    background: url("/dogs/paw.svg") no-repeat center center;
+    background: url('/dogs/paw.svg') no-repeat center center;
     background-size: contain;
     opacity: 0.1;
     transform: rotate(20deg);
@@ -24,13 +24,13 @@
   }
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: -20px;
     right: -30px;
     width: 100px;
     height: 100px;
-    background: url("/dogs/paw.svg") no-repeat center center;
+    background: url('/dogs/paw.svg') no-repeat center center;
     background-size: contain;
     opacity: 0.1;
     transform: rotate(-40deg);
@@ -51,7 +51,7 @@
   align-items: center;
 
   .contact-modal-title {
-    font-family: "Rowdies-Bold", sans-serif;
+    font-family: 'Rowdies-Bold', sans-serif;
     font-size: 40px;
     font-weight: bold;
     color: var(--primary-dark);
@@ -67,7 +67,7 @@
   .contact-modal-description {
     font-size: 18px;
     font-weight: 300;
-    font-family: "Roboto-Light", sans-serif;
+    font-family: 'Roboto-Light', sans-serif;
     color: var(--secondary-gray);
     margin-bottom: 30px;
     text-align: center;
@@ -105,7 +105,7 @@
         border: none;
         outline: none;
         font-size: 16px;
-        font-family: "Roboto-Regular", sans-serif;
+        font-family: 'Roboto-Regular', sans-serif;
         background-color: transparent;
         min-width: 0;
 
@@ -132,7 +132,7 @@
       margin-top: 20px;
 
       &:hover {
-        background-color: var(--primary-color-yellow) // A slightly darker orange
+        background-color: var(--primary-color-yellow); // A slightly darker orange
       }
     }
   }

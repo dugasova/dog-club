@@ -72,7 +72,7 @@ html {
   --secondary-light: #fffaf3;
   --secondary-light-blue: #f1f3ff;
   --secondary-gray: #839aa9;
-  --secondary-violet: #D9A6FF;
+  --secondary-violet: #d9a6ff;
   --secondary-light-gray: #f8f9ff;
   --menu-accent: #ffd166;
 
@@ -165,59 +165,59 @@ ul {
   max-width: 400px;
 }
 
-  .form-group {
-    position: relative;
-    display: flex;
-    align-items: center;
-    border: 1px solid var(--primary-color-yellow);
-    border-radius: 10px;
-    padding: 0 15px;
+.form-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--primary-color-yellow);
+  border-radius: 10px;
+  padding: 0 15px;
+}
+
+.input-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+input {
+  flex-grow: 1;
+  padding: 12px 0;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-family: 'Roboto-Regular', sans-serif;
+  background-color: transparent;
+
+  &::placeholder {
+    color: var(--primary-color-yellow); // Changed placeholder color to yellow
   }
 
-    .input-icon {
-      width: 20px;
-      height: 20px;
-      margin-right: 10px;
-    }
+  &:focus {
+    border-color: var(--primary-color-yellow); // Ensure focus border is yellow
+    outline: 1px solid var(--primary-color-yellow); // Add outline for better visibility
+  }
+}
+.privacy-policy {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
 
-    input {
-      flex-grow: 1;
-      padding: 12px 0;
-      border: none;
-      outline: none;
-      font-size: 16px;
-      font-family: "Roboto-Regular", sans-serif;
-      background-color: transparent;
+  input[type='checkbox'] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    border: 1px solid #888; // Changed checkbox border color
+    accent-color: var(--primary-color-yellow); // To change the fill color when checked
+  }
 
-      &::placeholder {
-        color: var(--primary-color-yellow); // Changed placeholder color to yellow
-      }
-
-      &:focus {
-        border-color: var(--primary-color-yellow); // Ensure focus border is yellow
-        outline: 1px solid var(--primary-color-yellow); // Add outline for better visibility
-      }
-    }
-    .privacy-policy {
-      display: flex;
-      align-items: center;
-      margin-top: 10px;
-
-      input[type="checkbox"] {
-        margin-right: 10px;
-        width: 18px;
-        height: 18px;
-        cursor: pointer;
-        border: 1px solid #888; // Changed checkbox border color
-        accent-color: var(--primary-color-yellow); // To change the fill color when checked
-      }
-
-      label {
-        font-size: 14px;
-        color: #888;
-        font-family: "Roboto-Regular", sans-serif;
-      }
-    }
+  label {
+    font-size: 14px;
+    color: #888;
+    font-family: 'Roboto-Regular', sans-serif;
+  }
+}
 .nutrition-search {
-   width: 50%;
+  width: 50%;
 }

@@ -5,7 +5,7 @@ export const CardData = [
     rating: 5,
     desc: 'nutrition.desc1',
     price: 120,
-    imgSrc: '/dogs/avegedog.png'
+    imgSrc: '/dogs/avegedog.png',
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const CardData = [
     rating: 4,
     desc: 'Josera JosiDog Economy 22/8',
     price: 136,
-    imgSrc: '/dogs/alldogs.png'
+    imgSrc: '/dogs/alldogs.png',
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const CardData = [
     rating: 5,
     desc: 'nutrition.desc3',
     price: 140,
-    imgSrc: '/dogs/smalldog.png'
+    imgSrc: '/dogs/smalldog.png',
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export const CardData = [
     rating: 3,
     desc: 'Royal Canin Mini Adult',
     price: 120,
-    imgSrc: '/dogs/avegedog.png'
+    imgSrc: '/dogs/avegedog.png',
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ export const CardData = [
     rating: 5,
     desc: 'nutrition.desc2',
     price: 136,
-    imgSrc: '/dogs/alldogs.png'
+    imgSrc: '/dogs/alldogs.png',
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ export const CardData = [
     rating: 5,
     desc: 'nutrition.desc3',
     price: 140,
-    imgSrc: '/dogs/smalldog.png'
+    imgSrc: '/dogs/smalldog.png',
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ export const CardData = [
     rating: 5,
     desc: 'Royal Canin Mini Adult',
     price: 120,
-    imgSrc: '/dogs/avegedog.png'
+    imgSrc: '/dogs/avegedog.png',
   },
   {
     id: 8,
@@ -61,7 +61,7 @@ export const CardData = [
     rating: 4,
     desc: 'nutrition.desc3',
     price: 136,
-    imgSrc: '/dogs/alldogs.png'
+    imgSrc: '/dogs/alldogs.png',
   },
   {
     id: 9,
@@ -69,7 +69,7 @@ export const CardData = [
     rating: 5,
     desc: 'Acana Adult Small Breed 31/17',
     price: 140,
-    imgSrc: '/dogs/smalldog.png'
+    imgSrc: '/dogs/smalldog.png',
   },
   {
     id: 10,
@@ -77,7 +77,7 @@ export const CardData = [
     rating: 3,
     desc: 'Brit Care Hypoallergenic Adult Medium Breed Lamb',
     price: 120,
-    imgSrc: '/dogs/avegedog.png'
+    imgSrc: '/dogs/avegedog.png',
   },
   {
     id: 11,
@@ -85,7 +85,7 @@ export const CardData = [
     rating: 5,
     desc: 'nutrition.desc2',
     price: 136,
-    imgSrc: '/dogs/alldogs.png'
+    imgSrc: '/dogs/alldogs.png',
   },
   {
     id: 12,
@@ -93,7 +93,7 @@ export const CardData = [
     rating: 5,
     desc: 'Acana Adult Small Breed 31/17',
     price: 140,
-    imgSrc: '/dogs/smalldog.png'
+    imgSrc: '/dogs/smalldog.png',
   },
   {
     id: 13,
@@ -101,7 +101,7 @@ export const CardData = [
     rating: 5,
     desc: 'nutrition.desc1',
     price: 120,
-    imgSrc: '/dogs/avegedog.png'
+    imgSrc: '/dogs/avegedog.png',
   },
   {
     id: 14,
@@ -109,7 +109,7 @@ export const CardData = [
     rating: 4,
     desc: 'nutrition.desc2',
     price: 136,
-    imgSrc: '/dogs/alldogs.png'
+    imgSrc: '/dogs/alldogs.png',
   },
   {
     id: 15,
@@ -117,7 +117,7 @@ export const CardData = [
     rating: 5,
     desc: 'Acana Adult Small Breed 31/17',
     price: 140,
-    imgSrc: '/dogs/smalldog.png'
+    imgSrc: '/dogs/smalldog.png',
   },
   {
     id: 16,
@@ -125,7 +125,7 @@ export const CardData = [
     rating: 3,
     desc: 'nutrition.desc1',
     price: 120,
-    imgSrc: '/dogs/avegedog.png'
+    imgSrc: '/dogs/avegedog.png',
   },
   {
     id: 17,
@@ -133,7 +133,7 @@ export const CardData = [
     rating: 5,
     desc: 'nutrition.desc2',
     price: 136,
-    imgSrc: '/dogs/alldogs.png'
+    imgSrc: '/dogs/alldogs.png',
   },
   {
     id: 18,
@@ -141,7 +141,7 @@ export const CardData = [
     rating: 2,
     desc: 'Acana Adult Small Breed 31/17',
     price: 140,
-    imgSrc: '/dogs/smalldog.png'
+    imgSrc: '/dogs/smalldog.png',
   },
   {
     id: 19,
@@ -149,7 +149,7 @@ export const CardData = [
     rating: 5,
     desc: 'nutrition.desc1',
     price: 120,
-    imgSrc: '/dogs/avegedog.png'
+    imgSrc: '/dogs/avegedog.png',
   },
   {
     id: 20,
@@ -157,7 +157,7 @@ export const CardData = [
     rating: 4,
     desc: 'nutrition.desc2',
     price: 136,
-    imgSrc: '/dogs/alldogs.png'
+    imgSrc: '/dogs/alldogs.png',
   },
   {
     id: 21,
@@ -165,7 +165,7 @@ export const CardData = [
     rating: 5,
     desc: 'nutrition.desc3',
     price: 140,
-    imgSrc: '/dogs/smalldog.png'
+    imgSrc: '/dogs/smalldog.png',
   },
   {
     id: 22,
@@ -173,7 +173,7 @@ export const CardData = [
     rating: 3,
     desc: 'nutrition.desc1',
     price: 120,
-    imgSrc: '/dogs/avegedog.png'
+    imgSrc: '/dogs/avegedog.png',
   },
   {
     id: 23,
@@ -181,7 +181,7 @@ export const CardData = [
     rating: 5,
     desc: 'nutrition.desc2',
     price: 136,
-    imgSrc: '/dogs/alldogs.png'
+    imgSrc: '/dogs/alldogs.png',
   },
   {
     id: 24,
@@ -189,7 +189,7 @@ export const CardData = [
     rating: 4,
     desc: 'nutrition.desc3',
     price: 140,
-    imgSrc: '/dogs/smalldog.png'
+    imgSrc: '/dogs/smalldog.png',
   },
   {
     id: 25,
@@ -197,14 +197,15 @@ export const CardData = [
     rating: 4,
     desc: 'Canin Maine Coon Kitten',
     price: 175,
-    imgSrc: '/dogs/smalldog.png'
-  }, {
+    imgSrc: '/dogs/smalldog.png',
+  },
+  {
     id: 26,
     code: '35905',
     rating: 5,
     desc: 'nutrition.desc5',
     price: 160,
-    imgSrc: '/dogs/smalldog.png'
+    imgSrc: '/dogs/smalldog.png',
   },
   {
     id: 27,
@@ -212,7 +213,7 @@ export const CardData = [
     rating: 4,
     desc: 'Canin Maine Coon Kitten',
     price: 175,
-    imgSrc: '/dogs/smalldog.png'
+    imgSrc: '/dogs/smalldog.png',
   },
   {
     id: 28,
@@ -220,73 +221,71 @@ export const CardData = [
     rating: 5,
     desc: 'nutrition.desc5',
     price: 160,
-    imgSrc: '/dogs/smalldog.png'
+    imgSrc: '/dogs/smalldog.png',
   },
 ];
 
 export const CUSTOMERS = [
   {
     id: 1,
-    name: "happycustomers.customer1.name",
-    comment: "happycustomers.customer1.comment",
+    name: 'happycustomers.customer1.name',
+    comment: 'happycustomers.customer1.comment',
     img: '/customers/christin.png',
     rating: '5/5',
   },
   {
     id: 2,
-    name: "happycustomers.customer2.name",
-    comment: "happycustomers.customer2.comment",
+    name: 'happycustomers.customer2.name',
+    comment: 'happycustomers.customer2.comment',
     img: '/customers/anna.png',
     rating: '5/5',
   },
   {
     id: 3,
-    name: "happycustomers.customer3.name",
-    comment: "happycustomers.customer3.comment",
+    name: 'happycustomers.customer3.name',
+    comment: 'happycustomers.customer3.comment',
     img: '/customers/sindy.png',
     rating: '4/5',
   },
   {
     id: 4,
-    name: "happycustomers.customer4.name",
-    comment: "happycustomers.customer4.comment",
+    name: 'happycustomers.customer4.name',
+    comment: 'happycustomers.customer4.comment',
     img: '/customers/christin.png',
     rating: '4/5',
   },
   {
     id: 5,
-    name: "happycustomers.customer5.name",
-    comment: "happycustomers.customer5.comment",
+    name: 'happycustomers.customer5.name',
+    comment: 'happycustomers.customer5.comment',
     img: '/customers/anna.png',
     rating: '5/5',
   },
-]
+];
 
 export const servicesData = [
   {
     id: 1,
-    title: "Grooming",
-    src: "/services/grooming.jpg",
-    description: "servicecs.grooming.description",
-
+    title: 'Grooming',
+    src: '/services/grooming.jpg',
+    description: 'servicecs.grooming.description',
   },
   {
     id: 2,
-    title: "Nutrition",
-    src: "/services/nutrition.jpg",
-    description: "servicecs.nutrition.description",
+    title: 'Nutrition',
+    src: '/services/nutrition.jpg',
+    description: 'servicecs.nutrition.description',
   },
   {
     id: 3,
-    title: "Training",
-    src: "/services/training.jpg",
-    description: "servicecs.training.description",
-
+    title: 'Training',
+    src: '/services/training.jpg',
+    description: 'servicecs.training.description',
   },
   {
     id: 4,
-    title: "Bathing",
-    src: "/services/bathing.jpg",
-    description: "servicecs.bathing.description",
+    title: 'Bathing',
+    src: '/services/bathing.jpg',
+    description: 'servicecs.bathing.description',
   },
-]
+];

@@ -28,7 +28,11 @@ describe('NutritionCard', () => {
   });
 
   it('renders the card details and a star for each rating point', () => {
-    render(<ul><NutritionCard card={card} /></ul>);
+    render(
+      <ul>
+        <NutritionCard card={card} />
+      </ul>,
+    );
 
     expect(screen.getByText('nutrition.code: KBL-1')).toBeInTheDocument();
     expect(screen.getByText('25.00$')).toBeInTheDocument();
@@ -38,7 +42,11 @@ describe('NutritionCard', () => {
 
   it('dispatches an ADD_ITEM action with the card data when buying', async () => {
     const user = userEvent.setup();
-    render(<ul><NutritionCard card={card} /></ul>);
+    render(
+      <ul>
+        <NutritionCard card={card} />
+      </ul>,
+    );
 
     await user.click(screen.getByRole('button', { name: 'nutrition.buy' }));
 

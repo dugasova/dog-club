@@ -1,9 +1,9 @@
-import { NavLink } from "react-router-dom";
-import "./Footer.scss";
-const Logo = "/icons/logo.svg";
-const FacebookIcon = "/icons/facebook.svg";
-const InstagramIcon = "/icons/instagram.svg";
-import Dog from "../../assets/dogs/footerdog.png";
+import { NavLink } from 'react-router-dom';
+import './Footer.scss';
+const Logo = '/icons/logo.svg';
+const FacebookIcon = '/icons/facebook.svg';
+const InstagramIcon = '/icons/instagram.svg';
+import Dog from '../../assets/dogs/footerdog.png';
 import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
@@ -25,7 +25,7 @@ export default function Footer() {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive ? "header-nav-link active" : "header-nav-link"
+                isActive ? 'header-nav-link active' : 'header-nav-link'
               }
             >
               {t('menu.lessTalk')}
@@ -35,7 +35,7 @@ export default function Footer() {
             <NavLink
               to="/services"
               className={({ isActive }) =>
-                isActive ? "header-nav-link active" : "header-nav-link"
+                isActive ? 'header-nav-link active' : 'header-nav-link'
               }
             >
               {t('menu.services')}
@@ -45,7 +45,7 @@ export default function Footer() {
             <NavLink
               to="/happy-customer"
               className={({ isActive }) =>
-                isActive ? "header-nav-link active" : "header-nav-link"
+                isActive ? 'header-nav-link active' : 'header-nav-link'
               }
             >
               {t('menu.happyCustomer')}
@@ -55,7 +55,7 @@ export default function Footer() {
             <NavLink
               to="/contact"
               className={({ isActive }) =>
-                isActive ? "header-nav-link active" : "header-nav-link"
+                isActive ? 'header-nav-link active' : 'header-nav-link'
               }
             >
               {t('menu.contact')}
@@ -66,24 +66,35 @@ export default function Footer() {
       <div className="footer-to-contact">
         <div className="form-group">
           <img src="/icons/people.svg" alt="name icon" className="input-icon" />
-          <input type="text" id="name" name="name" placeholder={t('footer.form.name')} required className='footer-name' />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder={t('footer.form.name')}
+            required
+            className="footer-name"
+          />
         </div>
         <div className="form-group form-group-sms">
-          <input type="text" id="name" name="name" placeholder={t('footer.form.sms')} required className='footer-sms' />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder={t('footer.form.sms')}
+            required
+            className="footer-sms"
+          />
         </div>
-        <button className="footer-to-contact__btn btn">
-          {t('footer.form.contactUs')}
-        </button>
+        <button className="footer-to-contact__btn btn">{t('footer.form.contactUs')}</button>
         <div className="experts-form-privacy">
           <input className="experts-form-checkbox" type="checkbox" id="privacy" />
           <label htmlFor="privacy">{t('footer.form.privacyAgree')}</label>
         </div>
-
       </div>
       <div className="footer-pet">
         <img src={Dog} alt="Dog" />
       </div>
       <img src={Logo} alt="logo icon" className="footer-content-icon footer-mobile-logo" />
     </div>
-  )
+  );
 }

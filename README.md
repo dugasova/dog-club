@@ -13,15 +13,15 @@ A pet food e-commerce SPA built with React, TypeScript and Vite. Users can brows
 
 ## Tech Stack
 
-| Layer | Libraries |
-|---|---|
-| UI | React 18, TypeScript, Vite |
-| Routing | React Router |
-| State | useReducer + Context API |
-| Backend | Firebase Auth + Firestore |
-| Forms | react-hook-form + Zod |
-| i18n | react-i18next |
-| Testing | Vitest + Testing Library |
+| Layer   | Libraries                  |
+| ------- | -------------------------- |
+| UI      | React 18, TypeScript, Vite |
+| Routing | React Router               |
+| State   | useReducer + Context API   |
+| Backend | Firebase Auth + Firestore  |
+| Forms   | react-hook-form + Zod      |
+| i18n    | react-i18next              |
+| Testing | Vitest + Testing Library   |
 
 ## Getting Started
 
@@ -32,12 +32,12 @@ npm run dev
 
 ## Scripts
 
-| Command | Description |
-|---|---|
-| `npm run dev` | Start development server |
-| `npm run build` | Production build |
-| `npm run test` | Run test suite |
-| `npm run test:ui` | Run tests with UI |
+| Command           | Description              |
+| ----------------- | ------------------------ |
+| `npm run dev`     | Start development server |
+| `npm run build`   | Production build         |
+| `npm run test`    | Run test suite           |
+| `npm run test:ui` | Run tests with UI        |
 
 ## Testing
 

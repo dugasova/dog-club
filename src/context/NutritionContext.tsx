@@ -5,13 +5,14 @@ import type { CardData } from '../types';
 
 export type { CardData };
 
-export type SortOption = 'Popularity' | 'Cheaper first' | 'More expensive first' | 'By name' | 'New ones first';
+export type SortOption =
+  'Popularity' | 'Cheaper first' | 'More expensive first' | 'By name' | 'New ones first';
 
 export type NutritionContextType = {
   cardsData: CardData[];
   sortOption: SortOption;
   setSortOption: (option: SortOption) => void;
-}
+};
 
 const NutritionContext = createContext<NutritionContextType | undefined>(undefined);
 
@@ -56,4 +57,4 @@ export const useNutrition = (): NutritionContextType => {
     throw new Error('useNutrition must be used within a NutritionProvider');
   }
   return context;
-}
+};

@@ -3,7 +3,10 @@ import { actionCreator } from './store';
 
 describe('actionCreator', () => {
   it('builds an action object with the given type and payload', () => {
-    expect(actionCreator('SEARCH_SET', 'kibble')).toEqual({ type: 'SEARCH_SET', payload: 'kibble' });
+    expect(actionCreator('SEARCH_SET', 'kibble')).toEqual({
+      type: 'SEARCH_SET',
+      payload: 'kibble',
+    });
   });
 
   it('supports object payloads', () => {
@@ -13,6 +16,9 @@ describe('actionCreator', () => {
   });
 
   it('supports actions without a meaningful payload', () => {
-    expect(actionCreator('CLEAR_CART', undefined)).toEqual({ type: 'CLEAR_CART', payload: undefined });
+    expect(actionCreator('CLEAR_CART', undefined)).toEqual({
+      type: 'CLEAR_CART',
+      payload: undefined,
+    });
   });
 });

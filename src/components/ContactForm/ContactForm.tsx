@@ -29,7 +29,11 @@ interface ContactFormProps {
   submitClassName?: string;
 }
 
-export default function ContactForm({ formClassName, submitLabel, submitClassName }: ContactFormProps) {
+export default function ContactForm({
+  formClassName,
+  submitLabel,
+  submitClassName,
+}: ContactFormProps) {
   const { t } = useTranslation();
   const [submittedName, setSubmittedName] = useState('');
 
@@ -131,7 +135,9 @@ export default function ContactForm({ formClassName, submitLabel, submitClassNam
 
       {submittedName && (
         <div className="success-message" onClick={() => setSubmittedName('')}>
-          <p className="success-message-text">{t('experts.successContact', { name: submittedName })}</p>
+          <p className="success-message-text">
+            {t('experts.successContact', { name: submittedName })}
+          </p>
           <span className="success-message-close">×</span>
         </div>
       )}
