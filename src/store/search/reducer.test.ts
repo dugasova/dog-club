@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { reducer, initialState, type SearchState } from './reducer';
 import type { CardData } from '../../types';
-import { SEARCH_SET, LIST_SEARCH_SET, LIST_SEARCH } from './action';
+import { SearchActionType } from './action';
 
 const card = (overrides: Partial<CardData> = {}): CardData => ({
   id: 1,
@@ -15,13 +15,14 @@ const card = (overrides: Partial<CardData> = {}): CardData => ({
 
 describe('search reducer', () => {
   it('returns the initial state for an unknown action', () => {
+    // @ts-expect-error - intentionally passing an action type the reducer doesn't handle
     const state = reducer(initialState, { type: 'UNKNOWN_ACTION', payload: undefined });
 
     expect(state).toBe(initialState);
   });
 
   it('sets the search term', () => {
-    const state = reducer(initialState, { type: SEARCH_SET, payload: 'kibble' });
+    const state = reducer(initialState, { type: SearchActionType.SEARCH_SET, payload: 'kibble' });
 
     expect(state.search).toBe('kibble');
   });
@@ -29,7 +30,7 @@ describe('search reducer', () => {
   it('sets the search list directly', () => {
     const list = [card({ id: 1 }), card({ id: 2 })];
 
-    const state = reducer(initialState, { type: LIST_SEARCH_SET, payload: list });
+    const state = reducer(initialState, { type: SearchActionType.LIST_SEARCH_SET, payload: list });
 
     expect(state.searchList).toEqual(list);
   });
@@ -42,7 +43,10 @@ describe('search reducer', () => {
     ];
     const initial: SearchState = { search: 'kibble', searchList: [] };
 
-    const state = reducer(initial, { type: LIST_SEARCH, payload: { list, value: 'kibble' } });
+    const state = reducer(initial, {
+      type: SearchActionType.LIST_SEARCH,
+      payload: { list, value: 'kibble' },
+    });
 
     expect(state.searchList).toEqual([list[0], list[2]]);
   });

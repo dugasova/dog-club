@@ -10,7 +10,7 @@ vi.mock('react-i18next', () => ({
   useTranslation: () => ({ t: (key: string) => key }),
 }));
 
-vi.mock('../../context/NutritionContext', () => ({
+vi.mock('../../context/useNutrition', () => ({
   useNutrition: () => ({ sortOption, setSortOption }),
 }));
 

@@ -1,26 +1,13 @@
-import React, { createContext, useContext, useState, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import type { ReactNode } from 'react';
-import { CardData as InitialCardData } from '../data'; // Renamed import to avoid conflict
-import type { CardData } from '../types';
-
-export type { CardData };
-
-export type SortOption =
-  'Popularity' | 'Cheaper first' | 'More expensive first' | 'By name' | 'New ones first';
-
-export type NutritionContextType = {
-  cardsData: CardData[];
-  sortOption: SortOption;
-  setSortOption: (option: SortOption) => void;
-};
-
-const NutritionContext = createContext<NutritionContextType | undefined>(undefined);
+import { CardData as InitialCardData } from '../data';
+import { NutritionContext, type SortOption } from './useNutrition';
 
 export const NutritionProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [sortOption, setSortOption] = useState<SortOption>('Popularity');
 
   const cardsData = useMemo(() => {
-    const sortedData = [...InitialCardData]; // Using InitialCardData
+    const sortedData = [...InitialCardData];
 
     switch (sortOption) {
       case 'Popularity':
@@ -49,12 +36,4 @@ export const NutritionProvider: React.FC<{ children: ReactNode }> = ({ children 
       {children}
     </NutritionContext.Provider>
   );
-};
-
-export const useNutrition = (): NutritionContextType => {
-  const context = useContext(NutritionContext);
-  if (!context) {
-    throw new Error('useNutrition must be used within a NutritionProvider');
-  }
-  return context;
 };

@@ -1,27 +1,8 @@
 import { useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
 import { useTranslation } from 'react-i18next';
-
-export const contactSchema = (t: (key: string) => string) =>
-  z.object({
-    name: z.string().min(2, t('experts.form.validation.nameMin')),
-    petName: z.string().min(1, t('experts.form.validation.petNameRequired')),
-    phone: z.string().regex(/^\+?[\d\s-]{10,}$/, t('experts.form.validation.invalidPhone')),
-    email: z.string().email(t('experts.form.validation.invalidEmail')),
-    privacy: z.boolean().refine((val) => val === true, {
-      message: t('experts.form.validation.privacyRequired'),
-    }),
-  });
-
-export type ContactFormData = {
-  name: string;
-  petName: string;
-  phone: string;
-  email: string;
-  privacy: boolean;
-};
+import { contactSchema, type ContactFormData } from './contactSchema';
 
 interface ContactFormProps {
   formClassName?: string;

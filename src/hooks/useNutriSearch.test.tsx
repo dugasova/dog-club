@@ -1,8 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { act, renderHook } from '@testing-library/react';
 import useNutriSearch from './useNutriSearch';
-import { actionCreator } from '../store/store';
-import { SEARCH_SET } from '../store/search/action';
+import { SearchActionType } from '../store/search/action';
 import type { CardData } from '../types';
 
 const card = (overrides: Partial<CardData> = {}): CardData => ({
@@ -34,7 +33,7 @@ describe('useNutriSearch', () => {
     const { result } = renderHook(() => useNutriSearch(list));
 
     act(() => {
-      result.current.dispatchSearch(actionCreator(SEARCH_SET, 'kib'));
+      result.current.dispatchSearch({ type: SearchActionType.SEARCH_SET, payload: 'kib' });
     });
 
     expect(result.current.stateSearch.search).toBe('kib');
@@ -50,12 +49,12 @@ describe('useNutriSearch', () => {
     const { result } = renderHook(() => useNutriSearch(list));
 
     act(() => {
-      result.current.dispatchSearch(actionCreator(SEARCH_SET, 'kib'));
+      result.current.dispatchSearch({ type: SearchActionType.SEARCH_SET, payload: 'kib' });
     });
     expect(result.current.stateSearch.searchList).toEqual([list[0]]);
 
     act(() => {
-      result.current.dispatchSearch(actionCreator(SEARCH_SET, 'ki'));
+      result.current.dispatchSearch({ type: SearchActionType.SEARCH_SET, payload: 'ki' });
     });
 
     expect(result.current.stateSearch.searchList).toEqual(list);

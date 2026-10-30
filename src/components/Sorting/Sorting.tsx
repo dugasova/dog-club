@@ -1,13 +1,12 @@
 import './Sorting.scss';
-const SortingBtn = '/icons/sortblack.svg';
-import { useNutrition } from '../../context/NutritionContext';
-import type { SortOption } from '../../context/NutritionContext'; // Import SortOption as a type
 import { useTranslation } from 'react-i18next';
+import { useNutrition, type SortOption } from '../../context/useNutrition';
 
 type SortingProps = {
   handleClick: () => void;
 };
 
+const SortingBtn = '/icons/sortblack.svg';
 export default function Sorting({ handleClick }: SortingProps) {
   const { sortOption, setSortOption } = useNutrition();
   const { t } = useTranslation();

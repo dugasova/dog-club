@@ -1,35 +1,38 @@
-import { LIST_SEARCH, LIST_SEARCH_SET, SEARCH_SET } from './action';
 import type { CardData } from '../../types';
+import { SearchActionType } from './action';
 
 export type SearchState = {
   search: string;
   searchList: CardData[];
 };
 
-const initialState: SearchState = {
-  search: ``,
-  searchList: [] as CardData[],
+export type SearchAction =
+  | { type: typeof SearchActionType.SEARCH_SET; payload: string }
+  | { type: typeof SearchActionType.LIST_SEARCH_SET; payload: CardData[] }
+  | {
+      type: typeof SearchActionType.LIST_SEARCH;
+      payload: { list: CardData[]; value: string };
+    };
+
+export const initialState: SearchState = {
+  search: '',
+  searchList: [],
 };
 
-const reducer = (
-  state: SearchState = initialState,
-  { type, payload }: { type: string; payload: any },
-) => {
-  switch (type) {
-    case SEARCH_SET:
-      return { ...state, search: payload };
-    case LIST_SEARCH_SET:
-      return { ...state, searchList: payload as CardData[] };
-    case LIST_SEARCH:
+export const reducer = (state: SearchState, action: SearchAction): SearchState => {
+  switch (action.type) {
+    case SearchActionType.SEARCH_SET:
+      return { ...state, search: action.payload };
+    case SearchActionType.LIST_SEARCH_SET:
+      return { ...state, searchList: action.payload };
+    case SearchActionType.LIST_SEARCH: {
+      const value = action.payload.value.toLowerCase();
       return {
         ...state,
-        searchList: (payload.list as CardData[]).filter((item: CardData) =>
-          item.desc.toLowerCase().includes(payload.value.toLowerCase()),
-        ),
+        searchList: action.payload.list.filter((item) => item.desc.toLowerCase().includes(value)),
       };
+    }
     default:
       return state;
   }
 };
-
-export { reducer, initialState };

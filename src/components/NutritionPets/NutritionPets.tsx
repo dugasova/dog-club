@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 import './NutritionPets.scss';
 import NutritionCard from '../NutritionCard/NutritionCard';
 const SortingArrow = '/icons/sorting-arrow.svg';
-import { useNutrition } from '../../context/NutritionContext';
 import { useTranslation } from 'react-i18next';
 import Sorting from '../Sorting/Sorting';
 import NutritionSearch from '../NutritionSearch/NutritionSearch';
 import useNutriSearch from '../../hooks/useNutriSearch';
-import { actionCreator } from '../../store/store';
-import { SEARCH_SET } from '../../store/search/action';
+import { SearchActionType } from '../../store/search/action';
+import { useNutrition } from '../../context/useNutrition';
 
 export default function NutritionPets() {
   const INITIAL_DISPLAY_COUNT = 8;
@@ -47,7 +46,9 @@ export default function NutritionPets() {
         <div className="nutri-sort">
           <NutritionSearch
             search={stateSearch.search}
-            onSearchChange={(e) => dispatchSearch(actionCreator(SEARCH_SET, e.target.value))}
+            onSearchChange={(e) =>
+              dispatchSearch({ type: SearchActionType.SEARCH_SET, payload: e.target.value })
+            }
           />
           <button className="nutri-sorting__btn" onClick={handleClick}>
             <img className="nutri-sorting__arrow" src={SortingArrow} alt="sorting arrow" />
