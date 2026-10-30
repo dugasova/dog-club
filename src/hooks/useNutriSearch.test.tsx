@@ -1,8 +1,9 @@
-import { describe, it, expect } from 'vitest';
 import { act, renderHook } from '@testing-library/react';
-import useNutriSearch from './useNutriSearch';
+import { describe, expect, it } from 'vitest';
+
 import { SearchActionType } from '../store/search/action';
 import type { CardData } from '../types';
+import useNutriSearch from './useNutriSearch';
 
 const card = (overrides: Partial<CardData> = {}): CardData => ({
   id: 1,

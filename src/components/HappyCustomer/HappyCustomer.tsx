@@ -1,10 +1,12 @@
-import { useState } from 'react';
 import './HappyCustomer.scss';
+
+import { useState } from 'react';
 const Sliderarrow = '/icons/sliderarrow.svg';
+import { useTranslation } from 'react-i18next';
 import { RxDotFilled } from 'react-icons/rx';
+
 import { CUSTOMERS } from '../../data';
 import HappyCustomerCard from './HappyCustomerCard';
-import { useTranslation } from 'react-i18next';
 
 export default function HappyCustomer() {
   const { t } = useTranslation();

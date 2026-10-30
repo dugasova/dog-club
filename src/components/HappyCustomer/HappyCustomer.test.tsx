@@ -1,8 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { describe, it, expect, vi } from 'vitest';
-import HappyCustomer from './HappyCustomer';
+import { describe, expect, it, vi } from 'vitest';
+
 import { CUSTOMERS } from '../../data';
+import HappyCustomer from './HappyCustomer';
 
 vi.mock('react-i18next', () => ({
   useTranslation: () => ({ t: (key: string) => key }),

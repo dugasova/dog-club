@@ -1,7 +1,8 @@
-import { describe, it, expect } from 'vitest';
-import { cartReducer, cartState, type CartState } from './reducer';
-import { CartActionType } from './actions';
+import { describe, expect, it } from 'vitest';
+
 import type { CartItem } from '../../types';
+import { CartActionType } from './actions';
+import { cartReducer, type CartState, cartState } from './reducer';
 
 const item = (overrides: Partial<Omit<CartItem, 'quantity'>> = {}): Omit<CartItem, 'quantity'> => ({
   id: 1,

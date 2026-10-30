@@ -1,8 +1,10 @@
-import { useState } from 'react';
-import type { FormEvent } from 'react';
 import './SignUp.scss';
-import { useNavigate, Link } from 'react-router-dom';
+
+import type { FormEvent } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link, useNavigate } from 'react-router-dom';
+
 import { UserAuth } from '../../context/AuthContext';
 
 export default function SignUp() {

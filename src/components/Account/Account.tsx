@@ -1,8 +1,10 @@
-import { useEffect, useState } from 'react';
 import './Account.scss';
-import { UserAuth } from '../../context/AuthContext';
+
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { deleteOrder, subscribeToOrders, type Order, type OrderItem } from '../../services/orders';
+
+import { UserAuth } from '../../context/AuthContext';
+import { deleteOrder, type Order, type OrderItem, subscribeToOrders } from '../../services/orders';
 
 export default function Account() {
   const [orders, setOrders] = useState<Order[]>([]);

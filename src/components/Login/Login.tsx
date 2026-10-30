@@ -1,8 +1,10 @@
-import { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import { UserAuth } from '../../context/AuthContext';
 import './Login.scss';
+
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Link, useNavigate } from 'react-router-dom';
+
+import { UserAuth } from '../../context/AuthContext';
 
 export default function Login() {
   const { logIn } = UserAuth();

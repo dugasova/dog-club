@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import Header from '../components/Header/Header';
 import { Outlet } from 'react-router-dom';
-import Footer from '../components/Footer/Footer';
-import { CartProvider } from '../context/BuyBasketContext';
+
 import ContactModal from '../components/ContactModal/ContactModal';
+import Footer from '../components/Footer/Footer';
+import Header from '../components/Header/Header';
+import { CartProvider } from '../context/BuyBasketContext';
 
 export default function Layout() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);

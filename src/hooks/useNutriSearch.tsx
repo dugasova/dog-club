@@ -1,7 +1,8 @@
-import { useReducer, useEffect } from 'react';
+import { useEffect, useReducer } from 'react';
+
+import { SearchActionType } from '../store/search/action';
 import { initialState, reducer } from '../store/search/reducer';
 import type { CardData } from '../types';
-import { SearchActionType } from '../store/search/action';
 
 export default function useNutriSearch(list: CardData[]) {
   const [stateSearch, dispatchSearch] = useReducer(reducer, initialState);

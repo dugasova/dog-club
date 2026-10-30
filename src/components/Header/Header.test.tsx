@@ -1,8 +1,9 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { describe, it, expect, vi, beforeEach } from 'vitest';
-import Header from './Header';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
+
 import type { CartItem } from '../../types';
+import Header from './Header';
 
 const navigate = vi.fn();
 const logOut = vi.fn();

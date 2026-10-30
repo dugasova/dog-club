@@ -2,15 +2,17 @@ import { useState } from 'react';
 const Logo = '/icons/logo.svg';
 const BasketImg = '/icons/basket.svg';
 const Humburger = '/icons/humburger.svg';
-import MobileMenu from '../MobileMenu/MobileMenu';
 import './Header.scss';
-import Menu from '../Menu/Menu';
-import { useCart } from '../../context/useCart';
+
 import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router-dom';
-import type { CartItem } from '../../types';
+
 import { UserAuth } from '../../context/AuthContext';
+import { useCart } from '../../context/useCart';
+import type { CartItem } from '../../types';
 import LanguageButton from '../LanguageButton/LanguageButton';
+import Menu from '../Menu/Menu';
+import MobileMenu from '../MobileMenu/MobileMenu';
 
 interface HeaderProps {
   onContactUsClick: () => void;

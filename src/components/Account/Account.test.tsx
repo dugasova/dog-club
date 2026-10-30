@@ -1,8 +1,9 @@
-import { render, screen, act } from '@testing-library/react';
+import { act, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { describe, it, expect, vi, beforeEach } from 'vitest';
-import Account from './Account';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
+
 import type { Order } from '../../services/orders';
+import Account from './Account';
 
 const { subscribeToOrders, deleteOrder } = vi.hoisted(() => ({
   subscribeToOrders: vi.fn(),

@@ -1,10 +1,13 @@
-import { useState } from 'react';
 import './Services.scss';
+
+import { useState } from 'react';
+
 import { servicesData } from './../../data';
 const Arrowmore = '/icons/servicearrow.svg';
-import { useNavigate } from 'react-router-dom';
-import Modal from '../Modal/Modal';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
+
+import Modal from '../Modal/Modal';
 import ServiceSlider from './ServiceSlider';
 
 export default function Services() {

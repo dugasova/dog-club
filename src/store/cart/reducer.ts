@@ -1,5 +1,5 @@
-import { CartActionType } from './actions';
 import type { CartItem } from '../../types';
+import { CartActionType } from './actions';
 
 export type CartState = {
   items: CartItem[];

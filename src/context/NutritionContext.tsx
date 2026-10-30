@@ -1,5 +1,6 @@
-import React, { useState, useMemo } from 'react';
 import type { ReactNode } from 'react';
+import React, { useMemo, useState } from 'react';
+
 import { CardData as InitialCardData } from '../data';
 import { NutritionContext, type SortOption } from './useNutrition';
 

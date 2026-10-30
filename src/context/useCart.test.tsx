@@ -1,7 +1,8 @@
-import { describe, it, expect, vi } from 'vitest';
 import { renderHook } from '@testing-library/react';
-import { CartContext, useCart } from './useCart';
+import { describe, expect, it, vi } from 'vitest';
+
 import { cartState } from '../store/cart/reducer';
+import { CartContext, useCart } from './useCart';
 
 describe('useCart', () => {
   it('throws when used outside of a CartProvider', () => {

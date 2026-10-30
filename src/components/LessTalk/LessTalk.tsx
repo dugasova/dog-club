@@ -1,5 +1,7 @@
-import { useState } from 'react';
 import './LessTalk.scss';
+
+import { useState } from 'react';
+
 import LesstalkImage from '../../assets/lesstalk/lesstolkleft.svg';
 const Pow = '/dogs/paw.svg';
 import Dog from '../../assets/dogs/shetland.png';

@@ -1,5 +1,6 @@
-import { useTranslation } from 'react-i18next';
 import './Contacts.scss';
+
+import { useTranslation } from 'react-i18next';
 
 const emailIcon = '/icons/email.svg';
 const phoneIcon = '/icons/phone.svg';

@@ -1,4 +1,5 @@
 import { createContext, useContext } from 'react';
+
 import type { CardData } from '../types';
 
 export type SortOption =

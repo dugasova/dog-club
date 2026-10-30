@@ -1,18 +1,19 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Layout from './pages/Layout';
-import Home from './routes/Home';
-import Nutrition from './routes/Nutrition';
-import ErrorRoute from './routes/ErrorRoute';
-import ServicesRoute from './pages/ServicesRoute';
-import ContactsRoute from './routes/ContactsRoute';
-import { CartProvider } from './context/BuyBasketContext';
-import BasketRoute from './routes/BasketRoute';
-import LoginRoute from './routes/LoginRoute';
-import SignUpRoute from './routes/SignUpRoute';
-import AccountRoute from './routes/AccountRoute';
+
 import { AuthContextProvider } from './context/AuthContext';
-import TakingCareRoute from './routes/TakingCareRoute';
+import { CartProvider } from './context/BuyBasketContext';
+import Layout from './pages/Layout';
+import ServicesRoute from './pages/ServicesRoute';
+import AccountRoute from './routes/AccountRoute';
+import BasketRoute from './routes/BasketRoute';
+import ContactsRoute from './routes/ContactsRoute';
+import ErrorRoute from './routes/ErrorRoute';
+import Home from './routes/Home';
 import LessTalkRoute from './routes/LessTalkRoute';
+import LoginRoute from './routes/LoginRoute';
+import Nutrition from './routes/Nutrition';
+import SignUpRoute from './routes/SignUpRoute';
+import TakingCareRoute from './routes/TakingCareRoute';
 
 export default function App() {
   const router = createBrowserRouter([

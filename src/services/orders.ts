@@ -1,4 +1,5 @@
-import { arrayUnion, doc, onSnapshot, updateDoc, type Unsubscribe } from 'firebase/firestore';
+import { arrayUnion, doc, onSnapshot, type Unsubscribe, updateDoc } from 'firebase/firestore';
+
 import { db } from '../firebase';
 import type { CartItem } from '../types';
 

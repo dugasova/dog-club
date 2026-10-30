@@ -1,5 +1,6 @@
 import React, { createContext, useContext } from 'react';
-import type { CartState, CartAction } from '../store/cart/reducer';
+
+import type { CartAction, CartState } from '../store/cart/reducer';
 
 export const CartContext = createContext<{
   state: CartState;

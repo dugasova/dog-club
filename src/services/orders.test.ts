@@ -1,6 +1,7 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { placeOrder, subscribeToOrders, deleteOrder } from './orders';
-import type { Order, NewOrder } from './orders';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
+
+import type { NewOrder, Order } from './orders';
+import { deleteOrder, placeOrder, subscribeToOrders } from './orders';
 
 const { mockDoc, mockOnSnapshot, mockUpdateDoc, mockArrayUnion, mockUnsubscribe } = vi.hoisted(
   () => ({

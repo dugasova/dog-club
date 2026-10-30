@@ -1,4 +1,5 @@
 import './LanguageButton.scss';
+
 import { useTranslation } from 'react-i18next';
 
 export default function LanguageButton() {

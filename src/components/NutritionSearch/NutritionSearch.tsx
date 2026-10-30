@@ -1,5 +1,6 @@
-import React from 'react';
 import './NutritionSearch.scss';
+
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 interface NutritionSearchProps {

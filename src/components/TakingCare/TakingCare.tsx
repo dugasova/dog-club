@@ -1,14 +1,15 @@
 import './TakingCare.scss';
 const Arrow = '/icons/arrow.svg';
-import Husky from '../../assets/dogs/husky.jpg';
-import Dog from '../../assets/dogs/dog.png';
-import Poodle from '../../assets/dogs/whitepoodle.png';
-import YellowPrint from '../../assets/dogs/yellow-print.svg';
-import Dachshund from '../../assets/dogs/dachshund.png';
-import PinkPrint from '../../assets/dogs/pinkprint.svg';
-import PurplePrint from '../../assets/dogs/purpleprint.svg';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
+
+import Dachshund from '../../assets/dogs/dachshund.png';
+import Dog from '../../assets/dogs/dog.png';
+import Husky from '../../assets/dogs/husky.jpg';
+import PinkPrint from '../../assets/dogs/pinkprint.svg';
+import PurplePrint from '../../assets/dogs/purpleprint.svg';
+import Poodle from '../../assets/dogs/whitepoodle.png';
+import YellowPrint from '../../assets/dogs/yellow-print.svg';
 
 export default function TakingCare() {
   const navigate = useNavigate();

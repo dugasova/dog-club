@@ -1,9 +1,10 @@
-import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 const Arrow = '/icons/arrow.svg';
 const Pow = '/dogs/paw.svg';
-import Dog from '../../assets/dogs/shetland.png';
 import './LessTalkContent.scss';
+
+import Dog from '../../assets/dogs/shetland.png';
 
 export default function LessTalkContent() {
   const { t } = useTranslation();

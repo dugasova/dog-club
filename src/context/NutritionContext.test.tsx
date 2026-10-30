@@ -1,8 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { describe, it, expect, vi } from 'vitest';
-import { useNutrition, type SortOption } from './useNutrition';
+import { describe, expect, it, vi } from 'vitest';
+
 import { NutritionProvider } from './NutritionContext';
+import { type SortOption, useNutrition } from './useNutrition';
 
 const { mockCards } = vi.hoisted(() => ({
   mockCards: [

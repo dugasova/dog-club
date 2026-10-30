@@ -1,12 +1,13 @@
-import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 const Arrow = '/icons/arrow.svg';
-import Poodle from '../../assets/dogs/whitepoodle.png';
-import YellowPrint from '../../assets/dogs/yellow-print.svg';
+import './TakingCareContent.scss';
+
 import Dachshund from '../../assets/dogs/dachshund.png';
 import PinkPrint from '../../assets/dogs/pinkprint.svg';
 import PurplePrint from '../../assets/dogs/purpleprint.svg';
-import './TakingCareContent.scss';
+import Poodle from '../../assets/dogs/whitepoodle.png';
+import YellowPrint from '../../assets/dogs/yellow-print.svg';
 
 export default function TakingCareContent() {
   const { t } = useTranslation();

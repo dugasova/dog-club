@@ -1,8 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { describe, it, expect, vi, beforeEach } from 'vitest';
-import Basket from './Basket';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
+
 import type { CartItem } from '../../types';
+import Basket from './Basket';
 
 const { placeOrder } = vi.hoisted(() => ({ placeOrder: vi.fn() }));
 

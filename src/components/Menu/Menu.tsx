@@ -1,6 +1,7 @@
 import './Menu.scss';
-import { NavLink } from 'react-router-dom';
+
 import { useTranslation } from 'react-i18next';
+import { NavLink } from 'react-router-dom';
 
 export default function Menu() {
   const { t } = useTranslation();

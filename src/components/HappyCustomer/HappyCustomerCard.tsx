@@ -1,5 +1,5 @@
-import BoneYellow from './../../assets/dogs/boneyellow.svg';
 import BoneWhite from './../../assets/dogs/bonewhite.svg';
+import BoneYellow from './../../assets/dogs/boneyellow.svg';
 
 type HappyCustomerProps = {
   id: number;

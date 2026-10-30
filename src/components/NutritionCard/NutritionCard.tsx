@@ -1,5 +1,6 @@
-import { useTranslation } from 'react-i18next';
 import './NutritionCard.scss';
+
+import { useTranslation } from 'react-i18next';
 const Star = '/icons/strforfeed.svg';
 
 import { useCart } from '../../context/useCart';

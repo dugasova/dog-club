@@ -1,14 +1,17 @@
-import { useState, useMemo, useCallback, useEffect } from 'react';
 import './Basket.scss';
+
+import { useCallback, useEffect, useMemo, useState } from 'react';
+
 import { useCart } from '../../context/useCart';
 const HomeIcon = '/icons/servicearrow.svg';
+import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
+
 import { UserAuth } from '../../context/AuthContext';
 import { placeOrder } from '../../services/orders';
-import Modal from '../Modal/Modal';
-import { useTranslation } from 'react-i18next';
-import EmptyBasket from './EmptyBasket';
 import type { CartItem } from '../../types';
+import Modal from '../Modal/Modal';
+import EmptyBasket from './EmptyBasket';
 
 export default function Basket() {
   const { user } = UserAuth();

@@ -1,6 +1,8 @@
 import './Sorting.scss';
+
 import { useTranslation } from 'react-i18next';
-import { useNutrition, type SortOption } from '../../context/useNutrition';
+
+import { type SortOption, useNutrition } from '../../context/useNutrition';
 
 type SortingProps = {
   handleClick: () => void;

@@ -1,10 +1,12 @@
-import { NavLink } from 'react-router-dom';
 import './Footer.scss';
+
+import { NavLink } from 'react-router-dom';
 const Logo = '/icons/logo.svg';
 const FacebookIcon = '/icons/facebook.svg';
 const InstagramIcon = '/icons/instagram.svg';
-import Dog from '../../assets/dogs/footerdog.png';
 import { useTranslation } from 'react-i18next';
+
+import Dog from '../../assets/dogs/footerdog.png';
 
 export default function Footer() {
   const { t } = useTranslation();

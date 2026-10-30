@@ -1,7 +1,9 @@
-import Modal from '../Modal/Modal';
-import ContactForm from '../ContactForm/ContactForm';
-import { useTranslation } from 'react-i18next';
 import './ContactModal.scss';
+
+import { useTranslation } from 'react-i18next';
+
+import ContactForm from '../ContactForm/ContactForm';
+import Modal from '../Modal/Modal';
 
 interface ContactModalProps {
   isOpen: boolean;
