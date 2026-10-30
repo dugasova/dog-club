@@ -1,4 +1,11 @@
-import { arrayUnion, doc, onSnapshot, type Unsubscribe, updateDoc } from 'firebase/firestore';
+import {
+  arrayUnion,
+  doc,
+  onSnapshot,
+  setDoc,
+  type Unsubscribe,
+  updateDoc,
+} from 'firebase/firestore';
 
 import { db } from '../firebase';
 import type { CartItem } from '../types';
@@ -34,7 +41,7 @@ export interface NewOrder {
 }
 
 export const placeOrder = (order: NewOrder) =>
-  updateDoc(doc(db, 'users', order.email), { savedFood: arrayUnion(order) });
+  setDoc(doc(db, 'users', order.email), { savedFood: arrayUnion(order) }, { merge: true });
 
 export const subscribeToOrders = (
   email: string,

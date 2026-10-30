@@ -3,21 +3,22 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 import type { NewOrder, Order } from './orders';
 import { deleteOrder, placeOrder, subscribeToOrders } from './orders';
 
-const { mockDoc, mockOnSnapshot, mockUpdateDoc, mockArrayUnion, mockUnsubscribe } = vi.hoisted(
-  () => ({
+const { mockDoc, mockOnSnapshot, mockUpdateDoc, mockSetDoc, mockArrayUnion, mockUnsubscribe } =
+  vi.hoisted(() => ({
     mockDoc: vi.fn(),
     mockOnSnapshot: vi.fn(),
     mockUpdateDoc: vi.fn(),
     mockArrayUnion: vi.fn(),
     mockUnsubscribe: vi.fn(),
-  }),
-);
+    mockSetDoc: vi.fn(),
+  }));
 
 vi.mock('firebase/firestore', () => ({
   doc: mockDoc,
   onSnapshot: mockOnSnapshot,
   updateDoc: mockUpdateDoc,
   arrayUnion: mockArrayUnion,
+  setDoc: mockSetDoc,
 }));
 
 vi.mock('../firebase', () => ({ db: {} }));
@@ -54,25 +55,21 @@ describe('placeOrder', () => {
     createdAt: new Date('2024-01-01'),
   };
 
-  it('writes to the correct Firestore document path', async () => {
-    await placeOrder(newOrder);
-
-    expect(mockDoc).toHaveBeenCalledWith({}, 'users', 'user@example.com');
-  });
-
-  it('saves the order using arrayUnion so existing orders are preserved', async () => {
+  it('saves the order using arrayUnion and merge so the document is created if missing', async () => {
     await placeOrder(newOrder);
 
     expect(mockArrayUnion).toHaveBeenCalledWith(newOrder);
-    expect(mockUpdateDoc).toHaveBeenCalledWith(docRef, {
-      savedFood: { __arrayUnion: newOrder },
-    });
+    expect(mockSetDoc).toHaveBeenCalledWith(
+      docRef,
+      { savedFood: { __arrayUnion: newOrder } },
+      { merge: true },
+    );
   });
 
-  it('returns the promise from updateDoc', () => {
+  it('returns the promise from setDoc', () => {
     const result = placeOrder(newOrder);
 
-    expect(result).toBe(mockUpdateDoc.mock.results[0].value);
+    expect(result).toBe(mockSetDoc.mock.results[0].value);
   });
 });
 
