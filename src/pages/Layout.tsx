@@ -4,7 +4,6 @@ import { Outlet } from 'react-router-dom';
 import ContactModal from '../components/ContactModal/ContactModal';
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
-import { CartProvider } from '../context/BuyBasketContext';
 
 export default function Layout() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
@@ -14,10 +13,8 @@ export default function Layout() {
   };
 
   return (
-    <CartProvider>
-      <header>
-        <Header onContactUsClick={toggleContactModal} />
-      </header>
+    <>
+      <Header onContactUsClick={toggleContactModal} />
       <main>
         <Outlet />
       </main>
@@ -25,6 +22,6 @@ export default function Layout() {
         <Footer />
       </footer>
       <ContactModal isOpen={isContactModalOpen} onClose={toggleContactModal} />
-    </CartProvider>
+    </>
   );
 }
