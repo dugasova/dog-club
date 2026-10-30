@@ -121,7 +121,7 @@ describe('Account', () => {
 
     await user.click(screen.getByRole('button', { name: 'account.button' }));
 
-    expect(deleteOrder).toHaveBeenCalledWith('user@example.com', [testOrder], testOrder);
+    expect(deleteOrder).toHaveBeenCalledWith('user@example.com', [testOrder], testOrder.orderId);
   });
 
   it('unsubscribes from orders when the component unmounts', () => {

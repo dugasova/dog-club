@@ -114,16 +114,26 @@ describe('subscribeToOrders', () => {
 
 describe('deleteOrder', () => {
   it('writes to the correct Firestore document path', async () => {
-    await deleteOrder('user@example.com', [order()], order());
+    await deleteOrder('user@example.com', [order()], order().orderId);
 
     expect(mockDoc).toHaveBeenCalledWith({}, 'users', 'user@example.com');
+  });
+
+  it('removes only the target order when two orders share the same timestamp', async () => {
+    const sameTime = { seconds: 100, nanoseconds: 0 };
+    const keep = order({ orderId: 'keep', createdAt: sameTime });
+    const remove = order({ orderId: 'remove', createdAt: sameTime });
+
+    await deleteOrder('user@example.com', [keep, remove], remove.orderId);
+
+    expect(mockUpdateDoc).toHaveBeenCalledWith(docRef, { savedFood: [keep] });
   });
 
   it('removes the target order and saves the remainder', async () => {
     const keep = order({ orderId: 'keep', createdAt: { seconds: 200, nanoseconds: 0 } });
     const remove = order({ orderId: 'remove', createdAt: { seconds: 100, nanoseconds: 0 } });
 
-    await deleteOrder('user@example.com', [keep, remove], remove);
+    await deleteOrder('user@example.com', [keep, remove], remove.orderId);
 
     expect(mockUpdateDoc).toHaveBeenCalledWith(docRef, { savedFood: [keep] });
   });
@@ -131,13 +141,13 @@ describe('deleteOrder', () => {
   it('saves an empty array when deleting the only order', async () => {
     const only = order();
 
-    await deleteOrder('user@example.com', [only], only);
+    await deleteOrder('user@example.com', [only], only.orderId);
 
     expect(mockUpdateDoc).toHaveBeenCalledWith(docRef, { savedFood: [] });
   });
 
   it('returns the promise from updateDoc', () => {
-    const result = deleteOrder('user@example.com', [order()], order());
+    const result = deleteOrder('user@example.com', [order()], order().orderId);
 
     expect(result).toBe(mockUpdateDoc.mock.results[0].value);
   });

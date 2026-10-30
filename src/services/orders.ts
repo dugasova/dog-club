@@ -44,9 +44,7 @@ export const subscribeToOrders = (
     onChange(snapshot.data()?.savedFood || []);
   });
 
-export const deleteOrder = (email: string, orders: Order[], orderToDelete: Order) => {
-  const remainingOrders = orders.filter(
-    (order) => order.createdAt.seconds !== orderToDelete.createdAt.seconds,
-  );
+export const deleteOrder = (email: string, orders: Order[], orderId: string) => {
+  const remainingOrders = orders.filter((order) => order.orderId !== orderId);
   return updateDoc(doc(db, 'users', email), { savedFood: remainingOrders });
 };

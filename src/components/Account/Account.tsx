@@ -16,10 +16,10 @@ export default function Account() {
     return subscribeToOrders(user.email, setOrders);
   }, [user?.email]);
 
-  const handleDeleteOrder = async (passedOrder: Order) => {
+  const handleDeleteOrder = async (orderId: string) => {
     if (!user?.email) return;
     try {
-      await deleteOrder(user.email, orders, passedOrder);
+      await deleteOrder(user.email, orders, orderId);
     } catch (e) {
       console.error(e);
     }
@@ -67,7 +67,7 @@ export default function Account() {
                 </ul>
                 <button
                   className="order-card__delete-button"
-                  onClick={() => handleDeleteOrder(order)}
+                  onClick={() => handleDeleteOrder(order.orderId)}
                 >
                   {t('account.button')}
                 </button>
