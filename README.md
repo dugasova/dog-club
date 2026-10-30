@@ -1,5 +1,7 @@
 # Dog Club
 
+[![CI](https://github.com/dugasova/dog-club/actions/workflows/ci.yml/badge.svg)](https://github.com/dugasova/dog-club/actions/workflows/ci.yml)
+
 A pet food e-commerce SPA built with React, TypeScript and Vite. Users can browse and search a nutrition catalogue, add products to a cart, place orders, and view their order history — with Firebase handling authentication and data persistence.
 
 ## Features
