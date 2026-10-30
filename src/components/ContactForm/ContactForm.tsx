@@ -116,11 +116,18 @@ export default function ContactForm({
       </form>
 
       {submittedName && (
-        <div className="success-message" onClick={() => setSubmittedName('')}>
+        <div className="success-message" role="status">
           <p className="success-message-text">
             {t('experts.successContact', { name: submittedName })}
           </p>
-          <span className="success-message-close">×</span>
+          <button
+            type="button"
+            className="success-message-close"
+            aria-label={t('common.close')}
+            onClick={() => setSubmittedName('')}
+          >
+            ×
+          </button>
         </div>
       )}
     </>

@@ -88,7 +88,8 @@
     }
   },
   "common": {
-    "back": "Back"
+    "back": "Back",
+    "close": "Close"
   },
   "happycustomers": {
     "title": "Happy Customers",

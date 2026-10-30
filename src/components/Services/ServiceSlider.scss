@@ -25,6 +25,16 @@
     overflow: hidden;
     cursor: pointer;
     background-color: var(--primary-color);
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    text-align: left;
+
+    &:focus-visible {
+      outline: 2px solid var(--primary-color-yellow);
+      outline-offset: -4px;
+    }
   }
 
   &__image {

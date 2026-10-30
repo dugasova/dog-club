@@ -61,4 +61,14 @@ describe('Sorting', () => {
 
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
+
+  it('does not close the panel when clicking inside the sorting list', async () => {
+    const handleClick = vi.fn();
+    const user = userEvent.setup();
+    render(<Sorting handleClick={handleClick} />);
+
+    await user.click(screen.getByRole('heading', { name: 'sorting.title' }));
+
+    expect(handleClick).not.toHaveBeenCalled();
+  });
 });

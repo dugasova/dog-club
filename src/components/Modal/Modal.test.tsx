@@ -14,6 +14,19 @@ describe('Modal', () => {
 
     expect(screen.getByText('Modal body')).toBeInTheDocument();
   });
+  it('calls handleClick when Escape is pressed', async () => {
+    const handleClick = vi.fn();
+    const user = userEvent.setup();
+    render(
+      <Modal handleClick={handleClick}>
+        <p>content</p>
+      </Modal>,
+    );
+
+    await user.keyboard('{Escape}');
+
+    expect(handleClick).toHaveBeenCalledTimes(1);
+  });
 
   it('calls handleClick when the backdrop overlay is clicked', async () => {
     const handleClick = vi.fn();

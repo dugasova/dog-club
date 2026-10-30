@@ -44,13 +44,17 @@ export default function Services() {
         {/* Tablet+: grid */}
         <ul className="services-cards">
           {servicesData.map(({ id, title, src, description }) => (
-            <li
-              key={id}
-              className="services-card"
-              onClick={() => openServiceDescriptionModal(t(description))}
-            >
-              <img className="services-card_image" src={src} alt={title} />
-              <h3 className="services-card_title">{t(`servicecs.${title.toLowerCase()}.title`)}</h3>
+            <li key={id} className="services-card">
+              <button
+                type="button"
+                className="services-card__button"
+                onClick={() => openServiceDescriptionModal(t(description))}
+              >
+                <img className="services-card_image" src={src} alt={title} />
+                <h3 className="services-card_title">
+                  {t(`servicecs.${title.toLowerCase()}.title`)}
+                </h3>
+              </button>
             </li>
           ))}
         </ul>

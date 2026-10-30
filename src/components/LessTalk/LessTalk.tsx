@@ -1,13 +1,14 @@
 import './LessTalk.scss';
 
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 import LesstalkImage from '../../assets/lesstalk/lesstolkleft.svg';
+import { useEscapeKey } from '../../hooks/useEscapeKey';
 const Pow = '/dogs/paw.svg';
 import Dog from '../../assets/dogs/shetland.png';
 const Arrow = '/icons/arrow.svg';
-import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
 
 export default function LessTalk() {
   const { t } = useTranslation();
@@ -17,6 +18,8 @@ export default function LessTalk() {
   const handleToLessTalkContent = () => {
     navigate('/lesstalk');
   };
+  const closeVideo = useCallback(() => setVideoOpen(false), []);
+  useEscapeKey(closeVideo);
   return (
     <div className="lesstalk container">
       <div className="lesstalk-sheltland">
@@ -38,13 +41,15 @@ export default function LessTalk() {
       </div>
 
       {videoOpen && (
-        <div className="video-modal" onClick={() => setVideoOpen(false)}>
-          <div className="video-modal__content" onClick={(e) => e.stopPropagation()}>
-            <button
-              className="video-modal__close"
-              onClick={() => setVideoOpen(false)}
-              aria-label="Close"
-            >
+        <div
+          role="presentation"
+          className="video-modal"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) closeVideo();
+          }}
+        >
+          <div className="video-modal__content">
+            <button className="video-modal__close" onClick={() => closeVideo()} aria-label="Close">
               ×
             </button>
             <iframe

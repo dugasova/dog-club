@@ -35,14 +35,15 @@ export default function ServiceSlider({ items, onCardClick }: Props) {
     <div className="service-slider">
       <div className="service-slider__track" ref={trackRef} onScroll={handleScroll}>
         {items.map(({ id, title, src, description }) => (
-          <div
+          <button
+            type="button"
             key={id}
             className="service-slider__card"
             onClick={() => onCardClick(t(description))}
           >
             <img className="service-slider__image" src={src} alt={title} />
             <h3 className="service-slider__title">{t(`servicecs.${title.toLowerCase()}.title`)}</h3>
-          </div>
+          </button>
         ))}
       </div>
 

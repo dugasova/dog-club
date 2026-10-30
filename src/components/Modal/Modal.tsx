@@ -1,6 +1,7 @@
 import './Modal.scss';
 
-import React from 'react';
+import { useEscapeKey } from '../../hooks/useEscapeKey';
+
 const Close = '/icons/closemodal.svg';
 
 interface ModalProps {
@@ -10,12 +11,16 @@ interface ModalProps {
 }
 
 export default function Modal({ handleClick, children, backdropClassName }: ModalProps) {
+  useEscapeKey(handleClick);
   return (
-    <div className="modal" onClick={handleClick}>
-      <div
-        className={`modal-backdrop ${backdropClassName || ''}`}
-        onClick={(e) => e.stopPropagation()}
-      >
+    <div
+      className="modal"
+      role="presentation"
+      onClick={(e) => {
+        if (e.target === e.currentTarget) handleClick();
+      }}
+    >
+      <div className={`modal-backdrop ${backdropClassName ?? ''}`} role="dialog" aria-modal="true">
         <button className="modal-close-btn" onClick={handleClick}>
           <img src={Close} alt="Close" />
         </button>

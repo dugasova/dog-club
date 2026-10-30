@@ -3,6 +3,7 @@ import './Sorting.scss';
 import { useTranslation } from 'react-i18next';
 
 import { type SortOption, useNutrition } from '../../context/useNutrition';
+import { useEscapeKey } from '../../hooks/useEscapeKey';
 
 type SortingProps = {
   handleClick: () => void;
@@ -10,6 +11,7 @@ type SortingProps = {
 
 const SortingBtn = '/icons/sortblack.svg';
 export default function Sorting({ handleClick }: SortingProps) {
+  useEscapeKey(handleClick);
   const { sortOption, setSortOption } = useNutrition();
   const { t } = useTranslation();
 
@@ -27,19 +29,28 @@ export default function Sorting({ handleClick }: SortingProps) {
   };
 
   return (
-    <div className="sorting" onClick={handleClick}>
-      <div className="sorting-backdrop" onClick={(e) => e.stopPropagation()}>
+    <div
+      className="sorting"
+      role="presentation"
+      onClick={(e) => {
+        if (e.target === e.currentTarget) handleClick();
+      }}
+    >
+      <div className="sorting-backdrop">
         <h3 className="sorting-title">{t('sorting.title')}</h3>
         <ul className="sorting-list">
-          {sortingItems.map((item, index) => (
+          {sortingItems.map((item) => (
             <li
-              key={index}
+              key={item}
               className={`sorting-item ${item === sortOption ? 'sorting-item--active' : ''}`}
-              onClick={() => handleSortItemClick(item)}
             >
-              {t(`sorting.options.${item}`)}
-              <button className="sorting__btn">
-                <img src={SortingBtn} alt="Sort button" className="sorting__img" />
+              <button
+                type="button"
+                className="sorting__btn"
+                onClick={() => handleSortItemClick(item)}
+              >
+                {t(`sorting.options.${item}`)}
+                <img src={SortingBtn} alt="" className="sorting__img" />
               </button>
             </li>
           ))}

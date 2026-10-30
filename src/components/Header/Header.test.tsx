@@ -16,7 +16,19 @@ vi.mock('react-i18next', () => ({
 
 vi.mock('react-router-dom', () => ({
   useNavigate: () => navigate,
-  Link: ({ children }: { children: React.ReactNode }) => <>{children}</>,
+  Link: ({
+    children,
+    to,
+    className,
+  }: {
+    children: React.ReactNode;
+    to: string;
+    className?: string;
+  }) => (
+    <a href={to} className={className}>
+      {children}
+    </a>
+  ),
 }));
 
 vi.mock('../../context/useCart', () => ({
@@ -83,13 +95,9 @@ describe('Header', () => {
     expect(navigate).toHaveBeenCalledWith('/basket');
   });
 
-  it('navigates to / when the logo is clicked', async () => {
-    const user = userEvent.setup();
+  it('links the logo to the home page', () => {
     renderHeader();
-
-    await user.click(screen.getByRole('img', { name: 'logo of DogClub' }).closest('div')!);
-
-    expect(navigate).toHaveBeenCalledWith('/');
+    expect(screen.getByRole('link', { name: 'DogClub — home' })).toHaveAttribute('href', '/');
   });
 
   it('shows login and signup buttons when logged out', () => {
@@ -101,11 +109,14 @@ describe('Header', () => {
     expect(screen.queryByRole('button', { name: 'header.logout' })).not.toBeInTheDocument();
   });
 
-  it('shows account and logout buttons when logged in', () => {
+  it('shows account link and logout button when logged in', () => {
     authUser = { email: 'user@example.com' };
     renderHeader();
 
-    expect(screen.getByRole('button', { name: 'header.account' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'header.account' })).toHaveAttribute(
+      'href',
+      '/account',
+    );
     expect(screen.getByRole('button', { name: 'header.logout' })).toBeInTheDocument();
     expect(screen.queryByRole('button', { name: 'header.login' })).not.toBeInTheDocument();
   });

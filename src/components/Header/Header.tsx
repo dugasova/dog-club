@@ -31,9 +31,6 @@ export default function Header({ onContactUsClick }: HeaderProps) {
     navigate('/basket');
   };
 
-  const handleHome = () => {
-    navigate('/');
-  };
   const handleLogout = async () => {
     try {
       await logOut();
@@ -51,14 +48,15 @@ export default function Header({ onContactUsClick }: HeaderProps) {
   return (
     <div className="container">
       <header className="header">
-        <div onClick={handleHome} className="header-container_logo">
-          <img className="header-logo" src={Logo} alt="logo of DogClub" />
-        </div>
+        <Link to="/" className="header-container_logo">
+          <img className="header-logo" src={Logo} alt="DogClub — home" />
+        </Link>
+
         <Menu />
         {user?.email ? (
           <div className="header-auth">
-            <Link to="/account">
-              <button className="header-auth-button">{t('header.account')}</button>
+            <Link to="/account" className="header-auth-button">
+              {t('header.account')}
             </Link>
             <button className="header-auth-button" onClick={handleLogout}>
               {t('header.logout')}

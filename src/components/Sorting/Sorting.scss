@@ -42,11 +42,7 @@
   &-item {
     font-size: 18px;
     font-weight: 600;
-    display: flex;
-    width: 100%;
-    padding: 10px;
     margin-bottom: 10px;
-    justify-content: space-between;
     color: var(--primary-dark);
 
     &:hover {
@@ -61,10 +57,22 @@
   }
 
   &__btn {
-    align-self: start;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+    padding: 10px;
     border: none;
-    color: var(--primary-dark);
     background-color: transparent;
+    font: inherit;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+
+    &:focus-visible {
+      outline: 2px solid var(--primary-color-yellow);
+      outline-offset: 2px;
+    }
 
     .sorting__img {
       filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
