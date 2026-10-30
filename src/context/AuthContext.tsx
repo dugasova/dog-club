@@ -23,14 +23,12 @@ const AuthContext = createContext<UserAuthContextType | null>(null);
 export function AuthContextProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
 
-  function signUp(email: string, password: string) {
-    return createUserWithEmailAndPassword(auth, email, password).then((credential) => {
-      setDoc(doc(db, 'users', email), {
-        savedFood: [],
-      });
-      return credential;
-    });
+  async function signUp(email: string, password: string) {
+    const credential = await createUserWithEmailAndPassword(auth, email, password);
+    await setDoc(doc(db, 'users', email), { savedFood: [] });
+    return credential;
   }
+
   function logIn(email: string, password: string) {
     return signInWithEmailAndPassword(auth, email, password);
   }
