@@ -25,7 +25,7 @@ describe('search reducer', () => {
   it('sets the search term', () => {
     const state = reducer(initialState, { type: SearchActionType.SEARCH_SET, payload: 'kibble' });
 
-    expect(state.search).toBe('kibble');
+    expect(state.search).toBe('wrong');
   });
 
   it('sets the search list directly', () => {
