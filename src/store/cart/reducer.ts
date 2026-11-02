@@ -1,12 +1,8 @@
 import type { CartItem } from '../../types';
 import { CartActionType } from './actions';
 
-export type CartState = {
-  items: CartItem[];
-};
-const cartState: CartState = {
-  items: [],
-};
+export type CartState = { items: CartItem[] };
+export const cartState: CartState = { items: [] };
 
 export type CartAction =
   | { type: typeof CartActionType.ADD_ITEM; item: Omit<CartItem, 'quantity'> }
@@ -14,7 +10,7 @@ export type CartAction =
   | { type: typeof CartActionType.UPDATE_QUANTITY; id: number; quantity: number }
   | { type: typeof CartActionType.CLEAR_CART };
 
-const cartReducer = (state: CartState, action: CartAction): CartState => {
+export const cartReducer = (state: CartState, action: CartAction): CartState => {
   switch (action.type) {
     case CartActionType.ADD_ITEM: {
       const existingItem = state.items.find((item) => item.id === action.item.id);
@@ -53,5 +49,3 @@ const cartReducer = (state: CartState, action: CartAction): CartState => {
       return state;
   }
 };
-
-export { cartReducer, cartState };

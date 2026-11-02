@@ -32,7 +32,7 @@ export default function Services() {
 
   return (
     <section className="services">
-      <div className="arrow">{/* The arrow image will be handled by CSS background-image */}</div>
+      <div className="arrow" />
       <div className="container">
         <h2 className="services-title">{t('menu.services')}</h2>
 

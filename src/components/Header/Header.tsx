@@ -42,7 +42,6 @@ export default function Header({ onContactUsClick }: HeaderProps) {
   const goToLogin = () => navigate('/login');
   const goToSignup = () => navigate('/signup');
 
-  // Fix TypeScript errors by explicitly typing 'item' as CartItem
   const totalItems = state.items.reduce((sum: number, item: CartItem) => sum + item.quantity, 0);
 
   return (
@@ -64,7 +63,6 @@ export default function Header({ onContactUsClick }: HeaderProps) {
           </div>
         ) : (
           <div className="header-auth">
-            {/* use nav-menu-link so buttons get the same appearance as menu links */}
             <button onClick={goToLogin} className="header-auth-button">
               {t('header.login')}
             </button>

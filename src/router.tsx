@@ -1,7 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import Layout from './pages/Layout';
-import ServicesRoute from './pages/ServicesRoute';
+import Layout from './layouts/Layout';
 import AccountRoute from './routes/AccountRoute';
 import BasketRoute from './routes/BasketRoute';
 import ContactsRoute from './routes/ContactsRoute';
@@ -10,6 +9,7 @@ import Home from './routes/Home';
 import LessTalkRoute from './routes/LessTalkRoute';
 import LoginRoute from './routes/LoginRoute';
 import Nutrition from './routes/Nutrition';
+import ServicesRoute from './routes/ServicesRoute';
 import SignUpRoute from './routes/SignUpRoute';
 import TakingCareRoute from './routes/TakingCareRoute';
 
