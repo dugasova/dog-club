@@ -191,8 +191,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 0;
     padding: 12px 16px;
     padding: 10px 0;
+
+    /* stays above page content but below modals (z-index: 1000) */
+    &-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--primary-color);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
 
     &-hamburger {
       display: none;

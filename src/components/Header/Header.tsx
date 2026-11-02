@@ -47,57 +47,59 @@ export default function Header({ onContactUsClick }: HeaderProps) {
   const totalItems = selectTotalItems(state);
 
   return (
-    <div className="container">
-      <header className="header">
-        <Link to="/" className="header-container_logo">
-          <img className="header-logo" src={Logo} alt="DogClub — home" />
-        </Link>
+    <div className="header-wrapper">
+      <div className="container">
+        <header className="header">
+          <Link to="/" className="header-container_logo">
+            <img className="header-logo" src={Logo} alt="DogClub — home" />
+          </Link>
 
-        <Menu />
-        {user?.email ? (
-          <div className="header-auth">
-            <Link to="/account" className="header-auth-button">
-              {t('header.account')}
-            </Link>
-            <button className="header-auth-button" onClick={handleLogout}>
-              {t('header.logout')}
-            </button>
-          </div>
-        ) : (
-          <div className="header-auth">
-            <button onClick={goToLogin} className="header-auth-button">
-              {t('header.login')}
-            </button>
-            <button onClick={goToSignup} className="header-auth-button">
-              {t('header.signup')}
-            </button>
-          </div>
-        )}
-        <LanguageButton />
-        <div className="header-controls">
-          <div className="header-basket">
+          <Menu />
+          {user?.email ? (
+            <div className="header-auth">
+              <Link to="/account" className="header-auth-button">
+                {t('header.account')}
+              </Link>
+              <button className="header-auth-button" onClick={handleLogout}>
+                {t('header.logout')}
+              </button>
+            </div>
+          ) : (
+            <div className="header-auth">
+              <button onClick={goToLogin} className="header-auth-button">
+                {t('header.login')}
+              </button>
+              <button onClick={goToSignup} className="header-auth-button">
+                {t('header.signup')}
+              </button>
+            </div>
+          )}
+          <LanguageButton />
+          <div className="header-controls">
+            <div className="header-basket">
+              <button
+                className="header-basket"
+                aria-label={t('header.basket')}
+                onClick={handleBasketClick}
+              >
+                <img src={BasketImg} alt={t('header.basket')} />
+                {totalItems > 0 && <span className="header-basket__count">{totalItems}</span>}
+              </button>
+              <button className="header-basket__btn" onClick={onContactUsClick}>
+                {t('header.contactUs')}
+              </button>
+            </div>
             <button
-              className="header-basket"
-              aria-label={t('header.basket')}
-              onClick={handleBasketClick}
+              className="header-hamburger"
+              aria-label={t('header.openMenu')}
+              onClick={() => setMobileOpen(true)}
             >
-              <img src={BasketImg} alt={t('header.basket')} />
-              {totalItems > 0 && <span className="header-basket__count">{totalItems}</span>}
-            </button>
-            <button className="header-basket__btn" onClick={onContactUsClick}>
-              {t('header.contactUs')}
+              <img src={Hamburger} alt="" />
             </button>
           </div>
-          <button
-            className="header-hamburger"
-            aria-label={t('header.openMenu')}
-            onClick={() => setMobileOpen(true)}
-          >
-            <img src={Hamburger} alt="" />
-          </button>
-        </div>
-      </header>
-      {mobileOpen && <MobileMenu onClose={() => setMobileOpen(false)} />}
+        </header>
+        {mobileOpen && <MobileMenu onClose={() => setMobileOpen(false)} />}
+      </div>
     </div>
   );
 }
