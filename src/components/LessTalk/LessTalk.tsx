@@ -4,10 +4,10 @@ import { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
-import LesstalkImage from '../../assets/lesstalk/lesstolkleft.svg';
-import { useEscapeKey } from '../../hooks/useEscapeKey';
+import LesstalkImage from '@/assets/lesstalk/lesstolkleft.svg';
+import { useEscapeKey } from '@/hooks/useEscapeKey';
 const Pow = '/dogs/paw.svg';
-import Dog from '../../assets/dogs/shetland.png';
+import Dog from '@/assets/dogs/shetland.png';
 const Arrow = '/icons/arrow.svg';
 
 export default function LessTalk() {

@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
-import type { CardData } from '../../types';
+import type { CardData } from '@/types';
+
 import { SearchActionType } from './action';
 import { initialState, reducer, type SearchState } from './reducer';
 

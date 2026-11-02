@@ -2,7 +2,8 @@ import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
-import type { CartItem } from '../../types';
+import type { CartItem } from '@/types';
+
 import Header from './Header';
 
 const navigate = vi.fn();
@@ -31,11 +32,11 @@ vi.mock('react-router-dom', () => ({
   ),
 }));
 
-vi.mock('../../context/useCart', () => ({
+vi.mock('@/context/useCart', () => ({
   useCart: () => ({ state: { items: cartItems } }),
 }));
 
-vi.mock('../../context/useAuth', () => ({
+vi.mock('@/context/useAuth', () => ({
   useAuth: () => ({ user: authUser, logOut }),
 }));
 

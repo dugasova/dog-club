@@ -1,6 +1,7 @@
 import './Experts.scss';
 
-import WalkingDog from '../../assets/dogs/walking.png';
+import WalkingDog from '@/assets/dogs/walking.png';
+
 import ExpertsForm from './ExpertsForm';
 
 export default function Experts() {

@@ -7,9 +7,10 @@ import './Header.scss';
 import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router-dom';
 
-import { useAuth } from '../../context/useAuth';
-import { useCart } from '../../context/useCart';
-import { selectTotalItems } from '../../store/cart/selectors';
+import { useAuth } from '@/context/useAuth';
+import { useCart } from '@/context/useCart';
+import { selectTotalItems } from '@/store/cart/selectors';
+
 import LanguageButton from '../LanguageButton/LanguageButton';
 import Menu from '../Menu/Menu';
 import MobileMenu from '../MobileMenu/MobileMenu';

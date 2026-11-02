@@ -19,7 +19,7 @@ vi.mock('react-i18next', () => ({
   useTranslation: () => ({ t: (key: string) => key }),
 }));
 
-vi.mock('../../context/useCart', () => ({
+vi.mock('@/context/useCart', () => ({
   useCart: () => ({ dispatch }),
 }));
 

@@ -2,7 +2,8 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
 
-import { CUSTOMERS } from '../../data';
+import { CUSTOMERS } from '@/data';
+
 import HappyCustomer from './HappyCustomer';
 
 vi.mock('react-i18next', () => ({

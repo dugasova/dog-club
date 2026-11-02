@@ -2,8 +2,8 @@ import './Sorting.scss';
 
 import { useTranslation } from 'react-i18next';
 
-import { type SortOption, useNutrition } from '../../context/useNutrition';
-import { useEscapeKey } from '../../hooks/useEscapeKey';
+import { type SortOption, useNutrition } from '@/context/useNutrition';
+import { useEscapeKey } from '@/hooks/useEscapeKey';
 
 type SortingProps = {
   handleClick: () => void;

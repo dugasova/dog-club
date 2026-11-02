@@ -5,7 +5,8 @@ const Sliderarrow = '/icons/sliderarrow.svg';
 import { useTranslation } from 'react-i18next';
 import { RxDotFilled } from 'react-icons/rx';
 
-import { CUSTOMERS } from '../../data';
+import { CUSTOMERS } from '@/data';
+
 import HappyCustomerCard from './HappyCustomerCard';
 
 export default function HappyCustomer() {

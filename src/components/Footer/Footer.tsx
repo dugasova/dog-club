@@ -6,7 +6,7 @@ const FacebookIcon = '/icons/facebook.svg';
 const InstagramIcon = '/icons/instagram.svg';
 import { useTranslation } from 'react-i18next';
 
-import Dog from '../../assets/dogs/footerdog.png';
+import Dog from '@/assets/dogs/footerdog.png';
 
 export default function Footer() {
   const { t } = useTranslation();

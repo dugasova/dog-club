@@ -2,7 +2,8 @@ import { act, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
-import type { Order } from '../../services/orders';
+import type { Order } from '@/services/orders';
+
 import Account from './Account';
 
 const { subscribeToOrders, deleteOrder } = vi.hoisted(() => ({
@@ -14,11 +15,11 @@ vi.mock('react-i18next', () => ({
   useTranslation: () => ({ t: (key: string) => key }),
 }));
 
-vi.mock('../../context/useAuth', () => ({
+vi.mock('@/context/useAuth', () => ({
   useAuth: () => ({ user: authUser }),
 }));
 
-vi.mock('../../services/orders', () => ({ subscribeToOrders, deleteOrder }));
+vi.mock('@/services/orders', () => ({ subscribeToOrders, deleteOrder }));
 
 let authUser: { email: string; uid: string } | null = null;
 const mockUnsubscribe = vi.fn();

@@ -4,7 +4,7 @@ const Arrow = '/icons/arrow.svg';
 const Pow = '/dogs/paw.svg';
 import './LessTalkContent.scss';
 
-import Dog from '../../assets/dogs/shetland.png';
+import Dog from '@/assets/dogs/shetland.png';
 
 export default function LessTalkContent() {
   const { t } = useTranslation();

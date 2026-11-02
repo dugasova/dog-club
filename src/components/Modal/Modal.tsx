@@ -2,7 +2,7 @@ import './Modal.scss';
 
 import { useTranslation } from 'react-i18next';
 
-import { useEscapeKey } from '../../hooks/useEscapeKey';
+import { useEscapeKey } from '@/hooks/useEscapeKey';
 
 const Close = '/icons/closemodal.svg';
 

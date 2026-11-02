@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
-import type { CartItem } from '../../types';
+import type { CartItem } from '@/types';
+
 import { CartActionType } from './actions';
 import { cartReducer, type CartState, cartState } from './reducer';
 

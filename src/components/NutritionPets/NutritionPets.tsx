@@ -6,9 +6,10 @@ import NutritionCard from '../NutritionCard/NutritionCard';
 const SortingArrow = '/icons/sorting-arrow.svg';
 import { useTranslation } from 'react-i18next';
 
-import { useNutrition } from '../../context/useNutrition';
-import useNutriSearch from '../../hooks/useNutriSearch';
-import { SearchActionType } from '../../store/search/action';
+import { useNutrition } from '@/context/useNutrition';
+import useNutriSearch from '@/hooks/useNutriSearch';
+import { SearchActionType } from '@/store/search/action';
+
 import NutritionSearch from '../NutritionSearch/NutritionSearch';
 import Sorting from '../Sorting/Sorting';
 

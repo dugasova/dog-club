@@ -3,9 +3,9 @@ import './NutritionCard.scss';
 import { useTranslation } from 'react-i18next';
 const Star = '/icons/strforfeed.svg';
 
-import { useCart } from '../../context/useCart';
-import type { CardData } from '../../types';
-import { formatPrice } from '../../utils/formatPrice';
+import { useCart } from '@/context/useCart';
+import type { CardData } from '@/types';
+import { formatPrice } from '@/utils/formatPrice';
 
 type NutritionCardProps = {
   card: CardData;

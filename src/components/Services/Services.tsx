@@ -2,7 +2,7 @@ import './Services.scss';
 
 import { useState } from 'react';
 
-import { servicesData } from './../../data';
+import { servicesData } from '@/data';
 const Arrowmore = '/icons/servicearrow.svg';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';

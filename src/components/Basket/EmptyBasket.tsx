@@ -3,7 +3,7 @@ import './EmptyBasket.scss';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
-import Cat from './../../assets/dogs/cat-basket.png';
+import Cat from '@/assets/dogs/cat-basket.png';
 
 export default function EmptyBasket() {
   const { t } = useTranslation();

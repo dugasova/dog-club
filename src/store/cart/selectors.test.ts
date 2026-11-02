@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
-import type { CartItem } from '../../types';
+import type { CartItem } from '@/types';
+
 import { selectTotalItems, selectTotalPrice } from './selectors';
 
 const item = (price: number, quantity: number): CartItem => ({

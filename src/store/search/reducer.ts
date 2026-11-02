@@ -1,4 +1,5 @@
-import type { CardData } from '../../types';
+import type { CardData } from '@/types';
+
 import { SearchActionType } from './action';
 
 export type SearchState = {

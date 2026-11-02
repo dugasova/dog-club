@@ -3,11 +3,11 @@ import { useNavigate } from 'react-router-dom';
 const Arrow = '/icons/arrow.svg';
 import './TakingCareContent.scss';
 
-import Dachshund from '../../assets/dogs/dachshund.png';
-import PinkPrint from '../../assets/dogs/pinkprint.svg';
-import PurplePrint from '../../assets/dogs/purpleprint.svg';
-import Poodle from '../../assets/dogs/whitepoodle.png';
-import YellowPrint from '../../assets/dogs/yellow-print.svg';
+import Dachshund from '@/assets/dogs/dachshund.png';
+import PinkPrint from '@/assets/dogs/pinkprint.svg';
+import PurplePrint from '@/assets/dogs/purpleprint.svg';
+import Poodle from '@/assets/dogs/whitepoodle.png';
+import YellowPrint from '@/assets/dogs/yellow-print.svg';
 
 export default function TakingCareContent() {
   const { t } = useTranslation();
