@@ -268,24 +268,24 @@ export const servicesData = [
     id: 1,
     title: 'Grooming',
     src: '/services/grooming.jpg',
-    description: 'servicecs.grooming.description',
+    description: 'serviceItems.grooming.description',
   },
   {
     id: 2,
     title: 'Nutrition',
     src: '/services/nutrition.jpg',
-    description: 'servicecs.nutrition.description',
+    description: 'serviceItems.nutrition.description',
   },
   {
     id: 3,
     title: 'Training',
     src: '/services/training.jpg',
-    description: 'servicecs.training.description',
+    description: 'serviceItems.training.description',
   },
   {
     id: 4,
     title: 'Bathing',
     src: '/services/bathing.jpg',
-    description: 'servicecs.bathing.description',
+    description: 'serviceItems.bathing.description',
   },
 ];

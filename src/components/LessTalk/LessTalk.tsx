@@ -49,7 +49,11 @@ export default function LessTalk() {
           }}
         >
           <div className="video-modal__content">
-            <button className="video-modal__close" onClick={() => closeVideo()} aria-label="Close">
+            <button
+              className="video-modal__close"
+              onClick={() => closeVideo()}
+              aria-label={t('common.close')}
+            >
               ×
             </button>
             <iframe
@@ -76,7 +80,7 @@ export default function LessTalk() {
           <button
             className="lesstalk-sheltland__btn play"
             onClick={() => setVideoOpen(true)}
-            aria-label="Play video"
+            aria-label={t('lesstalk.playVideo')}
           />
         </div>
       </div>

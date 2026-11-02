@@ -52,7 +52,7 @@ export default function Services() {
               >
                 <img className="services-card_image" src={src} alt={title} />
                 <h3 className="services-card_title">
-                  {t(`servicecs.${title.toLowerCase()}.title`)}
+                  {t(`serviceItems.${title.toLowerCase()}.title`)}
                 </h3>
               </button>
             </li>

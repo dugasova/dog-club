@@ -22,7 +22,7 @@ describe('ContactModal', () => {
 
     expect(screen.getByRole('heading', { name: 'experts.title' })).toBeInTheDocument();
 
-    await user.click(screen.getByRole('button', { name: 'Close' }));
+    await user.click(screen.getByRole('button', { name: 'common.close' }));
 
     expect(onClose).toHaveBeenCalledTimes(1);
   });

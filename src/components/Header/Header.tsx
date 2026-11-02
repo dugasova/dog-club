@@ -88,10 +88,10 @@ export default function Header({ onContactUsClick }: HeaderProps) {
           </div>
           <button
             className="header-hamburger"
-            aria-label="Open menu"
+            aria-label={t('header.openMenu')}
             onClick={() => setMobileOpen(true)}
           >
-            <img src={Humburger} alt="open menu" />
+            <img src={Humburger} alt="" />
           </button>
         </div>
       </header>

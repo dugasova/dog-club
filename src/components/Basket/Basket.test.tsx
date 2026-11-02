@@ -166,6 +166,6 @@ describe('Basket', () => {
 
     await user.click(screen.getByRole('button', { name: 'basket.checkout' }));
 
-    expect(await screen.findByText('Error placing order. Please try again.')).toBeInTheDocument();
+    expect(await screen.findByText('basket.modalError')).toBeInTheDocument();
   });
 });

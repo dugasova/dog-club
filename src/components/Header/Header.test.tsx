@@ -166,7 +166,7 @@ describe('Header', () => {
 
     expect(screen.queryByTestId('mobile-menu')).not.toBeInTheDocument();
 
-    await user.click(screen.getByRole('button', { name: 'Open menu' }));
+    await user.click(screen.getByRole('button', { name: 'header.openMenu' }));
 
     expect(screen.getByTestId('mobile-menu')).toBeInTheDocument();
   });
@@ -175,7 +175,7 @@ describe('Header', () => {
     const user = userEvent.setup();
     renderHeader();
 
-    await user.click(screen.getByRole('button', { name: 'Open menu' }));
+    await user.click(screen.getByRole('button', { name: 'header.openMenu' }));
     expect(screen.getByTestId('mobile-menu')).toBeInTheDocument();
 
     await user.click(screen.getByRole('button', { name: 'close-mobile' }));

@@ -34,7 +34,7 @@ export default function Account() {
           orders.map((order: Order) => {
             const orderDate = order.createdAt
               ? new Date(order.createdAt.seconds * 1000).toLocaleString()
-              : 'N/A';
+              : t('account.noDate');
             return (
               <div key={order.orderId} className="order-card">
                 <h3 className="order-card__title">
@@ -57,12 +57,12 @@ export default function Account() {
                       <li key={itemIndex} className="order-card__item-detail">
                         <p>
                           {item.desc} (x{item.quantity}) - $
-                          {item.price ? item.price.toFixed(2) : '0.00'} each
+                          {item.price ? item.price.toFixed(2) : '0.00'} {t('account.each')}
                         </p>
                       </li>
                     ))
                   ) : (
-                    <li key={order.orderId}>No items found for this order.</li>
+                    <li key={order.orderId}>{t('account.noItems')}</li>
                   )}
                 </ul>
                 <button

@@ -94,7 +94,7 @@ describe('Account', () => {
 
     render(<Account />);
 
-    expect(screen.getByText('Chicken kibble (x2) - $10.00 each')).toBeInTheDocument();
+    expect(screen.getByText('Chicken kibble (x2) - $10.00 account.each')).toBeInTheDocument();
   });
 
   it('shows "No items found" when an order has an empty items list', () => {
@@ -106,7 +106,7 @@ describe('Account', () => {
 
     render(<Account />);
 
-    expect(screen.getByText('No items found for this order.')).toBeInTheDocument();
+    expect(screen.getByText('account.noItems')).toBeInTheDocument();
   });
 
   it('calls deleteOrder with the correct arguments when the delete button is clicked', async () => {

@@ -32,7 +32,8 @@
     "login": "Log in",
     "signup": "Sign up",
     "contactUs": "Contact Us",
-    "basket": "Basket"
+    "basket": "Basket",
+    "openMenu": "Open menu"
   },
   "menu": {
     "lessTalk": "Less talk",
@@ -67,20 +68,21 @@
     "section2": {
       "title": "How we help",
       "text": "Our experienced walkers tailor each route to your dog’s energy level and personality, ensuring safe, enjoyable outings."
-    }
+    },
+    "playVideo": "Play video"
   },
-  "servicecs": {
+  "serviceItems": {
     "grooming": {
       "title": "Grooming",
-      "description": "Grooming requirements vary significantly depending on breed, age, and health. However, regular and proper grooming is essential for all dog breeds. Regular grooming helps prevent mats, dirt, and shedding, and promotes your dog's well-being.\nProfessional dog grooming in Kyiv includes the following essential procedures:\nGrooming – trimming the coat to maintain a well-groomed appearance.\nHygienic grooming – trimming the coat in sensitive areas (paws, groin, muzzle, anal area).\nBathing – using professional shampoos suitable for your pet's coat type. Ear cleaning helps prevent ear infections and ear infections.\nTeeth brushing helps prevent dental problems and bad breath.\nNail trimming prevents discomfort when walking and injuries.\nGrooming is also a great way to check your dog's overall health, checking for irritation, inflammation, fleas, or other issues that may require veterinary attention.\nGrooming a dog at home can be challenging, especially if the breed has a long or specific coat. Incorrect grooming or using inappropriate products can ruin your pet's appearance and lead to serious health problems.\nThat's why it's best to trust the professionals! We offer comprehensive grooming for dogs of all breeds. Our experienced groomers are knowledgeable about dog grooming, coat care, and hygiene procedures, and work in a calm and friendly atmosphere to ensure your pet feels as comfortable as possible.\nGive your pet professional grooming that will make them beautiful and healthy!"
+      "description": "Grooming requirements vary significantly depending on breed, age, and health. However, regular and proper grooming is essential for all dog breeds. Regular grooming helps prevent mats, dirt, and shedding, and promotes your dog's well-being.\nProfessional dog grooming in Kyiv includes the following essential procedures:\nGrooming – trimming the coat to maintain a well-groomed appearance.\nHygienic grooming – trimming the coat in sensitive areas (paws, groin, muzzle, anal area).\nBathing – using professional shampoos suitable for your pet's coat type. Ear cleaning helps prevent ear infections.\nTeeth brushing helps prevent dental problems and bad breath.\nNail trimming prevents discomfort when walking and injuries.\nGrooming is also a great way to check your dog's overall health, checking for irritation, inflammation, fleas, or other issues that may require veterinary attention.\nGrooming a dog at home can be challenging, especially if the breed has a long or specific coat. Incorrect grooming or using inappropriate products can ruin your pet's appearance and lead to serious health problems.\nThat's why it's best to trust the professionals! We offer comprehensive grooming for dogs of all breeds. Our experienced groomers are knowledgeable about dog grooming, coat care, and hygiene procedures, and work in a calm and friendly atmosphere to ensure your pet feels as comfortable as possible.\nGive your pet professional grooming that will make them beautiful and healthy!"
     },
     "nutrition": {
       "title": "Nutrition",
-      "description": "We believe that great nutrition should be accessible to all dogs and cats around the world. That’s why we offer a wide range of products that allow pet owners to choose the food that’s right for their pets. We want every pet owner to feel confident that their pet food meets or exceeds regulatory and industry standards, but we also want every pet owner to feel confident that they’ve made the right choice.\nWe believe that nutrition starts with understanding nutrients, not just ingredients. The best ingredients are those that work together to enhance each other’s effectiveness. A stronger blend of nutrients will be more digestible and effective for your pet than a single ingredient. That’s why we measure how different formulations affect\nWe believe that innovation should be pursued with a focus on your pet’s nutritional needs, safety and well-being. Our nutritional research helps us better understand the natural preferences, nutritional needs and behaviors of dogs and cats. Our trained and caring staff treats our dogs and cats with respect and affection because we are pet owners too."
+      "description": "We believe that great nutrition should be accessible to all dogs and cats around the world. That’s why we offer a wide range of products that allow pet owners to choose the food that’s right for their pets. We want every pet owner to feel confident that their pet food meets or exceeds regulatory and industry standards, but we also want every pet owner to feel confident that they’ve made the right choice.\nWe believe that nutrition starts with understanding nutrients, not just ingredients. The best ingredients are those that work together to enhance each other’s effectiveness. A stronger blend of nutrients will be more digestible and effective for your pet than a single ingredient. That’s why we measure how different formulations affect your pet's digestion and overall health.\nWe believe that innovation should be pursued with a focus on your pet’s nutritional needs, safety and well-being. Our nutritional research helps us better understand the natural preferences, nutritional needs and behaviors of dogs and cats. Our trained and caring staff treats our dogs and cats with respect and affection because we are pet owners too."
     },
     "training": {
       "title": "Training",
-      "description": "10 tips for training your dogBefore you start training your pup, here are 10 tips to help ensure that it is a success.\n1. Try it without your dog first, so you are clear and can avoid confusing them. \n2. Ensure the training is done in a calm space that is free of distractions.\n3. Make sure your dog has eaten and been to the toilet before you start. \n4. Only use positive reinforcement – reward with praise or a tasty treat and mix up what you use keep it interesting for your pooch.\n5. Show your pooch what you want them to do, don’t physically force them to do it.\n6. Be calm and consistent.\n7. Keep training sessions short (five to 10 minutes at a time) – and focus on training one behaviour before ending the session with a fun game.\n8. Record your progress – you could film it and / or write it down.\n9. Be patient. If pup is struggling, stop and go back a step and progress more slowly next time.\n10. Have fun and enjoy yourself – if either of you aren’t, pick it up another day."
+      "description": "10 tips for training your dog\nBefore you start training your pup, here are 10 tips to help ensure that it is a success.\n1. Try it without your dog first, so you are clear and can avoid confusing them. \n2. Ensure the training is done in a calm space that is free of distractions.\n3. Make sure your dog has eaten and been to the toilet before you start. \n4. Only use positive reinforcement – reward with praise or a tasty treat and mix up what you use keep it interesting for your pooch.\n5. Show your pooch what you want them to do, don’t physically force them to do it.\n6. Be calm and consistent.\n7. Keep training sessions short (five to 10 minutes at a time) – and focus on training one behaviour before ending the session with a fun game.\n8. Record your progress – you could film it and / or write it down.\n9. Be patient. If pup is struggling, stop and go back a step and progress more slowly next time.\n10. Have fun and enjoy yourself – if either of you aren’t, pick it up another day."
     },
     "bathing": {
       "title": "Bathing",
@@ -112,7 +114,9 @@
     "customer5": {
       "name": "Alina & Tony",
       "comment": "Amazing Products & Delivery on time."
-    }
+    },
+    "previous": "Previous customers",
+    "next": "Next customers"
   },
   "contacts": {
     "title": "Get in Touch With Us",
@@ -167,7 +171,10 @@
     "totalPrice": "Total Price",
     "totalItems": "Total Goods",
     "items": "Goods",
-    "noOrders": "No order found for your accont."
+    "noOrders": "No order found for your account.",
+    "noItems": "No items found for this order.",
+    "each": "each",
+    "noDate": "N/A"
   },
   "login": {
     "title": "Log in to your account",
@@ -184,7 +191,9 @@
   },
   "services": {
     "moreServices": "More services",
-    "modalTitle": "Service Details"
+    "modalTitle": "Service Details",
+    "slides": "Slides",
+    "slide": "Slide {{number}}"
   },
   "basket": {
     "title": "Your Cart",
@@ -193,11 +202,12 @@
     "remove": "Remove",
     "clearCart": "Clear Cart",
     "goToHome": "Go to Home",
-    "checkout": "Procced to Checkout",
+    "checkout": "Proceed to Checkout",
     "goToPurchases": "Go to Purchases",
     "empty": "Your basket is empty",
     "modalRedirect": "You are not logged in. Redirecting to login in 3 seconds...",
-    "modalSuccess": "Order placed successfully!"
+    "modalSuccess": "Order placed successfully!",
+    "modalError": "Error placing order. Please try again."
   },
   "empty": {
     "title": "Your Basket",

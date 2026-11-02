@@ -74,11 +74,6 @@ export default function Basket() {
   }, [modalMessage]);
 
   const sendOrderToFirebase = useCallback(async () => {
-    if (state.items.length === 0) {
-      showModal('Your cart is empty. Please add items before checking out.');
-      return;
-    }
-
     if (!user) {
       showModal(`${t('basket.modalRedirect')}`);
       setTimeout(() => navigate('/login'), 3000);
@@ -101,7 +96,7 @@ export default function Basket() {
       setTimeout(() => navigate('/account'), 3000);
     } catch (e) {
       console.error('Error adding document: ', e);
-      showModal('Error placing order. Please try again.');
+      showModal(t('basket.modalError'));
     }
   }, [user, state.items, totalPrice, totalItems, t, navigate, dispatch, showModal]);
 

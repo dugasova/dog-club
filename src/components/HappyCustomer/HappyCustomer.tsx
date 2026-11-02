@@ -42,10 +42,10 @@ export default function HappyCustomer() {
         <button
           className="happy-customer-btn btn__left"
           onClick={prev}
-          aria-label="Previous customers"
+          aria-label={t('happycustomers.previous')}
           disabled={index === 0}
         >
-          <img src={Sliderarrow} alt="Prev" />
+          <img src={Sliderarrow} alt="" />
         </button>
 
         <ul className="happy-customer__list" aria-live="polite">
@@ -64,10 +64,10 @@ export default function HappyCustomer() {
         <button
           className="happy-customer-btn btn__right"
           onClick={next}
-          aria-label="Next customers"
+          aria-label={t('happycustomers.next')}
           disabled={index === maxIndex}
         >
-          <img src={Sliderarrow} alt="Next" />
+          <img src={Sliderarrow} alt="" />
         </button>
       </div>
 

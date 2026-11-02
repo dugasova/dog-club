@@ -42,18 +42,20 @@ export default function ServiceSlider({ items, onCardClick }: Props) {
             onClick={() => onCardClick(t(description))}
           >
             <img className="service-slider__image" src={src} alt={title} />
-            <h3 className="service-slider__title">{t(`servicecs.${title.toLowerCase()}.title`)}</h3>
+            <h3 className="service-slider__title">
+              {t(`serviceItems.${title.toLowerCase()}.title`)}
+            </h3>
           </button>
         ))}
       </div>
 
-      <div className="service-slider__dots" role="tablist" aria-label="Slides">
+      <div className="service-slider__dots" role="tablist" aria-label={t('services.slides')}>
         {items.map((item, i) => (
           <button
             key={item.id}
             role="tab"
             aria-selected={i === activeIndex}
-            aria-label={`Slide ${i + 1}`}
+            aria-label={t('services.slide', { number: i + 1 })}
             className={`service-slider__dot${i === activeIndex ? ' service-slider__dot--active' : ''}`}
             onClick={() => goTo(i)}
           />

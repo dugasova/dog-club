@@ -32,7 +32,8 @@
     "login": "Увійти",
     "signup": "Зареєструватися",
     "contactUs": "Зв'язатися з нами",
-    "basket": "Кошик"
+    "basket": "Кошик",
+    "openMenu": "Відкрити меню"
   },
   "menu": {
     "lessTalk": "Менше слів",
@@ -71,24 +72,25 @@
     "section2": {
       "title": "Як ми допомагаємо",
       "text": "Наші досвідчені прогульники підбирають маршрут згідно з енергійністю та характером вашого собаки, забезпечуючи безпечні та приємні прогулянки."
-    }
+    },
+    "playVideo": "Відтворити відео"
   },
-  "servicecs": {
+  "serviceItems": {
     "grooming": {
-      "title": "Grooming",
-      "description": "Grooming requirements vary significantly depending on breed, age, and health. However, regular and proper grooming is essential for all dog breeds. Regular grooming helps prevent mats, dirt, and shedding, and promotes your dog's well-being.\nProfessional dog grooming in Kyiv includes the following essential procedures:\nGrooming – trimming the coat to maintain a well-groomed appearance.\nHygienic grooming – trimming the coat in sensitive areas (paws, groin, muzzle, anal area).\nBathing – using professional shampoos suitable for your pet's coat type. Ear cleaning helps prevent ear infections and ear infections.\nTeeth brushing helps prevent dental problems and bad breath.\nNail trimming prevents discomfort when walking and injuries.\nGrooming is also a great way to check your dog's overall health, checking for irritation, inflammation, fleas, or other issues that may require veterinary attention.\nGrooming a dog at home can be challenging, especially if the breed has a long or specific coat. Incorrect grooming or using inappropriate products can ruin your pet's appearance and lead to serious health problems.\nThat's why it's best to trust the professionals! We offer comprehensive grooming for dogs of all breeds. Our experienced groomers are knowledgeable about dog grooming, coat care, and hygiene procedures, and work in a calm and friendly atmosphere to ensure your pet feels as comfortable as possible.\nGive your pet professional grooming that will make them beautiful and healthy!"
+      "title": "Грумінг",
+      "description": "Вимоги до догляду суттєво залежать від породи, віку та стану здоров'я собаки. Проте регулярний і правильний грумінг потрібен собакам усіх порід. Він запобігає появі ковтунів, забрудненню та надмірній линьці, а також покращує самопочуття вашого улюбленця.\nПрофесійний грумінг собак у Києві включає такі основні процедури:\nСтрижка – підрівнювання шерсті для охайного вигляду.\nГігієнічна стрижка – підстригання шерсті на чутливих ділянках (лапи, пах, морда, ділянка навколо ануса).\nКупання – миття професійними шампунями, що підходять до типу шерсті вашого улюбленця.\nЧищення вух допомагає запобігти вушним інфекціям.\nЧищення зубів допомагає уникнути проблем із зубами та неприємного запаху з пащі.\nПідстригання кігтів запобігає дискомфорту під час ходьби та травмам.\nГрумінг – це також чудова нагода перевірити загальний стан здоров'я собаки: чи немає подразнень, запалень, бліх або інших проблем, які потребують уваги ветеринара.\nДоглядати за собакою вдома може бути складно, особливо якщо порода має довгу або особливу шерсть. Неправильний догляд чи невідповідні засоби можуть зіпсувати вигляд улюбленця та призвести до серйозних проблем зі здоров'ям.\nСаме тому краще довіритися професіоналам! Ми пропонуємо комплексний грумінг для собак усіх порід. Наші досвідчені грумери добре знаються на догляді за собаками, шерстю та гігієнічних процедурах і працюють у спокійній, доброзичливій атмосфері, щоб ваш улюбленець почувався якнайкомфортніше.\nПодаруйте улюбленцю професійний грумінг, який зробить його красивим і здоровим!"
     },
     "nutrition": {
-      "title": "Nutrition",
-      "description": "We believe that great nutrition should be accessible to all dogs and cats around the world. That’s why we offer a wide range of products that allow pet owners to choose the food that’s right for their pets. We want every pet owner to feel confident that their pet food meets or exceeds regulatory and industry standards, but we also want every pet owner to feel confident that they’ve made the right choice.\nWe believe that nutrition starts with understanding nutrients, not just ingredients. The best ingredients are those that work together to enhance each other’s effectiveness. A stronger blend of nutrients will be more digestible and effective for your pet than a single ingredient. That’s why we measure how different formulations affect\nWe believe that innovation should be pursued with a focus on your pet’s nutritional needs, safety and well-being. Our nutritional research helps us better understand the natural preferences, nutritional needs and behaviors of dogs and cats. Our trained and caring staff treats our dogs and cats with respect and affection because we are pet owners too."
+      "title": "Харчування",
+      "description": "Ми віримо, що якісне харчування має бути доступним для всіх собак і котів у світі. Саме тому ми пропонуємо широкий асортимент продуктів, серед яких власники можуть обрати корм, що найкраще підходить їхнім улюбленцям. Ми хочемо, щоб кожен власник був упевнений: корм відповідає нормативним і галузевим стандартам або перевищує їх, а вибір зроблено правильно.\nМи вважаємо, що харчування починається з розуміння поживних речовин, а не лише інгредієнтів. Найкращі інгредієнти – це ті, що разом посилюють дію одне одного. Збалансоване поєднання поживних речовин засвоюється краще й діє ефективніше, ніж один окремий інгредієнт. Саме тому ми вимірюємо, як різні склади впливають на організм тварин.\nМи вважаємо, що, впроваджуючи нове, варто передусім дбати про потреби в харчуванні, безпеку та добробут вашого улюбленця. Наші дослідження допомагають нам краще розуміти природні вподобання, потреби в харчуванні та поведінку собак і котів. Наші навчені й турботливі працівники ставляться до собак і котів з повагою та любов'ю, адже ми теж власники домашніх тварин."
     },
     "training": {
-      "title": "Training",
-      "description": "10 tips for training your dogBefore you start training your pup, here are 10 tips to help ensure that it is a success.\n1. Try it without your dog first, so you are clear and can avoid confusing them. \n2. Ensure the training is done in a calm space that is free of distractions.\n3. Make sure your dog has eaten and been to the toilet before you start. \n4. Only use positive reinforcement – reward with praise or a tasty treat and mix up what you use keep it interesting for your pooch.\n5. Show your pooch what you want them to do, don’t physically force them to do it.\n6. Be calm and consistent.\n7. Keep training sessions short (five to 10 minutes at a time) – and focus on training one behaviour before ending the session with a fun game.\n8. Record your progress – you could film it and / or write it down.\n9. Be patient. If pup is struggling, stop and go back a step and progress more slowly next time.\n10. Have fun and enjoy yourself – if either of you aren’t, pick it up another day."
+      "title": "Дресирування",
+      "description": "10 порад для дресирування собаки\nПерш ніж почати заняття з вашим песиком, скористайтеся цими 10 порадами, які допоможуть досягти успіху.\n1. Спершу спробуйте вправу без собаки, щоб самим добре її зрозуміти й не заплутати улюбленця.\n2. Проводьте заняття у спокійному місці, де ніщо не відволікає.\n3. Переконайтеся, що перед початком собака поїв і сходив у туалет.\n4. Використовуйте лише позитивне підкріплення: заохочуйте похвалою чи смаколиком і чергуйте нагороди, щоб песикові було цікаво.\n5. Показуйте собаці, що потрібно зробити, а не змушуйте фізично.\n6. Будьте спокійними й послідовними.\n7. Проводьте короткі заняття (від п'яти до десяти хвилин) і зосереджуйтеся на одній навичці, а завершуйте веселою грою.\n8. Фіксуйте прогрес: знімайте заняття на відео або записуйте результати.\n9. Будьте терплячими. Якщо песикові важко, зупиніться, поверніться на крок назад і наступного разу рухайтеся повільніше.\n10. Отримуйте задоволення від процесу: якщо комусь із вас не весело, продовжіть іншого дня."
     },
     "bathing": {
-      "title": "Bathing",
-      "description": "1. Brush Your Dog\nBefore you rinse your dog, brush them to remove excess dirt and mats. Otherwise, matted hair may hold water and irritate their skin. \n2. Set Water Temperature. The ideal bath water temperature for dogs is warm, but not hot. Setting a comfortable temperature is important, especially for canines who aren’t necessarily excited about a bath. \n3. Rinse Your Dog Rinse your dog’s body, offering praise and treats to keep them calm and happy. \n4. Apply Dog Shampoo.\nBefore lathering your pet, check the instructions on the bottle. Some shampoos need to be diluted with water. Apply the cleanser and don’t forget easy-to-overlook parts such as their paws and other sensitive areas. Make sure to keep the shampoo out of their eyes and nose. \n5. Rinse Shampoo Thoroughly\nMake sure you rinse all parts of your dog’s body at least once. You don’t want to miss a bit of shampoo hidden beneath your pet’s fur. Again, don’t forget areas like the paws, armpits and belly. \nIf you’re asking, Do dogs need conditioner?, the answer is it’s optional. Dog conditioner might be a good idea if your canine has long hair or dry skin. Just make sure to completely rinse it off your pet’s coat. \nApply conditioner at this step if you’re using it. \n6. Dry Your Dog\nIf you’re considering how to dry a dog, simply towel them off once the bath is over. They’ll probably shake several times to rid their bodies of excess water, so be prepared. \nWondering, Can you use a hair dryer on a dog? You can try it but keep the dryer on the cool setting to avoid burning your pet. Also keep in mind your dog may not like the sensation or the sound of the dryer. Consider acclimating them by turning the hair dryer on for short periods in their presence, prior to the bath. \nOnce you’re finished, don’t forget to provide treats and praise for a bath well done."
+      "title": "Купання",
+      "description": "1. Розчешіть собаку\nПеред купанням розчешіть собаку, щоб прибрати зайвий бруд і ковтуни. Інакше сплутана шерсть може утримувати воду й подразнювати шкіру.\n2. Налаштуйте температуру води\nІдеальна вода для купання собаки тепла, але не гаряча. Комфортна температура особливо важлива для собак, які не надто люблять купатися.\n3. Намочіть собаку\nЗмочіть тіло собаки водою, хваліть і пригощайте смаколиками, щоб улюбленець залишався спокійним і задоволеним.\n4. Нанесіть шампунь для собак\nПеред намилюванням прочитайте інструкцію на пляшці: деякі шампуні потрібно розводити водою. Нанесіть засіб і не забудьте про місця, які легко пропустити, зокрема лапи та інші чутливі ділянки. Стежте, щоб шампунь не потрапив в очі та ніс.\n5. Ретельно змийте шампунь\nПромийте все тіло собаки щонайменше один раз, щоб під шерстю не залишилося шампуню. Не забудьте про лапи, пахви та живіт.\nЧи потрібен собакам кондиціонер? Це необов'язково. Він може стати в пригоді, якщо у собаки довга шерсть або суха шкіра. Головне – повністю змити його з шерсті.\nЯкщо користуєтеся кондиціонером, нанесіть його на цьому етапі.\n6. Висушіть собаку\nПісля купання просто витріть собаку рушником. Швидше за все, улюбленець кілька разів струсить із себе зайву воду, тож будьте до цього готові.\nЧи можна сушити собаку феном? Можна спробувати, але вмикайте прохолодний режим, щоб не обпекти улюбленця. Пам'ятайте, що відчуття від фена чи його звук можуть не сподобатися собаці. Щоб вона звикла, вмикайте фен ненадовго поруч із нею ще до купання.\nНаприкінці не забудьте пригостити собаку смаколиком і похвалити за вдале купання."
     }
   },
   "happycustomers": {
@@ -112,7 +114,9 @@
     "customer5": {
       "name": "Аліна та Тоні",
       "comment": "Чудові товари та доставка вчасно."
-    }
+    },
+    "previous": "Попередні клієнти",
+    "next": "Наступні клієнти"
   },
   "contacts": {
     "title": "Зв'яжіться з нами",
@@ -167,7 +171,10 @@
     "totalPrice": "Загальна ціна",
     "totalItems": "Всього товарів",
     "items": "Товари",
-    "noOrders": "Для вашого облікового запису замовлення не знайдено."
+    "noOrders": "Для вашого облікового запису замовлення не знайдено.",
+    "noItems": "У цьому замовленні немає товарів.",
+    "each": "за шт.",
+    "noDate": "Немає даних"
   },
   "login": {
     "title": "Увійти в обліковий запис",
@@ -184,7 +191,9 @@
   },
   "services": {
     "moreServices": "Більше послуг",
-    "modalTitle": "Деталі послуги"
+    "modalTitle": "Деталі послуги",
+    "slides": "Слайди",
+    "slide": "Слайд {{number}}"
   },
   "basket": {
     "title": "Ваш кошик",
@@ -197,7 +206,8 @@
     "goToPurchases": "Перейти до покупок",
     "empty": "Ваш кошик порожній",
     "modalRedirect": "Ви не ввійшли в систему. Перенаправлення для входу через 3 секунди....",
-    "modalSuccess": "Замовлення успішно оформлено!"
+    "modalSuccess": "Замовлення успішно оформлено!",
+    "modalError": "Не вдалося оформити замовлення. Спробуйте ще раз."
   },
   "empty": {
     "title": "Кошик",

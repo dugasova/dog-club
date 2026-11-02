@@ -22,8 +22,8 @@ describe('HappyCustomer', () => {
     const user = userEvent.setup();
     render(<HappyCustomer />);
 
-    const prevButton = screen.getByRole('button', { name: /previous customers/i });
-    const nextButton = screen.getByRole('button', { name: /next customers/i });
+    const prevButton = screen.getByRole('button', { name: 'happycustomers.previous' });
+    const nextButton = screen.getByRole('button', { name: 'happycustomers.next' });
 
     expect(prevButton).toBeDisabled();
     expect(nextButton).not.toBeDisabled();
@@ -37,7 +37,7 @@ describe('HappyCustomer', () => {
     const user = userEvent.setup();
     render(<HappyCustomer />);
 
-    const nextButton = screen.getByRole('button', { name: /next customers/i });
+    const nextButton = screen.getByRole('button', { name: 'happycustomers.next' });
 
     await user.click(nextButton);
     await user.click(nextButton);

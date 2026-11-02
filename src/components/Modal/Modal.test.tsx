@@ -3,6 +3,9 @@ import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
 
 import Modal from './Modal';
+vi.mock('react-i18next', () => ({
+  useTranslation: () => ({ t: (key: string) => key }),
+}));
 
 describe('Modal', () => {
   it('renders its children', () => {
@@ -65,7 +68,7 @@ describe('Modal', () => {
       </Modal>,
     );
 
-    await user.click(screen.getByRole('button', { name: 'Close' }));
+    await user.click(screen.getByRole('button', { name: 'common.close' }));
 
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
