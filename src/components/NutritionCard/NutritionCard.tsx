@@ -5,6 +5,7 @@ const Star = '/icons/strforfeed.svg';
 
 import { useCart } from '../../context/useCart';
 import type { CardData } from '../../types';
+import { formatPrice } from '../../utils/formatPrice';
 
 type NutritionCardProps = {
   card: CardData;
@@ -35,7 +36,7 @@ export default function NutritionCard({ card }: NutritionCardProps) {
       </p>
       <p className="nutri-card__stars">{renderStars(card.rating)}</p>
       <p className="nutri-card__description">{t(card.desc)}</p>
-      <p className="nutri-card__price">{card.price}.00$</p>
+      <p className="nutri-card__price">{formatPrice(card.price)}</p>
       <button className="nutri-card__btn" onClick={handleAddToCart}>
         {t('nutrition.buy')}
       </button>

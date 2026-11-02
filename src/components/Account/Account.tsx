@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 import { UserAuth } from '../../context/AuthContext';
 import { deleteOrder, type Order, type OrderItem, subscribeToOrders } from '../../services/orders';
+import { formatPrice } from '../../utils/formatPrice';
 
 export default function Account() {
   const [orders, setOrders] = useState<Order[]>([]);
@@ -44,8 +45,7 @@ export default function Account() {
                   <strong>{t('account.date')}:</strong> {orderDate}
                 </p>
                 <p className="order-card__info">
-                  <strong>{t('account.totalPrice')}:</strong> $
-                  {order.totalPrice ? order.totalPrice.toFixed(2) : '0.00'}
+                  <strong>{t('account.totalPrice')}:</strong> {formatPrice(order.totalPrice || 0)}
                 </p>
                 <p className="order-card__info">
                   <strong>{t('account.totalItems')}:</strong> {order.totalItems || 0}
@@ -56,8 +56,8 @@ export default function Account() {
                     order.items.map((item: OrderItem, itemIndex: number) => (
                       <li key={itemIndex} className="order-card__item-detail">
                         <p>
-                          {item.desc} (x{item.quantity}) - $
-                          {item.price ? item.price.toFixed(2) : '0.00'} {t('account.each')}
+                          {item.desc} (x{item.quantity}) - {formatPrice(item.price || 0)}{' '}
+                          {t('account.each')}
                         </p>
                       </li>
                     ))

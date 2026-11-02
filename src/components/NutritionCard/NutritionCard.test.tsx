@@ -36,7 +36,7 @@ describe('NutritionCard', () => {
     );
 
     expect(screen.getByText('nutrition.code: KBL-1')).toBeInTheDocument();
-    expect(screen.getByText('25.00$')).toBeInTheDocument();
+    expect(screen.getByText('$25.00')).toBeInTheDocument();
     expect(screen.getByText(card.desc)).toBeInTheDocument();
     expect(screen.getAllByRole('img', { name: 'star' })).toHaveLength(card.rating);
   });

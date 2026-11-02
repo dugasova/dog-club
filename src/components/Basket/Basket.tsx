@@ -1,6 +1,6 @@
 import './Basket.scss';
 
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import { useCart } from '../../context/useCart';
 const HomeIcon = '/icons/servicearrow.svg';
@@ -9,7 +9,9 @@ import { useNavigate } from 'react-router-dom';
 
 import { UserAuth } from '../../context/AuthContext';
 import { placeOrder } from '../../services/orders';
+import { selectTotalItems, selectTotalPrice } from '../../store/cart/selectors';
 import type { CartItem } from '../../types';
+import { formatPrice } from '../../utils/formatPrice';
 import Modal from '../Modal/Modal';
 import EmptyBasket from './EmptyBasket';
 
@@ -49,16 +51,8 @@ export default function Basket() {
   const handleRemoveAllItems = useCallback(() => {
     dispatch({ type: 'CLEAR_CART' });
   }, [dispatch]);
-
-  const totalPrice = useMemo(
-    () => state.items.reduce((sum: number, item: CartItem) => sum + item.price * item.quantity, 0),
-    [state.items],
-  );
-
-  const totalItems = useMemo(
-    () => state.items.reduce((sum: number, item: CartItem) => sum + item.quantity, 0),
-    [state.items],
-  );
+  const totalPrice = selectTotalPrice(state);
+  const totalItems = selectTotalItems(state);
 
   const showModal = useCallback((message: string) => {
     setModalMessage(message);
@@ -125,7 +119,7 @@ export default function Basket() {
                     <p>{item.desc}</p>
                     <p>{item.code}</p>
                     <p>{item.rating}/5</p>
-                    <p className="basket-item-price">${item.price}.00</p>
+                    <p className="basket-item-price">{formatPrice(item.price)}</p>
                     <div className="basket-item-quantity-control">
                       <button onClick={() => handleUpdateQuantity(item.id, item.quantity - 1)}>
                         -
@@ -150,7 +144,7 @@ export default function Basket() {
           {state.items.length > 0 && (
             <div className="cart-footer">
               <h3 className="cart-footer__price">
-                {t('basket.totalPrice')}: ${totalPrice.toFixed(2)}
+                {t('basket.totalPrice')}: {formatPrice(totalPrice)}
               </h3>
 
               <div className="cart-footer__navigate">

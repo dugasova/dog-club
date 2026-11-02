@@ -9,7 +9,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import { UserAuth } from '../../context/AuthContext';
 import { useCart } from '../../context/useCart';
-import type { CartItem } from '../../types';
+import { selectTotalItems } from '../../store/cart/selectors';
 import LanguageButton from '../LanguageButton/LanguageButton';
 import Menu from '../Menu/Menu';
 import MobileMenu from '../MobileMenu/MobileMenu';
@@ -42,7 +42,7 @@ export default function Header({ onContactUsClick }: HeaderProps) {
   const goToLogin = () => navigate('/login');
   const goToSignup = () => navigate('/signup');
 
-  const totalItems = state.items.reduce((sum: number, item: CartItem) => sum + item.quantity, 0);
+  const totalItems = selectTotalItems(state);
 
   return (
     <div className="container">
