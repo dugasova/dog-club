@@ -9,6 +9,7 @@ import Home from './routes/Home';
 import LessTalkRoute from './routes/LessTalkRoute';
 import LoginRoute from './routes/LoginRoute';
 import Nutrition from './routes/Nutrition';
+import ProtectedRoute from './routes/ProtectedRoute';
 import ServicesRoute from './routes/ServicesRoute';
 import SignUpRoute from './routes/SignUpRoute';
 import TakingCareRoute from './routes/TakingCareRoute';
@@ -26,7 +27,11 @@ export const router = createBrowserRouter([
       { path: 'basket', element: <BasketRoute /> },
       { path: 'login', element: <LoginRoute /> },
       { path: 'signup', element: <SignUpRoute /> },
-      { path: 'account', element: <AccountRoute /> },
+      {
+        element: <ProtectedRoute />,
+        children: [{ path: 'account', element: <AccountRoute /> }],
+      },
+
       { path: 'takingcare', element: <TakingCareRoute /> },
       { path: 'lesstalk', element: <LessTalkRoute /> },
       { path: '*', element: <ErrorRoute /> },

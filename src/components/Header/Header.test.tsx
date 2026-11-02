@@ -147,8 +147,9 @@ describe('Header', () => {
 
     await user.click(screen.getByRole('button', { name: 'header.logout' }));
 
-    expect(logOut).toHaveBeenCalledTimes(1);
-    await waitFor(() => expect(navigate).toHaveBeenCalledWith('/'));
+    await waitFor(() => expect(logOut).toHaveBeenCalledTimes(1));
+    expect(navigate).toHaveBeenCalledWith('/', { flushSync: true });
+    expect(navigate.mock.invocationCallOrder[0]).toBeLessThan(logOut.mock.invocationCallOrder[0]);
   });
 
   it('calls onContactUsClick when the contact button is clicked', async () => {

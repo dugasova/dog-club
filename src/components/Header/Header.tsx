@@ -34,12 +34,13 @@ export default function Header({ onContactUsClick }: HeaderProps) {
 
   const handleLogout = async () => {
     try {
+      await navigate('/', { flushSync: true });
       await logOut();
-      navigate('/');
     } catch (error) {
       console.error(error);
     }
   };
+
   const goToLogin = () => navigate('/login');
   const goToSignup = () => navigate('/signup');
 

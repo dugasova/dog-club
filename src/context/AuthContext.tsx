@@ -13,6 +13,7 @@ import { AuthContext } from './useAuth';
 
 export function AuthContextProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(true);
 
   async function signUp(email: string, password: string) {
     const credential = await createUserWithEmailAndPassword(auth, email, password);
@@ -30,13 +31,17 @@ export function AuthContextProvider({ children }: { children: React.ReactNode })
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
+      setLoading(false);
     });
+
     return () => {
       unsubscribe();
     };
   }, []);
 
   return (
-    <AuthContext.Provider value={{ signUp, user, logIn, logOut }}>{children}</AuthContext.Provider>
+    <AuthContext.Provider value={{ signUp, user, loading, logIn, logOut }}>
+      {children}
+    </AuthContext.Provider>
   );
 }

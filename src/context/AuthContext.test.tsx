@@ -115,6 +115,16 @@ describe('AuthContextProvider', () => {
       expect(result.current.user).toBeNull();
     });
 
+    it('stays loading until Firebase reports the auth state', () => {
+      const { result } = renderAuth();
+      const authCallback = mockOnAuthStateChanged.mock.calls[0][1] as (user: unknown) => void;
+
+      expect(result.current.loading).toBe(true);
+
+      act(() => authCallback(null));
+      expect(result.current.loading).toBe(false);
+    });
+
     it('updates the user when Firebase reports a sign in and sign out', () => {
       const { result } = renderAuth();
       const authCallback = mockOnAuthStateChanged.mock.calls[0][1] as (user: unknown) => void;
