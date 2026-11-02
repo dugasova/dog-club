@@ -21,7 +21,7 @@ vi.mock('firebase/firestore', () => ({
   setDoc: mockSetDoc,
 }));
 
-vi.mock('../firebase', () => ({ db: {} }));
+vi.mock('../firestore', () => ({ db: {} }));
 
 const docRef = { id: 'mock-doc-ref' };
 

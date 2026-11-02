@@ -5,10 +5,9 @@ import {
   signOut,
   type User,
 } from 'firebase/auth';
-import { doc, setDoc } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 
-import { auth, db } from '../firebase';
+import { auth } from '../firebase';
 import { AuthContext } from './useAuth';
 
 export function AuthContextProvider({ children }: { children: React.ReactNode }) {
@@ -17,7 +16,8 @@ export function AuthContextProvider({ children }: { children: React.ReactNode })
 
   async function signUp(email: string, password: string) {
     const credential = await createUserWithEmailAndPassword(auth, email, password);
-    await setDoc(doc(db, 'users', email), { savedFood: [] });
+    const { createUserDocument } = await import('../services/orders');
+    await createUserDocument(email);
     return credential;
   }
 

@@ -7,7 +7,7 @@ import {
   updateDoc,
 } from 'firebase/firestore';
 
-import { db } from '../firebase';
+import { db } from '../firestore';
 import type { CartItem } from '../types';
 
 export interface OrderItem {
@@ -55,3 +55,6 @@ export const deleteOrder = (email: string, orders: Order[], orderId: string) => 
   const remainingOrders = orders.filter((order) => order.orderId !== orderId);
   return updateDoc(doc(db, 'users', email), { savedFood: remainingOrders });
 };
+
+export const createUserDocument = (email: string) =>
+  setDoc(doc(db, 'users', email), { savedFood: [] });

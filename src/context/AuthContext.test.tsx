@@ -34,7 +34,8 @@ vi.mock('firebase/firestore', () => ({
   setDoc: mockSetDoc,
 }));
 
-vi.mock('../firebase', () => ({ auth: {}, db: {} }));
+vi.mock('../firebase', () => ({ auth: {} }));
+vi.mock('../firestore', () => ({ db: {} }));
 
 const docRef = { id: 'mock-doc-ref' };
 const credential = { user: { uid: 'user-1', email: 'user@example.com' } };
