@@ -41,7 +41,7 @@ export default function ServiceSlider({ items, onCardClick }: Props) {
             className="service-slider__card"
             onClick={() => onCardClick(t(description))}
           >
-            <img className="service-slider__image" src={src} alt={title} />
+            <img className="service-slider__image" src={src} alt="" />
             <h3 className="service-slider__title">
               {t(`serviceItems.${title.toLowerCase()}.title`)}
             </h3>

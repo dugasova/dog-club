@@ -50,7 +50,7 @@ export default function Services() {
                 className="services-card__button"
                 onClick={() => openServiceDescriptionModal(t(description))}
               >
-                <img className="services-card_image" src={src} alt={title} />
+                <img className="services-card_image" src={src} alt="" />
                 <h3 className="services-card_title">
                   {t(`serviceItems.${title.toLowerCase()}.title`)}
                 </h3>
