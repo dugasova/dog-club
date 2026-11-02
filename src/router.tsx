@@ -1,18 +1,20 @@
+import { lazy } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 
 import Layout from './layouts/Layout';
-import AccountRoute from './routes/AccountRoute';
-import BasketRoute from './routes/BasketRoute';
-import ContactsRoute from './routes/ContactsRoute';
 import ErrorRoute from './routes/ErrorRoute';
 import Home from './routes/Home';
-import LessTalkRoute from './routes/LessTalkRoute';
-import LoginRoute from './routes/LoginRoute';
-import Nutrition from './routes/Nutrition';
 import ProtectedRoute from './routes/ProtectedRoute';
-import ServicesRoute from './routes/ServicesRoute';
-import SignUpRoute from './routes/SignUpRoute';
-import TakingCareRoute from './routes/TakingCareRoute';
+
+const AccountRoute = lazy(() => import('./routes/AccountRoute'));
+const BasketRoute = lazy(() => import('./routes/BasketRoute'));
+const ContactsRoute = lazy(() => import('./routes/ContactsRoute'));
+const LessTalkRoute = lazy(() => import('./routes/LessTalkRoute'));
+const LoginRoute = lazy(() => import('./routes/LoginRoute'));
+const Nutrition = lazy(() => import('./routes/Nutrition'));
+const ServicesRoute = lazy(() => import('./routes/ServicesRoute'));
+const SignUpRoute = lazy(() => import('./routes/SignUpRoute'));
+const TakingCareRoute = lazy(() => import('./routes/TakingCareRoute'));
 
 export const router = createBrowserRouter([
   {
