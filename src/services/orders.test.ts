@@ -54,6 +54,11 @@ describe('placeOrder', () => {
     totalItems: 3,
     createdAt: new Date('2024-01-01'),
   };
+  it('writes to the correct Firestore document path', async () => {
+    await placeOrder(newOrder);
+
+    expect(mockDoc).toHaveBeenCalledWith({}, 'users', 'user@example.com');
+  });
 
   it('saves the order using arrayUnion and merge so the document is created if missing', async () => {
     await placeOrder(newOrder);
