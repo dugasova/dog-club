@@ -35,8 +35,8 @@ vi.mock('../../context/useCart', () => ({
   useCart: () => ({ state: { items: cartItems } }),
 }));
 
-vi.mock('../../context/AuthContext', () => ({
-  UserAuth: () => ({ user: authUser, logOut }),
+vi.mock('../../context/useAuth', () => ({
+  useAuth: () => ({ user: authUser, logOut }),
 }));
 
 vi.mock('../Menu/Menu', () => ({ default: () => <nav data-testid="menu" /> }));

@@ -1,7 +1,8 @@
 import { act, renderHook } from '@testing-library/react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
-import { AuthContextProvider, UserAuth } from './AuthContext';
+import { AuthContextProvider } from './AuthContext';
+import { useAuth } from './useAuth';
 
 const {
   mockCreateUser,
@@ -42,7 +43,7 @@ const wrapper = ({ children }: { children: React.ReactNode }) => (
   <AuthContextProvider>{children}</AuthContextProvider>
 );
 
-const renderAuth = () => renderHook(() => UserAuth(), { wrapper });
+const renderAuth = () => renderHook(() => useAuth(), { wrapper });
 
 beforeEach(() => {
   vi.clearAllMocks();
@@ -135,12 +136,12 @@ describe('AuthContextProvider', () => {
   });
 });
 
-describe('UserAuth', () => {
+describe('useAuth', () => {
   it('throws when used outside of an AuthContextProvider', () => {
     const consoleError = vi.spyOn(console, 'error').mockImplementation(() => {});
 
-    expect(() => renderHook(() => UserAuth())).toThrow(
-      'UserAuth must be used within an AuthContextProvider',
+    expect(() => renderHook(() => useAuth())).toThrow(
+      'useAuth must be used within an AuthContextProvider',
     );
 
     consoleError.mockRestore();

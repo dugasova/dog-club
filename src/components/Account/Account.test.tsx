@@ -14,8 +14,8 @@ vi.mock('react-i18next', () => ({
   useTranslation: () => ({ t: (key: string) => key }),
 }));
 
-vi.mock('../../context/AuthContext', () => ({
-  UserAuth: () => ({ user: authUser }),
+vi.mock('../../context/useAuth', () => ({
+  useAuth: () => ({ user: authUser }),
 }));
 
 vi.mock('../../services/orders', () => ({ subscribeToOrders, deleteOrder }));

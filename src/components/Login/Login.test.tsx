@@ -18,8 +18,8 @@ vi.mock('react-i18next', () => ({
   useTranslation: () => ({ t: (key: string) => key }),
 }));
 
-vi.mock('../../context/AuthContext', () => ({
-  UserAuth: () => ({ logIn }),
+vi.mock('../../context/useAuth', () => ({
+  useAuth: () => ({ logIn }),
 }));
 
 describe('Login', () => {

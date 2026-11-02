@@ -3,13 +3,13 @@ import './Account.scss';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { UserAuth } from '../../context/AuthContext';
+import { useAuth } from '../../context/useAuth';
 import { deleteOrder, type Order, type OrderItem, subscribeToOrders } from '../../services/orders';
 import { formatPrice } from '../../utils/formatPrice';
 
 export default function Account() {
   const [orders, setOrders] = useState<Order[]>([]);
-  const { user } = UserAuth();
+  const { user } = useAuth();
   const { t } = useTranslation();
 
   useEffect(() => {

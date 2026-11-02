@@ -7,7 +7,7 @@ const HomeIcon = '/icons/servicearrow.svg';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
-import { UserAuth } from '../../context/AuthContext';
+import { useAuth } from '../../context/useAuth';
 import { placeOrder } from '../../services/orders';
 import { selectTotalItems, selectTotalPrice } from '../../store/cart/selectors';
 import type { CartItem } from '../../types';
@@ -16,7 +16,7 @@ import Modal from '../Modal/Modal';
 import EmptyBasket from './EmptyBasket';
 
 export default function Basket() {
-  const { user } = UserAuth();
+  const { user } = useAuth();
   const [modalMessage, setModalMessage] = useState<string | null>(null);
   const { t } = useTranslation();
   const navigate = useNavigate();
@@ -26,7 +26,7 @@ export default function Basket() {
     navigate('/');
   }, [navigate]);
 
-  const handleGoToParches = useCallback(() => {
+  const handleGoToPurchases = useCallback(() => {
     navigate('/happy-customer');
   }, [navigate]);
 
@@ -153,7 +153,7 @@ export default function Basket() {
                   {t('basket.goToHome')}
                 </button>
                 <button
-                  onClick={handleGoToParches}
+                  onClick={handleGoToPurchases}
                   className="cart-footer__navigate-btn btn-purchases"
                 >
                   <img src={HomeIcon} alt="" />

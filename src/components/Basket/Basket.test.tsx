@@ -36,8 +36,8 @@ vi.mock('../../context/useCart', () => ({
   useCart: () => ({ state: { items: cartItems }, dispatch }),
 }));
 
-vi.mock('../../context/AuthContext', () => ({
-  UserAuth: () => ({ user: authUser }),
+vi.mock('../../context/useAuth', () => ({
+  useAuth: () => ({ user: authUser }),
 }));
 
 vi.mock('../../services/orders', () => ({

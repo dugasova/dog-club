@@ -1,13 +1,13 @@
 import { useState } from 'react';
 const Logo = '/icons/logo.svg';
 const BasketImg = '/icons/basket.svg';
-const Humburger = '/icons/humburger.svg';
+const Hamburger = '/icons/hamburger.svg';
 import './Header.scss';
 
 import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router-dom';
 
-import { UserAuth } from '../../context/AuthContext';
+import { useAuth } from '../../context/useAuth';
 import { useCart } from '../../context/useCart';
 import { selectTotalItems } from '../../store/cart/selectors';
 import LanguageButton from '../LanguageButton/LanguageButton';
@@ -21,7 +21,7 @@ interface HeaderProps {
 export default function Header({ onContactUsClick }: HeaderProps) {
   const { t } = useTranslation();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { user, logOut } = UserAuth();
+  const { user, logOut } = useAuth();
 
   const { state } = useCart();
 
@@ -91,7 +91,7 @@ export default function Header({ onContactUsClick }: HeaderProps) {
             aria-label={t('header.openMenu')}
             onClick={() => setMobileOpen(true)}
           >
-            <img src={Humburger} alt="" />
+            <img src={Hamburger} alt="" />
           </button>
         </div>
       </header>

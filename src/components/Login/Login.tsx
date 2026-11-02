@@ -4,10 +4,10 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router-dom';
 
-import { UserAuth } from '../../context/AuthContext';
+import { useAuth } from '../../context/useAuth';
 
 export default function Login() {
-  const { logIn } = UserAuth();
+  const { logIn } = useAuth();
   const { t } = useTranslation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

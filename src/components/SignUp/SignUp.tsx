@@ -5,13 +5,13 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router-dom';
 
-import { UserAuth } from '../../context/AuthContext';
+import { useAuth } from '../../context/useAuth';
 
 export default function SignUp() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const { signUp } = UserAuth();
+  const { signUp } = useAuth();
   const { t } = useTranslation();
   const navigate = useNavigate();
 
